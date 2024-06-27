@@ -144,6 +144,7 @@ export const ProductCard = ({
         className="block group-hover/product:shadow-2xl "
       >
         <Image
+          unoptimized
           src={product.thumbnail}
           height="600"
           width="600"
