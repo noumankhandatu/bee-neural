@@ -109,3 +109,61 @@ export const products = [
     thumbnail: "/assets/images/section1.jpg",
   },
 ];
+
+export const serviceArray = [
+  {
+    title: "Natural Language Processing (NLP)",
+    image: "/assets/service-images/nlp.jpg",
+    description:
+      "Our NLP Services Help Businesses To Understand And Analyze Human Language Data. We Use Machine Learning Algorithms To Extract Insights And Provide Valuable Information To Our Clients.",
+  },
+  {
+    title: "Computer Vision",
+    image: "/assets/service-images/cv.jpg",
+    description:
+      "Our Computer Vision Services Enable Businesses To Analyze And Understand Visual Data. We Use Deep Learning Algorithms To Provide Insights That Help Our Clients To Make Informed Decisions.",
+  },
+  {
+    title: "Machine Learning",
+    image: "/assets/service-images/ml.webp",
+    description:
+      "Our Machine Learning Services Help Businesses To Develop Predictive Models That Enable Them To Make Data-Driven Decisions. We Use State-Of-The-Art Algorithms And Techniques To Develop Models That Are Accurate And Reliable.",
+  },
+  {
+    title: "Custom AI Solutions",
+    image: "/assets/service-images/ci.jpg",
+    description:
+      "We Also Offer Custom AI Solutions That Are Tailored To Meet The Specific Needs Of Our Clients. Our Team Of Experts Works Closely With Our Clients To Develop Solutions That Address Their Unique Challenges.",
+  },
+
+  {
+    title: "AI Consulting",
+    image: "/assets/service-images/consultatn.jpg",
+    description:
+      "Our AI Consulting Services Help Businesses To Develop AI Strategies That Align With Their Goals And Objectives. We Provide Expert Guidance And Support To Help Our Clients Make Informed Decisions About Their AI Investments.",
+  },
+  {
+    title: "AI Development",
+    image: "/assets/service-images/ai develpment.jpeg",
+    description:
+      "We Offer AI Development Services To Businesses That Want To Develop Their Own AI Applications. Our Team Of Experts Has Experience In Developing AI Applications For A Range Of Industries And Use Cases.",
+  },
+  {
+    title: "IOT And Robotics",
+    image: "/assets/service-images/robotic.webp",
+    description:
+      "Our IOT And Robotics Services Integrate Cutting-Edge Technologies To Build Innovative Solutions For Automation And Data-Driven Decision-Making. We Specialize In Designing And Deploying IoT Devices And Systems, As Well As Developing Intelligent Robotic Solutions For Various Industries. Whether It's Optimizing Manufacturing Processes, Enhancing Logistics Operations, Or Enabling Smart Home Automation, We Provide Comprehensive Services Tailored To Meet The Unique Needs Of Our Clients.",
+  },
+  {
+    title: "Data Analytics",
+    image: "/assets/service-images/data analytic.jpg",
+    description:
+      "Our Data Analytics Services Empower Businesses With Actionable Insights Derived From Their Data. We Offer Advanced Analytics Solutions, Including Data Mining, Predictive Modeling, And Statistical Analysis, To Extract Valuable Information And Drive Informed Decision-Making. By Leveraging State-Of-The-Art Techniques And Tools, We Help Our Clients Uncover Hidden Patterns, Trends, And Correlations In Their Data, Enabling Them To Optimize Processes, Identify Opportunities, And Mitigate Risks.",
+  },
+  {
+    title: "Python Scripting And Scraping",
+    image: "/assets/service-images/pyimage.jpg",
+    description:
+      "Our Python Scripting And Scraping Services Cater To Businesses Seeking Automation And Data Extraction Solutions. Leveraging Python's Versatile Capabilities, We Develop Custom Scripts And Scraping Tools To Automate Repetitive Tasks, Gather Data From Websites, And Extract Valuable Information For Analysis. Whether It's Web Scraping For Market Research, Data Aggregation For Business Intelligence, Or Process Automation For Increased Efficiency, Our Team Delivers Tailored Solutions To Meet The Specific Requirements Of Our Clients.",
+  },
+];
