@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import type { Metadata } from "next";
 import Spinner from "./components/atoms/Spinner";
+import Testimonial from "./components/sections/testimonial";
 
 // lazy imports
 const Navbar = lazy(() => import("./components/atoms/Navbar"));
@@ -33,6 +34,7 @@ const HomePage: React.FC = () => {
       <div style={{ height: 200 }} />
       <ServicesDemo />
       <OurProjectsDemo />
+      <Testimonial />
     </Suspense>
   );
 };

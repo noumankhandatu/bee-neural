@@ -1,48 +1,12 @@
-"use client";
+import { HoverEffect } from "./card-hover-effect";
 
-import { primary } from "@/utils/colors";
-import React from "react";
-import { GlobeDemo } from "../molecules/globe";
-import ProjectCard from "../atoms/ProjectCard";
-import { projectCardArray } from "@/lib/raw-data";
-import { HoverEffect } from "../molecules/card-hover-effect/card-hover-effect";
-
-const OurProjectsDemo = () => {
+export function CardHoverEffectDemo() {
   return (
-    <div className="container mx-auto px-4">
-      <GlobeDemo />
-      <div className="max-w-5xl mx-auto px-8">
-        <HoverEffect items={projects} />
-      </div>
-      <div className="flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 w-[80%]">
-          {projectCardArray.map(
-            (
-              items: {
-                title: string;
-                description: string;
-                icon: any;
-              },
-              id: number
-            ) => {
-              return (
-                <ProjectCard
-                  key={id}
-                  icon={items.icon}
-                  title={items.title}
-                  description={items.description}
-                />
-              );
-            }
-          )}
-        </div>
-      </div>
+    <div className="max-w-5xl mx-auto px-8">
+      <HoverEffect items={projects} />
     </div>
   );
-};
-
-export default OurProjectsDemo;
-
+}
 export const projects = [
   {
     title: "Imtiyaz Ali (CEO)",

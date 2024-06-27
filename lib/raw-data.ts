@@ -1,3 +1,5 @@
+import { projectIcons } from "./icons";
+
 export const testimonials = [
   {
     quote:
@@ -165,5 +167,26 @@ export const serviceArray = [
     image: "/assets/service-images/pyimage.jpg",
     description:
       "Our Python Scripting And Scraping Services Cater To Businesses Seeking Automation And Data Extraction Solutions. Leveraging Python's Versatile Capabilities, We Develop Custom Scripts And Scraping Tools To Automate Repetitive Tasks, Gather Data From Websites, And Extract Valuable Information For Analysis. Whether It's Web Scraping For Market Research, Data Aggregation For Business Intelligence, Or Process Automation For Increased Efficiency, Our Team Delivers Tailored Solutions To Meet The Specific Requirements Of Our Clients.",
+  },
+];
+
+export const projectCardArray = [
+  {
+    title: "Auto-Grading System",
+    description:
+      "The AI-Based Auto-Grading System For Schools Integrates Sentence Transformers And Cosine Similarity To Automate Grading Tasks Efficiently. By Leveraging Sentence Transformers, The System Encodes Textual Information Into Dense Vector Representations, Capturing Semantic Similarities Between Student Responses And Reference Solutions. Using Cosine Similarity, It Measures The Likeness Between Encoded Answers, Enabling Accurate Grading Based On Similarity Scores. This Automated Approach Streamlines The Grading Process, Providing Schools With A Reliable And Efficient Solution For Assessing Student Work And Delivering Prompt Feedback To Both Students And Educators.",
+    icon: projectIcons.database,
+  },
+  {
+    title: "Face Attendance System",
+    description:
+      "The Face Attendance System Using Python Is A Software Application Designed To Automate Attendance Tracking By Recognizing Faces. Leveraging Python's Libraries And Frameworks Such As OpenCV And Face Recognition, The System Captures Images Or Video Streams From Cameras, Detects Faces Within Them, And Matches Them Against A Database Of Known Faces To Identify Individuals. Upon Successful Recognition, The System Records The Attendance Of The Recognized Individuals, Logging Timestamps And Possibly Additional Information Such As Employee Or Student IDs. The System Offers A Convenient And Efficient Alternative To Traditional Methods Of Attendance Tracking, Reducing Manual Effort And Improving Accuracy. Additionally, It May Provide Features Such As Real-Time Monitoring, Reporting, And Integration With Existing Databases Or Attendance Management Systems.",
+    icon: projectIcons.camera,
+  },
+  {
+    title: "Sign Language Gesture Recognition",
+    description:
+      "The Project Aims To Develop A Deep Learning Model Tailored For Action Recognition Tasks, With A Probable Foundation In The I3D Architecture. This Architecture, Known For Its Effectiveness In Video-Based Tasks, Is Likely Being Utilized To Recognize And Classify Actions Or Gestures Within Video Sequences. The Goal Is To Train A Model Capable Of Accurately Identifying Various Human Actions Or Movements, Which Could Have Applications In Areas Such As Sign Language Recognition, Gesture Control Systems, Or Activity Recognition In Surveillance Footage. The Project Involves Tasks Such As Data Preprocessing, Model Training, And Evaluation, With A Focus On Achieving High Performance In Action Recognition Accuracy.",
+    icon: projectIcons.arrowUp,
   },
 ];
