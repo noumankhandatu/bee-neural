@@ -6,7 +6,7 @@ import { serviceArray } from "@/lib/raw-data";
 const ServicesDemo = () => {
   return (
     <>
-      <p className="text-4xl text-center" style={{ color: primary }}>
+      <p className="text-4xl text-center font-bold" style={{ color: primary }}>
         Our Services
       </p>
       <p className="text-[16px] text-center mt-8">
