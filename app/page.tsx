@@ -1,14 +1,20 @@
 import React, { lazy, Suspense } from "react";
 import type { Metadata } from "next";
-import { bgImage } from "@/utils/styles";
-import { HeroParallaxDemo } from "./components/molecules/hello-parallax";
-import { GoogleGeminiEffect } from "./components/molecules/google-gemini-effect/google-gemini-effect";
-import { GoogleGeminiEffectDemo } from "./components/molecules/google-gemini-effect";
-import { AboutUsDemo } from "./components/sections/aboutus";
-import ServicesDemo from "./components/sections/services";
-import { ThreeDCardDemo } from "./components/molecules/3d-card";
-import OurProjectsDemo from "./components/sections/our-projects";
+import Spinner from "./components/atoms/Spinner";
+
+// lazy imports
 const Navbar = lazy(() => import("./components/atoms/Navbar"));
+const HeroParallaxDemo = lazy(
+  () => import("./components/molecules/hello-parallax")
+);
+const OurProjectsDemo = lazy(
+  () => import("./components/sections/our-projects")
+);
+const GoogleGeminiEffectDemo = lazy(
+  () => import("./components/molecules/google-gemini-effect")
+);
+const ServicesDemo = lazy(() => import("./components/sections/services"));
+const AboutUsDemo = lazy(() => import("./components/sections/aboutus"));
 
 export const metadata: Metadata = {
   title: "Bee Neural Home",
@@ -17,7 +23,7 @@ export const metadata: Metadata = {
 
 const HomePage: React.FC = () => {
   return (
-    <Suspense fallback={<div className="center">Loading...</div>}>
+    <Suspense fallback={<Spinner />}>
       <Navbar />
       <HeroParallaxDemo />
       <GoogleGeminiEffectDemo />

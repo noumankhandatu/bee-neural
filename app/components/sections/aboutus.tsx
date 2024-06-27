@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { TracingBeam } from "../molecules/tracing-beam";
 
-export function AboutUsDemo() {
+function AboutUsDemo() {
   return (
     <TracingBeam className="px-6">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
@@ -40,6 +40,7 @@ export function AboutUsDemo() {
     </TracingBeam>
   );
 }
+export default AboutUsDemo;
 
 const dummyContent = [
   {
