@@ -41,7 +41,6 @@ const HomePage: React.FC = () => {
       <OurProjectsDemo />
       <Testimonial />
       <TeamCarousel />
-
       <FaqDemo />
       <SignupFormDemo />
       <Footer />
