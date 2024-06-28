@@ -6,6 +6,9 @@ import {
   FaInstagram,
   FaGoogle,
 } from "react-icons/fa";
+import { Label } from "../sections/contact-section/label";
+import { Input } from "../sections/contact-section/input";
+import { cn } from "@/utils/cn";
 
 const Footer = () => {
   return (
@@ -61,14 +64,9 @@ const Footer = () => {
             Latest Updates.
           </p>
           <div className="flex">
-            <input
-              type="text"
-              placeholder="Your Email"
-              className="p-2 flex-grow rounded-l-md"
-            />
-            <button className="bg-white text-teal-700 px-4 py-2 rounded-r-md">
-              Subscribe
-            </button>
+            <LabelInputContainer className="mb-4">
+              <Input id="email" placeholder="mike@mail.com" type="email" />
+            </LabelInputContainer>
           </div>
         </div>
       </div>
@@ -77,3 +75,16 @@ const Footer = () => {
 };
 
 export default Footer;
+const LabelInputContainer = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div className={cn("flex flex-col space-y-2 w-full", className)}>
+      {children}
+    </div>
+  );
+};
