@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimatedTooltipPreview } from "../molecules/customer-tooltip";
 import { primary } from "@/utils/colors";
-import { CardHoverEffectDemo } from "../molecules/card-hover-effect";
+import { InfiniteMovingCardsDemo } from "../molecules/InfiniteMovingCards";
 
 const Testimonial = () => {
   return (
@@ -12,11 +12,11 @@ const Testimonial = () => {
       >
         Testimonials
       </p>
-      <p className="text-[16px] text-center mt-8 mb-20">
+      <p className="text-[16px] text-center mt-4 mb-12">
         See What People Have To Say About Us
       </p>
       <AnimatedTooltipPreview />
-      <CardHoverEffectDemo />
+      <InfiniteMovingCardsDemo />
     </div>
   );
 };

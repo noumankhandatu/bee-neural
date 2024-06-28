@@ -1,35 +1,49 @@
-import { HoverEffect } from "./card-hover-effect";
+"use client";
 
-export function CardHoverEffectDemo() {
+import React, { useEffect, useState } from "react";
+import { InfiniteMovingCards } from "./infinite-moving-cards";
+
+export function InfiniteMovingCardsDemo() {
   return (
-    <div className="max-w-5xl mx-auto px-8">
-      <HoverEffect items={projects} />
+    <div className="h-[20rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <InfiniteMovingCards
+        items={testimonials}
+        direction="right"
+        speed="slow"
+      />
     </div>
   );
 }
-export const projects = [
+
+const testimonials = [
   {
-    title: "Imtiyaz Ali (CEO)",
-    description:
+    quote:
       "Working with BeeNeural was an amazing experience. They were able to  deliver a custom AI solution that exceeded our expectations. We highly recommend their services.",
-    link: "",
+    name: "Imtiyaz Ali ",
+    title: "CEO",
   },
   {
-    title: "Shaapa (DIGIACOM) ",
-    description:
+    quote:
       "AI Services Hub and BeeNeural helped us to develop a machine learning model that improved our sales forecasting accuracy. Their team was professional  and knowledgeable, and we would definitely work with them again.",
-    link: "",
+    name: "Shaapa",
+    title: "DIGIACOM",
   },
   {
-    title: "Aly (CTO)",
-    description:
+    quote:
       "AI Services Hub and BeeNeural provided us with valuable insights into our customer   behavior using natural language processing. Their team was responsive and delivered  the project on time. We would highly recommend their services.",
-    link: "",
+    name: "Aly",
+    title: "CTO",
   },
   {
-    title: "Aleezy (FREELANCER)",
-    description:
+    quote:
+      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+    name: "Jane Austen",
+    title: "Pride and Prejudice",
+  },
+  {
+    quote:
       "AI Services Hub and BeeNeural provided us with valuable insights into our customer  behavior using natural language processing. Their team was responsive and delivered  the project on time. We would highly recommend their services.",
-    link: "https://meta.com",
+    name: "Aleezy",
+    title: "FREELANCER",
   },
 ];
