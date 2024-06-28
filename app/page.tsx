@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import Spinner from "./components/atoms/Spinner";
 import Testimonial from "./components/sections/testimonial";
 import { SignupFormDemo } from "./components/sections/contact-section";
+import FaqDemo from "./components/sections/faq";
+import Footer from "./components/atoms/Footer";
+import RocketFired from "./components/atoms/rocket";
 
 // lazy imports
 const Navbar = lazy(() => import("./components/atoms/Navbar"));
@@ -36,7 +39,16 @@ const HomePage: React.FC = () => {
       <ServicesDemo />
       <OurProjectsDemo />
       <Testimonial />
+      <FaqDemo />
       <SignupFormDemo />
+      <Footer />
+      <div
+        className="flex align-middle justify-center items-center"
+        style={{ height: 120, backgroundColor: "black", color: "white" }}
+      >
+        <p> Copyright © 2024 BeeNeural. All Rights Reserved.</p>
+      </div>
+      <RocketFired />
     </Suspense>
   );
 };
