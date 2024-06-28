@@ -16,7 +16,6 @@ const Testimonial = () => {
         See What People Have To Say About Us
       </p>
       <AnimatedTooltipPreview />
-      <div style={{ height: 100 }} />
       <CardHoverEffectDemo />
     </div>
   );
