@@ -6,6 +6,7 @@ import { SignupFormDemo } from "./components/sections/contact-section";
 import FaqDemo from "./components/sections/faq";
 import Footer from "./components/atoms/Footer";
 import RocketFired from "./components/atoms/rocket";
+import TeamCarousel from "./components/molecules/team-carousel/team-carousel";
 
 // lazy imports
 const Navbar = lazy(() => import("./components/atoms/Navbar"));
@@ -39,6 +40,8 @@ const HomePage: React.FC = () => {
       <ServicesDemo />
       <OurProjectsDemo />
       <Testimonial />
+      <TeamCarousel />
+
       <FaqDemo />
       <SignupFormDemo />
       <Footer />
