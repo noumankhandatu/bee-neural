@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import TeamCard from "../../atoms/TeamCard";
+import { primary } from "@/utils/colors";
 
 const TeamCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,25 +52,35 @@ const TeamCarousel = () => {
   };
 
   return (
-    <div className="flex justify-center bg-black p-10">
-      <div className="relative w-[90%] mx-auto">
-        <div className="overflow-hidden relative">
-          <div
-            className="flex transition-transform ease-in-out duration-500 gap-4"
-            style={{ transform: `translateX(-${(currentIndex / 4) * 100}%)` }}
-          >
-            {cards.map((member, index) => (
-              <div key={index} className="w-1/4 flex-shrink-0">
-                <TeamCard
-                  name={member.name}
-                  position={member.position}
-                  image={member.image}
-                />
-              </div>
-            ))}
+    <div>
+      <p
+        className="text-4xl text-center font-bold mt-20"
+        style={{ color: primary }}
+      >
+        🤝 Our Team 🎉
+      </p>
+      <p className="text-[16px] text-center mt-4 mb-12">
+        We arent team we are family
+      </p>
+      <div className="flex justify-center bg-[#222222] p-10">
+        <div className="relative w-[90%] mx-auto">
+          <div className="overflow-hidden relative">
+            <div
+              className="flex transition-transform ease-in-out duration-500 gap-4"
+              style={{ transform: `translateX(-${(currentIndex / 4) * 100}%)` }}
+            >
+              {cards.map((member, index) => (
+                <div key={index} className="w-1/4 flex-shrink-0">
+                  <TeamCard
+                    name={member.name}
+                    position={member.position}
+                    image={member.image}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        {/* <button
+          {/* <button
           onClick={handlePrev}
           className="absolute top-1/2 transform -translate-y-1/2 left-0 bg-white text-gray-800 p-2 rounded-full shadow-md hover:bg-gray-200"
         >
@@ -81,7 +92,7 @@ const TeamCarousel = () => {
         >
           <FaChevronRight />
         </button> */}
-        {/* <div className="absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
+          {/* <div className="absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
           {Array.from({ length: cards.length - 3 }).map((_, index) => (
             <button
               key={index}
@@ -92,6 +103,7 @@ const TeamCarousel = () => {
             />
           ))}
         </div> */}
+        </div>
       </div>
     </div>
   );
