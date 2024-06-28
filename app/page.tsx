@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import type { Metadata } from "next";
 import Spinner from "./components/atoms/Spinner";
 import Testimonial from "./components/sections/testimonial";
+import { SignupFormDemo } from "./components/sections/contact-section";
 
 // lazy imports
 const Navbar = lazy(() => import("./components/atoms/Navbar"));
@@ -35,6 +36,7 @@ const HomePage: React.FC = () => {
       <ServicesDemo />
       <OurProjectsDemo />
       <Testimonial />
+      <SignupFormDemo />
     </Suspense>
   );
 };
