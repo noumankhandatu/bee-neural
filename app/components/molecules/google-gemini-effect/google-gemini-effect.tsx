@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/utils/cn";
 import { motion, MotionValue } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 
 const transition = {
@@ -26,11 +27,11 @@ export const GoogleGeminiEffect = ({
         className=" absolute -top-60 left-[40%] md:text-7xl  text-center text-xl  font-bold text-black dark:text-white"
       >
         B<span className="text-black">e</span>e
-        <span className="text-black">Neural</span> 🐝
+        <span className="text-black">Neural</span> 🧠
       </div>
-      <p className=" absolute -top-[120px] left-[36%] text-xs md:text-xl font-normal text-center text-black mt-4 max-w-lg mx-auto">
+      <p className=" absolute -top-[120px] lg:left-[36%]  left-[0%] text-xs md:text-xl font-normal text-center text-black mt-4 max-w-lg mx-auto">
         {description ||
-          `Bee Neural is a forward-thinking company dedicated to leveraging neural network technologies in the context of beekeeping and environmental conservation.🧠`}
+          `Bee Neural is a forward-thinking company dedicated to leveraging neural network technologies in the context of beekeeping and environmental conservation.`}
       </p>
       <div className="w-full h-[890px] -top-60 md:-top-[450px]  flex items-center justify-center bg-red-transparent absolute ">
         <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">

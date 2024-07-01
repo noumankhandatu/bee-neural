@@ -22,3 +22,17 @@
 .py-20 {
   padding: 0px;
 }
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 5px; /* Set the scrollbar width */
+  border-radius: 100px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ef7709; /* Set the scrollbar color */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the scrollbar track color */
+}

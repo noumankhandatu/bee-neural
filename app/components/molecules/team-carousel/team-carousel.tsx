@@ -2,36 +2,35 @@
 import React, { useState, useEffect } from "react";
 import TeamCard from "../../atoms/TeamCard";
 import { AnimatedPinDemo } from "../pin-card";
-
+const cards = [
+  {
+    name: "Gulshan Yasmeen",
+    position: "Founder And AI Lead Researchers",
+    image: "/assets/team/team1.webp",
+  },
+  {
+    name: "Engr Shoaib Uddin",
+    position: "Co-Founder Data Scientist And NLP Specialist",
+    image: "/assets/team/team2.webp",
+  },
+  {
+    name: "Hakeem Yar Baig",
+    position: "Co-Founder DevOps And ML Engineer",
+    image: "/assets/team/hakim.jpeg",
+  },
+  {
+    name: "Ammar Ali",
+    position: "Co-Founder Data Scientist Computer Vision Expert",
+    image: "/assets/team/ammer.webp",
+  },
+  {
+    name: "Ania Shams",
+    position: "Machine Learning Engineer And Bussiness Developer",
+    image: "/assets/team/shams.jpeg",
+  },
+];
 const TeamCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const cards = [
-    {
-      name: "Gulshan Yasmeen",
-      position: "Founder And AI Lead Researchers",
-      image: "/assets/team/team1.webp",
-    },
-    {
-      name: "Engr Shoaib Uddin",
-      position: "Co-Founder Data Scientist And NLP Specialist",
-      image: "/assets/team/team2.webp",
-    },
-    {
-      name: "Hakeem Yar Baig",
-      position: "Co-Founder DevOps And ML Engineer",
-      image: "/assets/team/hakim.jpeg",
-    },
-    {
-      name: "Ammar Ali",
-      position: "Co-Founder Data Scientist Computer Vision Expert",
-      image: "/assets/team/ammer.webp",
-    },
-    {
-      name: "Ania Shams",
-      position: "Machine Learning Engineer And Bussiness Developer",
-      image: "/assets/team/shams.jpeg",
-    },
-  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,7 +60,7 @@ const TeamCarousel = () => {
       <p className="text-[16px] text-center mt-4 mb-12">
         See What People Have To Say About Us
       </p>
-      <div className="flex justify-center  p-10">
+      <div className="  lg:flex hidden flex justify-center  p-10 ">
         <div className="relative w-[90%] mx-auto">
           <div className="overflow-hidden relative">
             <div
@@ -91,3 +90,25 @@ const TeamCarousel = () => {
 };
 
 export default TeamCarousel;
+
+export const TeamCarouselMobile = () => {
+  return (
+    <div className="flex lg:hidden justify-center lg:p-10  overflow-scroll gap-12">
+      <div className="relative w-[90%] mx-auto">
+        <div className=" relative">
+          <div className="flex gap-[100px] overflow-x-scroll lg:flex-wrap">
+            {cards.map((member, index) => (
+              <div key={index} className="w-full lg:w-1/4 flex-shrink-0 ">
+                <AnimatedPinDemo
+                  name={member.name}
+                  position={member.position}
+                  image={member.image}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
