@@ -6,7 +6,7 @@ import { TracingBeam } from "../molecules/tracing-beam";
 function AboutUsDemo() {
   return (
     <TracingBeam className="px-6">
-      <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+      <div id="about" className="max-w-2xl mx-auto antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
           <div key={`content-${index}`} className="mb-10">
             <div

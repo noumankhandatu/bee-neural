@@ -11,9 +11,9 @@ const navItems = [
   "Portfolio",
   "Team",
   "Career",
-  "Blog",
   "Contact",
   "FAQ",
+  "waitlist",
 ];
 
 const Navbar: React.FC = () => {
@@ -70,8 +70,12 @@ const Navbar: React.FC = () => {
               {navItems.map((item) => (
                 <li key={item}>
                   <a
-                    href={`#${item.toLowerCase()}`}
-                    className="block py-2 px-3 lg:text-[18px] text-[16px]   md:text-[10px]    rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0  md:dark:hover:text-primary  text-beta  "
+                    href={
+                      item === "waitlist"
+                        ? `${item.toLowerCase()}`
+                        : `#${item.toLowerCase()}`
+                    }
+                    className="block capitalize py-2 px-3 lg:text-[18px] text-[16px]   md:text-[10px]    rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0  md:dark:hover:text-primary  text-beta  "
                   >
                     {item}
                   </a>

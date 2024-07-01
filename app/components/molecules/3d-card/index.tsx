@@ -22,7 +22,6 @@ export function ThreeDCardDemo({ title, description, image }: ThreeCardTypes) {
     if (showFullDescription) {
       return description;
     } else {
-      // Display shortened description with '...'
       const maxLength = 100; // Maximum characters to show before truncating
       if (description.length > maxLength) {
         return `${description.substring(0, maxLength)}...`;
@@ -33,8 +32,8 @@ export function ThreeDCardDemo({ title, description, image }: ThreeCardTypes) {
   };
 
   return (
-    <CardContainer className="inter-var ">
-      <CardBody className="bg-secondary relative group/card   border-black/[0.1] w-auto  h-auto rounded-xl p-6 border  ">
+    <CardContainer className="inter-var">
+      <CardBody className="bg-secondary relative group/card border-black/[0.1] w-auto h-auto rounded-xl p-6 border transition-all duration-300 ease-in-out  hover:shadow-2xl hover:shadow-orange-500/50">
         <CardItem
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"

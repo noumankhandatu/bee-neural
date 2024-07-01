@@ -24,7 +24,7 @@ export function SignupFormDemo() {
   };
 
   return (
-    <div className="container mx-auto py-10">
+    <div id="contact" className="container mx-auto py-10">
       <p
         className="text-4xl text-center font-bold mt-20"
         style={{ color: primary }}

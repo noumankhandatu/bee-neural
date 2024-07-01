@@ -113,6 +113,7 @@ const FaqDemo = () => {
   return (
     <>
       <p
+        id="faq"
         className="text-4xl text-center font-bold mt-20"
         style={{ color: primary }}
       >

@@ -50,7 +50,7 @@ const TeamCarousel = () => {
   };
 
   return (
-    <div>
+    <div id="team">
       <div
         style={{ color: "#EF7709" }}
         className="  md:text-7xl  text-center text-xl  font-bold text-black "

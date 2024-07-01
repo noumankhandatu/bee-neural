@@ -7,6 +7,7 @@ const ServicesDemo = () => {
   return (
     <>
       <div
+        id="services"
         style={{ color: "#EF7709" }}
         className=" mb-6 md:text-7xl  text-center text-xl  font-bold text-black dark:text-white"
       >
