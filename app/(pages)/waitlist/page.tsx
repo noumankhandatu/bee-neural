@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { BackgroundBeams } from "../components/molecules/background-beam";
+import { BackgroundBeams } from "../../components/molecules/background-beam";
 import Link from "next/link";
 
 const page = () => {
