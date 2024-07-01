@@ -1,7 +1,10 @@
 import React from "react";
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import ClientProvider from "./components/atoms/ClientProvider";
+
+// Import the Client Component
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -21,12 +24,21 @@ export const metadata: Metadata | any = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        {metadata.icons.icon.map((icon: any, index: number) => (
+          <link key={index} rel={icon.rel} type={icon.type} href={icon.url} />
+        ))}
+      </head>
+      <body className={roboto.className}>
+        <ClientProvider>{children}</ClientProvider>
+      </body>
     </html>
   );
 }

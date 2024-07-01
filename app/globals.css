@@ -19,3 +19,6 @@
   -ms-transform: translate(-50%, -50%) !important;
   -o-transform: translate(-50%, -50%) !important;
 }
+.py-20 {
+  padding: 0px;
+}

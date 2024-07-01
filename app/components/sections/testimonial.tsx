@@ -6,12 +6,12 @@ import { InfiniteMovingCardsDemo } from "../molecules/InfiniteMovingCards";
 const Testimonial = () => {
   return (
     <div>
-      <p
-        className="text-4xl text-center font-bold mt-20"
-        style={{ color: primary }}
+      <div
+        style={{ color: "#EF7709" }}
+        className="  md:text-7xl  text-center text-xl  font-bold text-black dark:text-white"
       >
-        Testimonials
-      </p>
+        Testimonials 🤝
+      </div>
       <p className="text-[16px] text-center mt-4 mb-12">
         See What People Have To Say About Us
       </p>

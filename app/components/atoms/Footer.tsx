@@ -12,7 +12,7 @@ import { cn } from "@/utils/cn";
 
 const Footer = () => {
   return (
-    <footer className="bg-teal-700 text-white py-12">
+    <footer className="bg-primary text-white py-12">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 w-[80%]">
         <div className="space-y-4">
           <h2 className="text-lg font-bold">ABOUT US</h2>

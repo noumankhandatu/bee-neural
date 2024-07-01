@@ -7,8 +7,6 @@ import FaqDemo from "./components/sections/faq";
 import Footer from "./components/atoms/Footer";
 import RocketFired from "./components/atoms/rocket";
 import TeamCarousel from "./components/molecules/team-carousel/team-carousel";
-import { LampDemo } from "./components/molecules/Lamp";
-import { AnimatedPinDemo } from "./components/molecules/pin-card";
 
 // lazy imports
 const Navbar = lazy(() => import("./components/atoms/Navbar"));
@@ -40,17 +38,21 @@ const HomePage: React.FC = () => {
       <hr />
       <div style={{ height: 200 }} />
       <ServicesDemo />
+      <div style={{ height: 200 }} />
       <OurProjectsDemo />
+      <div style={{ height: 100 }} />
       <Testimonial />
-      <LampDemo />
+      <div style={{ height: 100 }} />
+
       <TeamCarousel />
-      <AnimatedPinDemo />
+      <div style={{ height: 100 }} />
+
       <FaqDemo />
       <SignupFormDemo />
       <Footer />
       <div
         className="flex align-middle justify-center items-center"
-        style={{ height: 120, backgroundColor: "black", color: "white" }}
+        style={{ height: 120, backgroundColor: "#eeefef", color: "black" }}
       >
         <p> Copyright © 2024 BeeNeural. All Rights Reserved.</p>
       </div>
@@ -60,18 +62,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-
-{
-  /* <div style={bgImage}>
-        <Navbar />
-        <div className="text-center center ">
-          <p className="text-white text-[50px]">
-            Empower Your Business With AI Services
-          </p>
-          <p className="text-white text-[20px] font-bold">With BeeNeural</p>
-        </div>
-      </div> */
-}
-{
-  /* section two */
-}

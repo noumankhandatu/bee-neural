@@ -112,7 +112,7 @@ export const products = [
 
 export const serviceArray = [
   {
-    title: "Natural Language Processing (NLP)",
+    title: "Natural Language Processing ",
     image: "/assets/service-images/nlp.jpg",
     description:
       "Our NLP Services Help Businesses To Understand And Analyze Human Language Data. We Use Machine Learning Algorithms To Extract Insights And Provide Valuable Information To Our Clients.",

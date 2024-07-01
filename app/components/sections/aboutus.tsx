@@ -9,20 +9,23 @@ function AboutUsDemo() {
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
           <div key={`content-${index}`} className="mb-10">
-            <h2
+            <div
               style={{
                 backgroundImage: `-webkit-linear-gradient(#EF7709, #EF7709)`,
                 WebkitBackgroundClip: "text",
                 color: "transparent",
               }}
-              className="  text-[50px]  px-4 py-1 mb-4"
+              className="  text-[60px] px-4 py-1 mb-4 font-bold text-center"
             >
-              {item.badge}
-            </h2>
-
-            <p className={"text-xl mb-4"}>{item.title}</p>
-
-            <div className="text-sm  prose prose-sm dark:prose-invert">
+              <div
+                style={{ color: "#EF7709" }}
+                className=" mb-6 md:text-7xl  text-center text-xl  font-bold text-black dark:text-white"
+              >
+                {item.badge}
+                🧑‍💼
+              </div>
+            </div>
+            <div className="text-sm  prose prose-sm dark:prose-invert text-center">
               {item?.image && (
                 <Image
                   src={item.image}
@@ -32,7 +35,11 @@ function AboutUsDemo() {
                   className="rounded-lg mb-10 object-cover"
                 />
               )}
-              {item.description}
+              {/* <p className={"text-3xl mb-4 text-center"}>{item.title}</p> */}
+
+              <div className="max-w-2xl text-base md:text-lg mt-8 text-beta">
+                {item.description}
+              </div>
             </div>
           </div>
         ))}

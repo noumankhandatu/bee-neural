@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 const navItems = [
   "Home",
@@ -16,6 +17,8 @@ const navItems = [
 ];
 
 const Navbar: React.FC = () => {
+  const colors = useSelector((state: any) => state.theme);
+  console.log(colors, "colors");
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -24,7 +27,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div>
-      <nav className=" border-gray-200 dark:bg-gray-900  w-full bg-transparent">
+      <nav className={`w-full bg-secondary`}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <Image
             src="/assets/svg/logo.svg"
@@ -36,7 +39,7 @@ const Navbar: React.FC = () => {
           <button
             onClick={toggleMenu}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white hover:text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary hover:text-primary rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-default"
             aria-expanded={isOpen}
           >
@@ -63,12 +66,12 @@ const Navbar: React.FC = () => {
             } w-full md:block md:w-auto`}
             id="navbar-default"
           >
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent ">
               {navItems.map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
-                    className="block py-2 px-3 lg:text-[18px] text-[16px]   md:text-[10px]    rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-red text-black md:text-black  md:dark:hover:bg-transparent"
+                    className="block py-2 px-3 lg:text-[18px] text-[16px]   md:text-[10px]    rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0  md:dark:hover:text-primary  text-beta  "
                   >
                     {item}
                   </a>
