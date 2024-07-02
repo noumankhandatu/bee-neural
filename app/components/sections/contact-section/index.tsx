@@ -5,19 +5,8 @@ import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
 import { Label } from "./label";
 import { Input } from "./input";
 import { primary } from "@/utils/colors";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-const mapContainerStyle = {
-  width: "100%",
-  height: "400px",
-};
-
-const center = {
-  lat: 33.886659,
-  lng: 73.935982,
-};
 
 export function SignupFormDemo() {
   const [formData, setFormData] = useState({
@@ -40,13 +29,16 @@ export function SignupFormDemo() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.BASEURL}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASEURL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const result = await response.json();
       if (response.ok) {
