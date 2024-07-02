@@ -1,4 +1,6 @@
 import nodemailer from "nodemailer";
+import fs from "fs";
+import path from "path";
 
 export async function POST(request) {
   const { firstName, lastName, email, message } = await request.json();
@@ -22,27 +24,24 @@ export async function POST(request) {
     },
   });
 
+  // Read HTML template file
+  // Read HTML template file
+  const templatePath = path.join(process.cwd(), "template", "template.html");
+  let htmlTemplate = fs.readFileSync(templatePath, "utf-8");
+
+  // Replace placeholders with actual values
+  htmlTemplate = htmlTemplate
+    .replace(/{{firstName}}/g, firstName)
+    .replace(/{{lastName}}/g, lastName)
+    .replace(/{{email}}/g, email)
+    .replace(/{{message}}/g, message);
+
   // Email options
   const mailOptions = {
     from: email,
     to: process.env.EMAIL,
     subject: "BeeNeural  Contact Form Submission",
-    html: `
-    <div style="font-family: Arial, sans-serif; color: #333;">
-      <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; border: 1px solid #ddd; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #dd5f00; text-align: center;">New Contact Form Submission</h2>
-        <div style="padding: 10px 20px; background-color: #ffffff; border-radius: 5px; margin-bottom: 20px;">
-          <p><strong style="color: #dd5f00;">Name:</strong> ${firstName} ${lastName}</p>
-          <p><strong style="color: #dd5f00;">Email:</strong> <a href="mailto:${email}" style="color: #dd5f00; text-decoration: none;">${email}</a></p>
-          <p><strong style="color: #dd5f00;">Message:</strong></p>
-          <p style="background-color: #f1f1f1; padding: 15px; border-radius: 5px;">${message}</p>
-        </div>
-        <footer style="text-align: center; color: #aaa; font-size: 12px;">
-          <p>Thank you for contacting beeneural!</p>
-        </footer>
-      </div>
-    </div>
-  `,
+    html: htmlTemplate,
   };
 
   // Send the email
