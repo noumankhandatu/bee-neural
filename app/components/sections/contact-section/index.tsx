@@ -6,6 +6,8 @@ import { Label } from "./label";
 import { Input } from "./input";
 import { primary } from "@/utils/colors";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const mapContainerStyle = {
   width: "100%",
@@ -18,13 +20,50 @@ const center = {
 };
 
 export function SignupFormDemo() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    setLoading(true);
+
+    try {
+      const response = await fetch("http://localhost:3000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        toast.success(result.message);
+      } else {
+        toast.error(result.message);
+      }
+    } catch (error) {
+      toast.error("Failed to send email. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div id="contact" className="container mx-auto py-10">
+      <ToastContainer />
       <p
         className="text-4xl text-center font-bold mt-20"
         style={{ color: primary }}
@@ -46,9 +85,9 @@ export function SignupFormDemo() {
             style={{ border: 0 }}
           ></iframe>
 
-          <div className=" w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+          <div className="w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
             <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-              Your opinions always matters 🙌
+              Your opinions always matter 🙌
             </h2>
             <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
               Please write your opinions in your humble words
@@ -56,47 +95,60 @@ export function SignupFormDemo() {
             <form className="my-8" onSubmit={handleSubmit}>
               <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                 <LabelInputContainer>
-                  <Label htmlFor="firstname">First name</Label>
-                  <Input id="firstname" placeholder="Tyler" type="text" />
+                  <Label htmlFor="firstName">First name</Label>
+                  <Input
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Tyler"
+                    type="text"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    disabled={loading}
+                  />
                 </LabelInputContainer>
                 <LabelInputContainer>
-                  <Label htmlFor="lastname">Last name</Label>
-                  <Input id="lastname" placeholder="Durden" type="text" />
+                  <Label htmlFor="lastName">Last name</Label>
+                  <Input
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Durden"
+                    type="text"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    disabled={loading}
+                  />
                 </LabelInputContainer>
               </div>
               <LabelInputContainer className="mb-4">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
                   id="email"
+                  name="email"
                   placeholder="projectmayhem@fc.com"
                   type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  disabled={loading}
                 />
               </LabelInputContainer>
-              {/* <LabelInputContainer className="mb-4">
-                <Label htmlFor="password">Password</Label>
-                <Input id="password" placeholder="••••••••" type="password" />
-              </LabelInputContainer>
-              <LabelInputContainer className="mb-8">
-                <Label htmlFor="twitterpassword">Your twitter password</Label>
-                <Input
-                  id="twitterpassword"
-                  placeholder="••••••••"
-                  type="password"
-                />
-              </LabelInputContainer> */}
               <LabelInputContainer className="mb-4">
-                <Label htmlFor="email">Message</Label>
+                <Label htmlFor="message">Message</Label>
                 <Input
-                  id="email"
+                  id="message"
+                  name="message"
                   placeholder="Write your humble words 🙂"
-                  type="email"
+                  type="text"
+                  value={formData.message}
+                  onChange={handleChange}
+                  disabled={loading}
                 />
               </LabelInputContainer>
               <button
                 className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
                 type="submit"
+                disabled={loading}
               >
-                Convey Message &rarr;
+                {loading ? "Sending..." : "Convey Message →"}
                 <BottomGradient />
               </button>
 
@@ -105,7 +157,7 @@ export function SignupFormDemo() {
               <div className="flex flex-col space-y-4">
                 <button
                   className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-                  type="submit"
+                  type="button"
                 >
                   <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
                   <span className="text-neutral-700 dark:text-neutral-300 text-sm">
@@ -115,7 +167,7 @@ export function SignupFormDemo() {
                 </button>
                 <button
                   className="relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-                  type="submit"
+                  type="button"
                 >
                   <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
                   <span className="text-neutral-700 dark:text-neutral-300 text-sm">
