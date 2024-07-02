@@ -1,12 +1,1 @@
-{
-  "routes": [
-    {
-      "src": "/[^.]+",
-      "dest": "/",
-      "status": 200,
-      "header": {
-        "Access-Controll-Allow-Origin": "*"
-      }
-    }
-  ]
-}
+{ "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }] }
