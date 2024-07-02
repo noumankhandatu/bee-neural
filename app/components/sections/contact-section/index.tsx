@@ -40,7 +40,7 @@ export function SignupFormDemo() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.BaseUrl}/api/contact`, {
+      const response = await fetch(`${process.env.BASEURL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
