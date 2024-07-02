@@ -40,16 +40,13 @@ export function SignupFormDemo() {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        "https://bee-neural.vercel.app/api/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch(`${process.env.BaseUrl}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const result = await response.json();
       if (response.ok) {
