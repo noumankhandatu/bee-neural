@@ -31,82 +31,54 @@ export const testimonials = [
 ];
 export const products = [
   {
-    title: "Moonbeam",
+    title: "BeeNeural",
     link: "",
-    thumbnail: "/assets/images/gif1.gif",
+    thumbnail: "/parallex/image0.webp",
   },
   {
-    title: "Cursor",
+    title: "BeeNeural",
     link: "",
-    thumbnail: "/assets/images/gi3.gif",
+    thumbnail: "/parallex/image1.webp",
   },
   {
-    title: "Rogue",
+    title: "BeeNeural",
     link: "",
-    thumbnail: "/assets/images/p3.png",
-  },
-
-  {
-    title: "Editorially",
-    link: "",
-    thumbnail: "/assets/images/p4.png",
+    thumbnail: "/parallex/image2.webp",
   },
   {
-    title: "Editrix AI",
+    title: "BeeNeural",
     link: "",
-    thumbnail: "/assets/images/gif4.gif",
+    thumbnail: "/parallex/image3.webp",
   },
   {
-    title: "Pixel Perfect",
+    title: "BeeNeural",
     link: "",
-    thumbnail: "/assets/images/gi3.gif",
-  },
-
-  {
-    title: "Algochurn",
-    link: "",
-    thumbnail: "/assets/images/gif1.gif",
+    thumbnail: "/parallex/image4.webp",
   },
   {
-    title: "Aceternity UI",
+    title: "BeeNeural",
     link: "",
-    thumbnail: "/assets/images/p5.png",
+    thumbnail: "/parallex/image5.webp",
   },
   {
-    title: "Tailwind Master Kit",
+    title: "BeeNeural",
     link: "",
-    thumbnail: "/assets/images/gif4.gif",
+    thumbnail: "/parallex/image6.webp",
   },
   {
-    title: "SmartBridge",
+    title: "BeeNeural",
     link: "",
-    thumbnail: "/assets/images/p6.png",
+    thumbnail: "/parallex/image7.webp",
   },
   {
-    title: "Renderwork Studio",
+    title: "BeeNeural",
     link: "",
-    thumbnail: "/assets/images/gif1.gif",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "",
-    thumbnail: "/assets/images/section1.jpg",
+    thumbnail: "/parallex/image8.webp",
   },
   {
-    title: "Golden Bells Academy",
+    title: "BeeNeural",
     link: "",
-    thumbnail: "/assets/images/gif1.gif",
-  },
-  {
-    title: "Invoker Labs",
-    link: "",
-    thumbnail: "/assets/images/gif1.gif",
-  },
-  {
-    title: "E Free Invoice",
-    link: "",
-    thumbnail: "/assets/images/section1.jpg",
+    thumbnail: "/parallex/image9.webp",
   },
 ];
 

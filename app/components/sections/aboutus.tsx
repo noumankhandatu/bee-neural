@@ -61,6 +61,6 @@ const dummyContent = [
       </p>
     ),
     badge: "About Us",
-    image: "/assets/images/img3.jpg",
+    image: "/parallex/image9.webp",
   },
 ];
