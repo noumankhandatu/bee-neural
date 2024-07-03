@@ -28,6 +28,11 @@ const cards = [
     position: "Machine Learning Engineer And Bussiness Developer",
     image: "/assets/team/shams.jpeg",
   },
+  {
+    name: "Nouman Datusing",
+    position: "Developer",
+    image: "/assets/team/me.jpg",
+  },
 ];
 const TeamCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -60,25 +65,20 @@ const TeamCarousel = () => {
       <p className="text-[16px] text-center mt-4 mb-12">
         See What People Have To Say About Us
       </p>
-      <div className="  lg:flex hidden flex justify-center  p-10 ">
+      <div className="  lg:flex hidden  justify-center  p-10 ">
         <div className="relative w-[90%] mx-auto">
           <div className="overflow-hidden relative">
             <div
-              className="flex transition-transform ease-in-out duration-500 gap-12"
+              className="flex transition-transform ease-in-out duration-500 gap-32"
               style={{ transform: `translateX(-${(currentIndex / 4) * 100}%)` }}
             >
               {cards.map((member, index) => (
-                <div key={index} className="w-1/4 flex-shrink-0">
+                <div key={index} className="w-1/6 flex-shrink-0">
                   <AnimatedPinDemo
                     name={member.name}
                     position={member.position}
                     image={member.image}
                   />
-                  {/* <TeamCard
-                    name={member.name}
-                    position={member.position}
-                    image={member.image}
-                  /> */}
                 </div>
               ))}
             </div>

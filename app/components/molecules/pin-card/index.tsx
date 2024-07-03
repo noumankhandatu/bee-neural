@@ -11,7 +11,7 @@ export function AnimatedPinDemo({ name, position, image }: any) {
         title={name}
         href="https://twitter.com/mannupaaji"
       >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-beta sm:basis-1/2 w-[20rem] h-[20rem] ">
+        <div className="flex basis-full flex-col p-4 tracking-tight text-beta sm:basis-1/2 w-[280px] h-[300px] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-beta">
             {name}
           </h3>
@@ -24,8 +24,8 @@ export function AnimatedPinDemo({ name, position, image }: any) {
               alt="img"
               height={1000}
               width={1000}
-              className="w-[120px] h-[120px]"
-              style={{ borderRadius: "100%", border: "3px solid #dd5f00" }}
+              className="w-[150px] h-[150px]"
+              style={{ borderRadius: "100%", border: "3px solid white" }}
             />
           </div>
         </div>

@@ -9,9 +9,15 @@ interface ThreeCardTypes {
   title: string;
   description: string;
   image: string;
+  className?: string;
 }
 
-export function ThreeDCardDemo({ title, description, image }: ThreeCardTypes) {
+export function ThreeDCardDemo({
+  title,
+  description,
+  image,
+  className,
+}: ThreeCardTypes) {
   const [showFullDescription, setShowFullDescription] = useState(false);
 
   const toggleDescription = () => {
@@ -32,8 +38,10 @@ export function ThreeDCardDemo({ title, description, image }: ThreeCardTypes) {
   };
 
   return (
-    <CardContainer className="inter-var">
-      <CardBody className="bg-secondary relative group/card border-black/[0.1] w-auto h-auto rounded-xl p-6 border transition-all duration-300 ease-in-out  hover:shadow-2xl hover:shadow-orange-500/50">
+    <CardContainer className={className}>
+      <CardBody
+        className={`bg-secondary relative group/card border-black/[0.1] w-auto h-auto rounded-xl p-6 border transition-all duration-300 ease-in-out  hover:shadow-2xl hover:shadow-orange-500/50`}
+      >
         <CardItem
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"

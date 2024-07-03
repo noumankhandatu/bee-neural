@@ -36,3 +36,9 @@
 ::-webkit-scrollbar-track {
   background-color: transparent; /* Set the scrollbar track color */
 }
+.last-card {
+  grid-column-start: span 5;
+  justify-self: center;
+  position: relative;
+  left: "50%";
+}

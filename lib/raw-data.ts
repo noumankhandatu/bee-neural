@@ -138,6 +138,12 @@ export const serviceArray = [
     description:
       "Our Python Scripting And Scraping Services Cater To Businesses Seeking Automation And Data Extraction Solutions. Leveraging Python's Versatile Capabilities, We Develop Custom Scripts And Scraping Tools To Automate Repetitive Tasks, Gather Data From Websites, And Extract Valuable Information For Analysis. Whether It's Web Scraping For Market Research, Data Aggregation For Business Intelligence, Or Process Automation For Increased Efficiency, Our Team Delivers Tailored Solutions To Meet The Specific Requirements Of Our Clients.",
   },
+  {
+    title: "Web Development",
+    image: "/tools/web.webp",
+    description:
+      "At Bee Neural, we specialize in cutting-edge web development services. Our expert team designs and builds innovative, responsive websites tailored to your business needs. Utilizing the latest technologies and best practices, we ensure seamless user experiences and robust performance. From front-end design to back-end functionality, we provide comprehensive solutions that drive results.",
+  },
 ];
 
 export const projectCardArray = [

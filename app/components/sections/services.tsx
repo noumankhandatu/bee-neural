@@ -19,21 +19,6 @@ const ServicesDemo = () => {
         Processing (NLP), Cloud Computing, Computer Vision, Machine Learning,
         And More.
       </p>
-      <div style={{ height: 150 }} />
-      <div className="flex justify-center ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 w-[80%]  ">
-          {serviceArray.map((items: any, id: number) => {
-            return (
-              <ThreeDCardDemo
-                key={id}
-                title={items.title}
-                description={items.description}
-                image={items.image}
-              />
-            );
-          })}
-        </div>
-      </div>
     </>
   );
 };

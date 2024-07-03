@@ -8,6 +8,7 @@ const navItems = [
   "Home",
   "About",
   "Services",
+  "Tools",
   "Portfolio",
   "Team",
   "Career",
@@ -71,7 +72,7 @@ const Navbar: React.FC = () => {
                 <li key={item}>
                   <a
                     href={
-                      item === "waitlist"
+                      item === "waitlist" || "Tools"
                         ? `${item.toLowerCase()}`
                         : `#${item.toLowerCase()}`
                     }
