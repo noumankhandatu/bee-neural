@@ -16,7 +16,7 @@ const placeholders = [
   "Python",
 ];
 
-export function PlaceholdersAndVanishInputDemo() {
+function PlaceholdersAndVanishInputDemo() {
   const [filterText, setFilterText] = useState("");
   const [sortOption, setSortOption] = useState("title");
 
@@ -83,3 +83,5 @@ export function PlaceholdersAndVanishInputDemo() {
     </div>
   );
 }
+
+export default PlaceholdersAndVanishInputDemo;
