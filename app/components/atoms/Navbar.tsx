@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
                 <li key={item}>
                   <a
                     href={
-                      item === "waitlist" || "Tools"
+                      item === "waitlist" || item === "Tools"
                         ? `${item.toLowerCase()}`
                         : `#${item.toLowerCase()}`
                     }
