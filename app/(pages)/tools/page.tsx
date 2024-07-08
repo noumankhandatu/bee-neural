@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import type { Metadata } from "next";
 import Spinner from "@/app/components/atoms/Spinner";
+import { BackgroundBoxesDemo } from "@/app/components/molecules/background-boxes";
 
 const PlaceholdersAndVanishInputDemo = lazy(
   () => import("@/app/components/molecules/input")
@@ -43,9 +44,10 @@ export const metadata: Metadata = {
 const ToolsPage: React.FC = () => {
   return (
     <Suspense fallback={<Spinner />}>
-      <div>
+      <BackgroundBoxesDemo />
+      {/* <div>
         <PlaceholdersAndVanishInputDemo />
-      </div>
+      </div> */}
     </Suspense>
   );
 };

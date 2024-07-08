@@ -145,24 +145,56 @@ export const serviceArray = [
       "At Bee Neural, we specialize in cutting-edge web development services. Our expert team designs and builds innovative, responsive websites tailored to your business needs. Utilizing the latest technologies and best practices, we ensure seamless user experiences and robust performance. From front-end design to back-end functionality, we provide comprehensive solutions that drive results.",
   },
 ];
+export const serviceAry = [
+  {
+    title: "Natural Language Processing ",
+    image: "/assets/service-images/nlp.jpg",
+    description: "",
+  },
+  {
+    title: "Cloud Computing",
+    image: "/assets/service-images/ci.jpg",
+    description: "",
+  },
+  {
+    title: "Computer Vision",
+    image: "/assets/service-images/cv.jpg",
+    description: "",
+  },
+  {
+    title: "Machine Learning",
+    image: "/assets/service-images/ml.webp",
+    description: "",
+  },
 
+  {
+    title: "Web Development with AI Integration",
+    image: "/tools/web.webp",
+    description: "",
+  },
+  {
+    title: "IoT and Robotics",
+    image: "/assets/service-images/data analytic.jpg",
+    description: "",
+  },
+];
 export const projectCardArray = [
   {
-    title: "Auto-Grading System",
+    title: "Intelligent Object Removal from Images",
     description:
-      "The AI-Based Auto-Grading System For Schools Integrates Sentence Transformers And Cosine Similarity To Automate Grading Tasks Efficiently. By Leveraging Sentence Transformers, The System Encodes Textual Information Into Dense Vector Representations, Capturing Semantic Similarities Between Student Responses And Reference Solutions. Using Cosine Similarity, It Measures The Likeness Between Encoded Answers, Enabling Accurate Grading Based On Similarity Scores. This Automated Approach Streamlines The Grading Process, Providing Schools With A Reliable And Efficient Solution For Assessing Student Work And Delivering Prompt Feedback To Both Students And Educators.",
+      "Our Intelligent Object Removal from Images project leverages advanced AI techniques to seamlessly eliminate unwanted objects from photographs. Using state-of-the-art algorithms in computer vision and machine learning, this tool identifies and removes selected elements while intelligently reconstructing the background for a natural, unaltered look. Not just that, but it is capable of removing watermarks or unwanted text as well. Ideal for photographers, designers, and businesses, this solution ensures high-quality image editing with minimal effort and maximum precision.",
     link: "",
   },
   {
-    title: "Face Attendance System",
+    title: "ANPR (Automatic Number plate Recognition System)",
     description:
-      "The Face Attendance System Using Python Is A Software Application Designed To Automate Attendance Tracking By Recognizing Faces. Leveraging Python's Libraries And Frameworks Such As OpenCV And Face Recognition, The System Captures Images Or Video Streams From Cameras, Detects Faces Within Them, And Matches Them Against A Database Of Known Faces To Identify Individuals. Upon Successful Recognition, The System Records The Attendance Of The Recognized Individuals, Logging Timestamps And Possibly Additional Information Such As Employee Or Student IDs. The System Offers A Convenient And Efficient Alternative To Traditional Methods Of Attendance Tracking, Reducing Manual Effort And Improving Accuracy. Additionally, It May Provide Features Such As Real-Time Monitoring, Reporting, And Integration With Existing Databases Or Attendance Management Systems.",
+      "Our Automatic Number Plate Recognition (ANPR) System utilizes cutting-edge AI and computer vision technologies to accurately and efficiently read vehicle license plates. Designed for applications such as traffic management, security, and access control, this system can quickly process high volumes of vehicles in real-time, even under challenging conditions such as poor lighting or varying weather. The ANPR system ensures high accuracy in plate recognition, supports multiple languages and plate formats, and integrates seamlessly with existing security and management infrastructures. Ideal for law enforcement, toll collection, and parking management, our ANPR solution offers reliable and scalable performance to enhance operational efficiency and security.",
     link: "",
   },
   {
-    title: "Sign Language Gesture Recognition",
+    title: "Smart Medical Test Advisor",
     description:
-      "The Project Aims To Develop A Deep Learning Model Tailored For Action Recognition Tasks, With A Probable Foundation In The I3D Architecture. This Architecture, Known For Its Effectiveness In Video-Based Tasks, Is Likely Being Utilized To Recognize And Classify Actions Or Gestures Within Video Sequences. The Goal Is To Train A Model Capable Of Accurately Identifying Various Human Actions Or Movements, Which Could Have Applications In Areas Such As Sign Language Recognition, Gesture Control Systems, Or Activity Recognition In Surveillance Footage. The Project Involves Tasks Such As Data Preprocessing, Model Training, And Evaluation, With A Focus On Achieving High Performance In Action Recognition Accuracy.",
+      "The Smart Medical Test Advisor is an advanced AI-driven solution designed to assist healthcare professionals in recommending the most appropriate medical tests for patients. By analyzing patient data, symptoms, and medical history, this system provides personalized and evidence-based test recommendations to support accurate diagnoses and effective treatment plans. Leveraging machine learning and data analytics, the Smart Medical Test Advisor enhances clinical decision-making, reduces unnecessary testing, and improves patient outcomes. Ideal for hospitals, clinics, and telemedicine platforms, this tool streamlines the diagnostic process, ensuring timely and precise medical care.",
     link: "",
   },
 ];

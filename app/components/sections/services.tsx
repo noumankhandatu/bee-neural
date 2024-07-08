@@ -1,7 +1,7 @@
-import { primary } from "@/utils/colors";
 import React from "react";
 import { ThreeDCardDemo } from "../molecules/3d-card";
-import { serviceArray } from "@/lib/raw-data";
+import { serviceArray, serviceAry } from "@/lib/raw-data";
+import { ServiceCard } from "../molecules/service-card";
 
 const ServicesDemo = () => {
   return (
@@ -14,10 +14,29 @@ const ServicesDemo = () => {
         Our Services 📝
       </div>
       <p className=" text-center mt-8 md:text-lg">
-        At AI Services Hub, We Offer A Range Of AI Services To Help Businesses
-        Achieve Their Goals. Our Services <br /> Include Natural Language
-        Processing (NLP), Cloud Computing, Computer Vision, Machine Learning,
-        And More.
+        At AI Services Hub, we provide a comprehensive range of AI services
+        designed to help businesses achieve their goals. Our offerings include
+      </p>
+      <div style={{ height: 100 }} />
+      <div className="flex justify-center w-full">
+        <div className="flex flex-wrap justify-center gap-4 w-full">
+          {serviceAry.map((items: any, id: number) => {
+            const isLastItem = id === serviceArray.length - 1;
+            return (
+              <ServiceCard
+                key={id}
+                title={items.title}
+                description={items.description}
+                image={items.image}
+                className={isLastItem ? "w-full flex justify-center" : "w-auto"}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <p className=" text-center mt-8 md:text-lg">
+        We are dedicated to delivering innovative solutions that drive success
+        and transform industries.
       </p>
     </>
   );

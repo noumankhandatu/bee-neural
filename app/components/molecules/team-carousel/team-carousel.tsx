@@ -60,10 +60,11 @@ const TeamCarousel = () => {
         style={{ color: "#EF7709" }}
         className="  md:text-7xl  text-center text-xl  font-bold text-black "
       >
-        Our Team 🎉
+        Our Team 👩‍💻👨‍💻
       </div>
       <p className="text-[16px] text-center mt-4 mb-12">
-        See What People Have To Say About Us
+        A dynamic team of innovators dedicated to excellence and groundbreaking
+        solutions.
       </p>
       <div className="  lg:flex hidden  justify-center  p-10 ">
         <div className="relative w-[90%] mx-auto">
