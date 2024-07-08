@@ -1,7 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import TeamCard from "../../atoms/TeamCard";
 import { AnimatedPinDemo } from "../pin-card";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
+
 const cards = [
   {
     name: "Gulshan Yasmeen",
@@ -34,6 +36,7 @@ const cards = [
     image: "/assets/team/me.jpg",
   },
 ];
+
 const TeamCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -55,10 +58,10 @@ const TeamCarousel = () => {
   };
 
   return (
-    <div id="team">
+    <div id="team" className="w-full">
       <div
         style={{ color: "#EF7709" }}
-        className="  md:text-7xl  text-center text-xl  font-bold text-black "
+        className="md:text-7xl text-center text-xl font-bold text-black"
       >
         Our Team 👩‍💻👨‍💻
       </div>
@@ -66,7 +69,39 @@ const TeamCarousel = () => {
         A dynamic team of innovators dedicated to excellence and groundbreaking
         solutions.
       </p>
-      <div className="  lg:flex hidden  justify-center  p-10 ">
+
+      <div className="flex justify-center w-full">
+        <div className="flex w-full flex-wrap justify-center gap-10">
+          {cards.map((member: any, id: number) => {
+            const isLastItem = id === cards.length - 1;
+            return (
+              <div key={id} className="flex">
+                <AnimatedPinDemo
+                  name={member.name}
+                  position={member.position}
+                  image={member.image}
+                  className={
+                    isLastItem ? "w-full flex justify-center" : "w-auto"
+                  }
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* <div className="grid grid-cols-4   gap-4">
+        {cards.map((member, index) => (
+          <div key={index} className="flex justify-center">
+            <AnimatedPinDemo />
+          </div>
+        ))}
+      </div> */}
+      {/* <div className="relative lg:flex hidden justify-center ">
+        <FaArrowLeft
+          onClick={handlePrev}
+          className="absolute left-10 top-64 border-2 border-primary rounded-full h-[30px] w-[30px] p-1 text-primary cursor-pointer"
+        />
         <div className="relative w-[90%] mx-auto">
           <div className="overflow-hidden relative">
             <div
@@ -85,7 +120,12 @@ const TeamCarousel = () => {
             </div>
           </div>
         </div>
-      </div>
+
+        <FaArrowRight
+          onClick={handleNext}
+          className="absolute right-10 top-64 border-2 border-primary rounded-full h-[30px] w-[30px] p-1 text-primary cursor-pointer"
+        />
+      </div> */}
     </div>
   );
 };

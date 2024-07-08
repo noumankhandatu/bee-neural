@@ -5,27 +5,27 @@ import Image from "next/image";
 
 export function AnimatedPinDemo({ name, position, image }: any) {
   return (
-    <div className="h-[40rem] w-full flex items-center justify-center  ">
+    <div className="w-full flex items-center justify-center">
       <PinContainer
         className=""
         title={name}
         href="https://twitter.com/mannupaaji"
       >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-beta sm:basis-1/2 w-[280px] h-[300px] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-beta">
+        <div className="flex basis-full flex-col p-4 tracking-tight text-beta sm:basis-1/2 w-full">
+          <h3 className="max-w-xs text-center !pb-2 !m-0 font-bold  text-base text-beta">
             {name}
           </h3>
-          <div className="text-base !m-0 !p-0 font-normal">
+          <div className="text-base text-center !m-0 !p-0 font-normal h-[50px]">
             <span className="text-slate-500 ">{position}</span>
           </div>
-          <div className="flex flex-1 items-center justify-center w-full rounded-lg mt-4 bg-gradient-to-br from-primary via-purple-secondary to-alpha">
+          <div className="flex flex-1 items-center justify-center w-full rounded-lg mt-4 bg-gradient-to-br from-primary via-purple-secondary to-secondary">
             <Image
               src={image}
               alt="img"
-              height={1000}
-              width={1000}
-              className="w-[150px] h-[150px]"
-              style={{ borderRadius: "100%", border: "3px solid white" }}
+              width={200}
+              height={200}
+              className="h-[150px] w-[150px]"
+              style={{ borderRadius: "110px", border: "4px solid white" }}
             />
           </div>
         </div>

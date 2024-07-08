@@ -15,7 +15,7 @@ export const InfiniteMovingCards = ({
     name: string;
     title: string;
   }[];
-  direction?: "left" | "right";
+  direction?: "left" | "right" | string;
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
@@ -25,7 +25,7 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation();
-  }, []);
+  }, [direction]);
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {

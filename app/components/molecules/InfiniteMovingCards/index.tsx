@@ -1,15 +1,25 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { InfiniteMovingCards } from "./infinite-moving-cards";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
+
+const left = "left";
+const right = "right";
 
 export function InfiniteMovingCardsDemo() {
+  const [turn, setTurn] = useState(left);
   return (
-    <div className="h-[20rem]  rounded-md flex flex-col antialiased bg-white  items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="slow"
+    <div className="h-[20rem]   rounded-md flex flex-col antialiased bg-white  items-center justify-center relative overflow-hidden">
+      <FaArrowLeft
+        className="absolute left-10 border-2 border-primary rounded-full h-[30px] w-[30px] p-1 text-primary cursor-pointer"
+        onClick={() => setTurn(left)}
+      />
+      <InfiniteMovingCards items={testimonials} direction={turn} speed="slow" />
+      <FaArrowRight
+        className="absolute right-10 border-2 border-primary rounded-full h-[30px] w-[30px] p-1 text-primary cursor-pointer"
+        onClick={() => setTurn(right)}
       />
     </div>
   );

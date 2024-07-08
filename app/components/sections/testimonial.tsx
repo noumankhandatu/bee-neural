@@ -1,6 +1,5 @@
 import React from "react";
 import { AnimatedTooltipPreview } from "../molecules/customer-tooltip";
-import { primary } from "@/utils/colors";
 import { InfiniteMovingCardsDemo } from "../molecules/InfiniteMovingCards";
 
 const Testimonial = () => {
