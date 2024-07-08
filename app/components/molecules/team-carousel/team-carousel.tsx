@@ -132,24 +132,24 @@ const TeamCarousel = () => {
 
 export default TeamCarousel;
 
-export const TeamCarouselMobile = () => {
-  return (
-    <div className="flex lg:hidden justify-center lg:p-10  overflow-scroll gap-12">
-      <div className="relative w-[90%] mx-auto">
-        <div className=" relative">
-          <div className="flex gap-[100px] overflow-x-scroll lg:flex-wrap">
-            {cards.map((member, index) => (
-              <div key={index} className="w-full lg:w-1/4 flex-shrink-0 ">
-                <AnimatedPinDemo
-                  name={member.name}
-                  position={member.position}
-                  image={member.image}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+// export const TeamCarouselMobile = () => {
+//   return (
+//     <div className="flex lg:hidden justify-center lg:p-10  overflow-scroll gap-12">
+//       <div className="relative w-[90%] mx-auto">
+//         <div className=" relative">
+//           <div className="flex gap-[100px] overflow-x-scroll lg:flex-wrap">
+//             {cards.map((member, index) => (
+//               <div key={index} className="w-full lg:w-1/4 flex-shrink-0 ">
+//                 <AnimatedPinDemo
+//                   name={member.name}
+//                   position={member.position}
+//                   image={member.image}
+//                 />
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };

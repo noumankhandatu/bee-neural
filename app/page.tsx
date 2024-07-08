@@ -12,11 +12,6 @@ const RocketFired = lazy(() => import("./components/atoms/rocket"));
 const TeamCarousel = lazy(
   () => import("./components/molecules/team-carousel/team-carousel")
 );
-const TeamCarouselMobile = lazy(() =>
-  import("./components/molecules/team-carousel/team-carousel").then(
-    (module) => ({ default: module.TeamCarouselMobile })
-  )
-);
 
 const Navbar = lazy(() => import("./components/atoms/Navbar"));
 const HeroParallaxDemo = lazy(
@@ -98,7 +93,6 @@ const HomePage: React.FC = () => {
         <section style={{ height: 100 }} />
 
         <TeamCarousel />
-        <TeamCarouselMobile />
         <section style={{ height: 100 }} />
 
         <FaqDemo />
