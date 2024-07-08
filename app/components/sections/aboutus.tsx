@@ -54,10 +54,14 @@ const dummyContent = [
     title: "AI Services Hub ",
     description: (
       <p>
-        We Are A Team Of Skilled Data Scientists And Professionals With Diverse
-        Expertise In Artificial Intelligence Services. Our Aim Is To Showcase
-        Our Capabilities, Expertise, And Skills, And To Offer Information About
-        The Range Of AI Services Provided. Our Services Include Natural Language
+        We are a team of highly skilled data scientists and professionals with
+        diverse expertise in artificial intelligence. Our mission is to
+        demonstrate our capabilities and showcase our extensive skills, offering
+        a wide range of AI services tailored to meet your needs. From machine
+        learning, data analytics, natural language processing and computer
+        vision, we are committed to delivering innovative solutions. Our goal is
+        to drive your business forward with cutting-edge AI technologies and
+        unparalleled expertise.
       </p>
     ),
     badge: "About Us",
