@@ -8,6 +8,8 @@ import { Label } from "@/app/components/sections/contact-section/label";
 import { Input } from "@/app/components/sections/contact-section/input";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { IoMdArrowBack } from "react-icons/io";
 
 const CareerPage = () => {
   const [formData, setFormData] = useState({
@@ -47,7 +49,7 @@ const CareerPage = () => {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASEURL}/api/contact`,
+        `${process.env.NEXT_PUBLIC_BASEURL}/api/career`,
         {
           method: "POST",
           body: formDataToSubmit,
@@ -69,13 +71,19 @@ const CareerPage = () => {
 
   return (
     <div id="contact" className="container mx-auto py-10">
-      <ToastContainer />
-      <p
-        className="text-5xl text-center font-bold mt-20"
-        style={{ color: primary }}
-      >
-        Career 👩🏻‍💻
-      </p>
+      <div className="flex justify-between w-full">
+        <Link href={"/"}>
+          <IoMdArrowBack fontSize={35} color="#ef7709" className="ml-4" />
+        </Link>
+        <p className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl text-black">
+          <span className="text-primary">
+            B<span className="text-beta">e</span>e
+            <span className="text-beta"> Neural Career 👩🏻‍💻</span>
+          </span>
+        </p>
+        <div></div>
+      </div>
+
       <p className="text-[20px] text-center mt-4 mb-12">
         Join BeeNeural and Be a part of something great
       </p>

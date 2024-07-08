@@ -82,9 +82,7 @@ export const metadata: Metadata = {
 const HomePage: React.FC = () => {
   return (
     <Suspense fallback={<Spinner />}>
-      <header>
-        <Navbar />
-      </header>
+      <Navbar />
       <main>
         <HeroParallaxDemo />
         <GoogleGeminiEffectDemo />

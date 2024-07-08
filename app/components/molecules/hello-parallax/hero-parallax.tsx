@@ -107,7 +107,7 @@ export const Header = () => {
   const words = ["Empower", "Modern", "Beautiful", "Better"];
 
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
+    <div className="max-w-7xl  relative mx-auto py-20 md:py-40 px-4 w-full left-6 top-0">
       <h1 className="text-2xl md:text-7xl font-bold text-beta text-center lg:text-left ">
         <FlipWords words={words} /> Your Business <br /> AI Services{" "}
         <span className="text-primary">
@@ -151,12 +151,12 @@ export const ProductCard = ({
         className="block group-hover/product:shadow-2xl "
       >
         <Image
-          unoptimized
           src={product.thumbnail}
-          height="600"
-          width="600"
+          width={600}
+          height={600}
           className="object-cover object-left-top absolute  lg:h-full Lg:w-full inset-0"
           alt={product.title}
+          priority
         />
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>

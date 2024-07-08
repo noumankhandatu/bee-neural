@@ -19,7 +19,6 @@ const navItems = [
 
 const Navbar: React.FC = () => {
   const colors = useSelector((state: any) => state.theme);
-  console.log(colors, "colors");
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -27,20 +26,23 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div>
-      <nav className={`w-full bg-secondary`}>
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+    <div className="relative mb-16">
+      <nav
+        className={`w-full bg-white shadow-md  p-5 fixed top-0 left-0 right-0 z-50 `}
+      >
+        <div className="max-w-screen-xl flex  flex-wrap items-center justify-between mx-auto">
           <Image
-            src="/assets/svg/logo.svg"
+            priority
+            src="/logo.svg.jpg"
             alt="logo"
-            height={550}
-            width={550}
-            className="w-[200px] h-[200px]"
+            height={1000}
+            width={1000}
+            className="w-[150px] h-full]"
           />
           <button
             onClick={toggleMenu}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary hover:text-primary rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary hover:text-primary rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-default"
             aria-expanded={isOpen}
           >
@@ -64,7 +66,7 @@ const Navbar: React.FC = () => {
           <div
             className={`${
               isOpen ? "block" : "hidden"
-            } w-full md:block md:w-auto`}
+            } w-full lg:block md:w-auto`}
             id="navbar-default"
           >
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent ">
@@ -78,7 +80,7 @@ const Navbar: React.FC = () => {
                         ? `${item.toLowerCase()}`
                         : `#${item.toLowerCase()}`
                     }
-                    className="block capitalize py-2 px-3 lg:text-[18px] text-[16px]   md:text-[10px]    rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0  md:dark:hover:text-primary  text-beta  "
+                    className="block capitalize py-2 px-3 text-[15px] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0  md:dark:hover:text-primary  text-beta  "
                   >
                     {item}
                   </a>
