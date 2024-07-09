@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { AnimatedPinDemo } from "../pin-card";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
+import { RiTeamFill } from "react-icons/ri";
 
 const cards = [
   {
@@ -61,9 +62,12 @@ const TeamCarousel = () => {
     <div id="team" className="w-full">
       <div
         style={{ color: "#EF7709" }}
-        className="md:text-7xl text-center text-xl font-bold text-black"
+        className="md:text-7xl text-center text-xl font-bold text-black flex justify-center"
       >
-        Our Team 👩‍💻👨‍💻
+        Our Team
+        <span>
+          <RiTeamFill className="ml-10" color="#FFC83D" />
+        </span>
       </div>
       <p className="text-[16px] text-center mt-4 mb-12">
         A dynamic team of innovators dedicated to excellence and groundbreaking
