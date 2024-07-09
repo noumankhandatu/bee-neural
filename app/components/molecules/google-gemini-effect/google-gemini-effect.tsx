@@ -3,6 +3,7 @@ import { cn } from "@/utils/cn";
 import { motion, MotionValue } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import Title from "../../atoms/Title";
 
 const transition = {
   duration: 0,
@@ -23,11 +24,11 @@ export const GoogleGeminiEffect = ({
   return (
     <div className={cn("sticky top-80", className)}>
       <div
-        style={{ color: "#EF7709" }}
+        style={{ color: "#EE9D1A" }}
         className="absolute -top-60 left-1/2 transform -translate-x-1/2 md:text-7xl text-center text-xl font-bold text-black mt-4"
       >
-        B<span className="text-black">e</span>e
-        <span className="text-black">Neural</span> 🧠
+        <Title />
+        🧠
       </div>
       <p className=" absolute -top-[120px] lg:left-[50%] left-1/2 transform -translate-x-1/2 text-xs md:text-xl font-normal text-center text-black mt-4 max-w-lg mx-auto">
         {description ||

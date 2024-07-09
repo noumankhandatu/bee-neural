@@ -60,7 +60,7 @@ function TeamSlider() {
     <div>
       <div id="team" className="w-full">
         <div
-          style={{ color: "#EF7709" }}
+          style={{ color: "#EE9D1A" }}
           className="md:text-7xl text-center text-xl font-bold text-black flex justify-center"
         >
           Our Team

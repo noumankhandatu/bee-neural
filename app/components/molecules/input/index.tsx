@@ -48,7 +48,7 @@ function PlaceholdersAndVanishInputDemo() {
     <div className="h-full mt-20 mb-10 flex flex-col justify-center items-center px-4">
       <div className="flex justify-between w-full">
         <Link href={"/"}>
-          <IoMdArrowBack fontSize={35} color="#ef7709" />
+          <IoMdArrowBack fontSize={35} color="#EE9D1A" />
         </Link>
         <p className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl text-black">
           <span className="text-primary">

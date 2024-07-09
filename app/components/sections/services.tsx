@@ -9,7 +9,7 @@ const ServicesDemo = () => {
     <>
       <div
         id="services"
-        style={{ color: "#EF7709" }}
+        style={{ color: "#EE9D1A" }}
         className=" mb-6 md:text-7xl  text-center text-xl  font-bold text-black dark:text-white"
       >
         Our Services 📝

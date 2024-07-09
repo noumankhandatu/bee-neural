@@ -6,7 +6,7 @@ const Testimonial = () => {
   return (
     <div id="career">
       <div
-        style={{ color: "#EF7709" }}
+        style={{ color: "#EE9D1A" }}
         className="  md:text-7xl  text-center text-xl  font-bold text-black dark:text-white"
       >
         Testimonials 🤝

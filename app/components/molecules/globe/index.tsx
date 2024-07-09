@@ -412,7 +412,7 @@ export function GlobeDemo() {
           className="div"
         >
           <div
-            style={{ color: "#EF7709" }}
+            style={{ color: "#EE9D1A" }}
             className="mb-5  md:text-7xl  text-center text-xl  font-bold text-black dark:text-white"
           >
             Our <span className="text-black">Projects</span> 🌐

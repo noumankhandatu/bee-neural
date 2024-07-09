@@ -29,7 +29,7 @@ const RocketFired: React.FC = () => {
       <a href="#top">
         <div
           ref={iconRef}
-          className="hidden rounded-full border-2 border-white shadow-lg bg-[#EF7709] text-white p-2"
+          className="hidden rounded-full border-2 border-white shadow-lg bg-primary text-white p-2"
         >
           <IoMdArrowRoundUp className="w-4 h-4" />
         </div>

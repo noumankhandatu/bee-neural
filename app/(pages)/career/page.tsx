@@ -10,6 +10,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdArrowBack } from "react-icons/io";
+import Title from "@/app/components/atoms/Title";
 
 const CareerPage = () => {
   const [formData, setFormData] = useState({
@@ -73,13 +74,12 @@ const CareerPage = () => {
     <div id="contact" className="container mx-auto py-10">
       <div className="flex justify-between w-full">
         <Link href={"/"}>
-          <IoMdArrowBack fontSize={35} color="#ef7709" className="ml-4" />
+          <IoMdArrowBack fontSize={35} color="#EE9D1A" className="ml-4" />
         </Link>
+
         <p className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl text-black">
-          <span className="text-primary">
-            B<span className="text-beta">e</span>e
-            <span className="text-beta"> Neural Career 👩🏻‍💻</span>
-          </span>
+          <Title />
+          👩🏻‍💻
         </p>
         <div></div>
       </div>

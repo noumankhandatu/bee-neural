@@ -11,14 +11,14 @@ function AboutUsDemo() {
           <div key={`content-${index}`} className="mb-10">
             <div
               style={{
-                backgroundImage: `-webkit-linear-gradient(#EF7709, #EF7709)`,
+                backgroundImage: `-webkit-linear-gradient(#EE9D1A, #EE9D1A)`,
                 WebkitBackgroundClip: "text",
                 color: "transparent",
               }}
               className="  text-[60px] px-4 py-1 mb-4 font-bold text-center"
             >
               <div
-                style={{ color: "#EF7709" }}
+                style={{ color: "#EE9D1A" }}
                 className=" mb-6 md:text-7xl  text-center text-xl  font-bold text-black dark:text-white"
               >
                 {item.badge}
