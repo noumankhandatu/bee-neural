@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import type { Metadata } from "next";
 import Spinner from "./components/atoms/Spinner";
 import { SignupFormDemo } from "./components/sections/contact-section";
+import TeamSlider from "./components/molecules/team-slider";
 
 // Lazy imports
 const Testimonial = lazy(() => import("./components/sections/testimonial"));
@@ -9,9 +10,6 @@ const Testimonial = lazy(() => import("./components/sections/testimonial"));
 const FaqDemo = lazy(() => import("./components/sections/faq"));
 const Footer = lazy(() => import("./components/atoms/Footer"));
 const RocketFired = lazy(() => import("./components/atoms/rocket"));
-const TeamCarousel = lazy(
-  () => import("./components/molecules/team-carousel/team-carousel")
-);
 
 const Navbar = lazy(() => import("./components/atoms/Navbar"));
 const HeroParallaxDemo = lazy(
@@ -91,10 +89,8 @@ const HomePage: React.FC = () => {
         <section style={{ height: 100 }} />
         <Testimonial />
         <section style={{ height: 100 }} />
-
-        <TeamCarousel />
+        <TeamSlider />
         <section style={{ height: 100 }} />
-
         <FaqDemo />
         <SignupFormDemo />
       </main>
