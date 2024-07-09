@@ -10,7 +10,6 @@ export async function POST(request) {
   const message = formData.get("message");
   const pdfFile = formData.get("pdf");
 
-  // Input validation
   if (!firstName || !lastName || !email || !message || !pdfFile) {
     return new Response(
       JSON.stringify({ message: "All fields are required" }),
@@ -22,28 +21,26 @@ export async function POST(request) {
   }
 
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: process.env.MAIL_HOST_NAME,
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.EMAIL_PASS,
     },
   });
 
-  // Read HTML template file
   const templatePath = path.join(process.cwd(), "template", "template.html");
   let htmlTemplate = fs.readFileSync(templatePath, "utf-8");
 
-  // Read PDF file from form data
   const pdfBuffer = Buffer.from(await pdfFile.arrayBuffer());
-  console.log(pdfFile, "pdfFile");
-  // Replace placeholders with actual values
+
   htmlTemplate = htmlTemplate
     .replace(/{{firstName}}/g, firstName)
     .replace(/{{lastName}}/g, lastName)
     .replace(/{{email}}/g, email)
     .replace(/{{message}}/g, message);
 
-  // Email options
   const mailOptions = {
     from: email,
     to: process.env.EMAIL,
@@ -58,7 +55,6 @@ export async function POST(request) {
     ],
   };
 
-  // Send the email
   try {
     await transporter.sendMail(mailOptions);
     return new Response(

@@ -16,6 +16,7 @@
     "@reduxjs/toolkit": "^2.2.6",
     "@tabler/icons-react": "^3.7.0",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
     "formidable": "^3.5.1",
     "framer-motion": "^11.2.12",
     "next": "14.2.4",
