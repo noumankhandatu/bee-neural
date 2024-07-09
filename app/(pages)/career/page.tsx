@@ -44,7 +44,7 @@ const CareerPage = () => {
     formDataToSubmit.append("email", formData.email);
     formDataToSubmit.append("message", formData.message);
     if (pdfFile) {
-      formDataToSubmit.append("resume", pdfFile);
+      formDataToSubmit.append("pdf", pdfFile);
     }
 
     try {

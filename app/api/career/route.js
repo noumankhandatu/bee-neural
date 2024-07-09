@@ -35,25 +35,25 @@ export async function POST(request) {
 
   // Read PDF file from form data
   const pdfBuffer = Buffer.from(await pdfFile.arrayBuffer());
-
+  console.log(pdfFile, "pdfFile");
   // Replace placeholders with actual values
   htmlTemplate = htmlTemplate
     .replace(/{{firstName}}/g, firstName)
     .replace(/{{lastName}}/g, lastName)
     .replace(/{{email}}/g, email)
-    .replace(/{{message}}/g, message)
-    .replace(/{{pdfBuffer}}/g, pdfBuffer);
+    .replace(/{{message}}/g, message);
 
   // Email options
   const mailOptions = {
     from: email,
     to: process.env.EMAIL,
-    subject: "BeeNeural Contact Form Submission",
+    subject: "BeeNeural Career Form Submission",
     html: htmlTemplate,
     attachments: [
       {
         filename: pdfFile.name,
         content: pdfBuffer,
+        contentType: "application/pdf",
       },
     ],
   };
