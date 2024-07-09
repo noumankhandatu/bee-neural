@@ -28,16 +28,16 @@ const Navbar: React.FC = () => {
   return (
     <div className="relative mb-16">
       <nav
-        className={`w-full bg-white shadow-md  p-5 fixed top-0 left-0 right-0 z-50 `}
+        className={`w-full bg-[#F2F2F2] shadow-md p-3   fixed top-0 left-0 right-0 z-50 `}
       >
         <div className="max-w-screen-xl flex  flex-wrap items-center justify-between mx-auto">
           <Image
             priority
-            src="/logo.svg.jpg"
+            src="/logo.png"
             alt="logo"
             height={1000}
             width={1000}
-            className="w-[150px] h-full]"
+            className="w-[180px] h-full]"
           />
           <button
             onClick={toggleMenu}

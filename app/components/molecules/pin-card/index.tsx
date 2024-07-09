@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function AnimatedPinDemo({ name, position, image }: any) {
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="  flex items-center justify-center">
       <PinContainer
         className=""
         title={name}

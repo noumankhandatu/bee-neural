@@ -29,7 +29,7 @@ export function ServiceCard({ title, image, className }: ThreeCardTypes) {
             src={image}
             height="1000"
             width="1000"
-            className="h-[250px] w-[350px] object-cover rounded-xl group-hover/card:shadow-xl"
+            className="h-[200px] w-[300px] object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
         </CardItem>

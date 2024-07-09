@@ -68,7 +68,7 @@ export function SignupFormDemo() {
       <div className="flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-[80%]">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d25848.754651273834!2d74.308008!3d35.920191!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x38e649e3642543b1%3A0x40fd0ca3ca17282b!2sGilgit!3m2!1d35.920190999999996!2d74.308008!5e0!3m2!1sen!2s!4v1719569073723!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d103386.65503162552!2d74.28570980753398!3d35.926588246870416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x38e637c660b54c0d%3A0xe223a1219f7cd8d!2sNomal%20-%20Gilgit%20Rd%2C%20near%20KIU%2C%20Gilgit%2C%2015100!3m2!1d35.9266164!2d74.36811089999999!5e0!3m2!1sen!2s!4v1720518686906!5m2!1sen!2s"
             width="100%"
             height="630px"
             loading="lazy"

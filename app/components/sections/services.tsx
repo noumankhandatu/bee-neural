@@ -19,7 +19,7 @@ const ServicesDemo = () => {
       </p>
       <div style={{ height: 100 }} />
       <div className="flex justify-center w-full">
-        <div className="flex flex-wrap justify-center gap-4 w-full">
+        <div className="flex flex-wrap justify-center gap-4 w-full p-5">
           {serviceAry.map((items: any, id: number) => {
             const isLastItem = id === serviceArray.length - 1;
             return (

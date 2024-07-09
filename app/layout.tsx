@@ -1,12 +1,13 @@
 import React from "react";
 import { Metadata } from "next";
-import { Roboto } from "next/font/google";
-import "./globals.css";
+import { Roboto, Oxygen } from "next/font/google";
 import ClientProvider from "./components/atoms/ClientProvider";
+import "./globals.css";
 
 // Import the Client Component
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
+const oxygen = Oxygen({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata | any = {
   title: "Bee Neural",
@@ -36,7 +37,7 @@ export default function RootLayout({
           <link key={index} rel={icon.rel} type={icon.type} href={icon.url} />
         ))}
       </head>
-      <body className={roboto.className}>
+      <body className={oxygen.className}>
         <ClientProvider>{children}</ClientProvider>
       </body>
     </html>
