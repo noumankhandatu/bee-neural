@@ -2,6 +2,7 @@ import React from "react";
 import { ThreeDCardDemo } from "../molecules/3d-card";
 import { serviceArray, serviceAry } from "@/lib/raw-data";
 import { ServiceCard } from "../molecules/service-card";
+import Link from "next/link";
 
 const ServicesDemo = () => {
   return (
@@ -23,13 +24,16 @@ const ServicesDemo = () => {
           {serviceAry.map((items: any, id: number) => {
             const isLastItem = id === serviceArray.length - 1;
             return (
-              <ServiceCard
-                key={id}
-                title={items.title}
-                description={items.description}
-                image={items.image}
-                className={isLastItem ? "w-full flex justify-center" : "w-auto"}
-              />
+              <Link key={id} href="/tools">
+                <ServiceCard
+                  title={items.title}
+                  description={items.description}
+                  image={items.image}
+                  className={
+                    isLastItem ? "w-full flex justify-center" : "w-auto"
+                  }
+                />
+              </Link>
             );
           })}
         </div>
