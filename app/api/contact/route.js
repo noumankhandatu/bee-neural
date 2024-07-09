@@ -27,7 +27,6 @@ export async function POST(request) {
   });
 
   // Read HTML template file
-  // Read HTML template file
   const templatePath = path.join(process.cwd(), "template", "template.html");
   let htmlTemplate = fs.readFileSync(templatePath, "utf-8");
 
