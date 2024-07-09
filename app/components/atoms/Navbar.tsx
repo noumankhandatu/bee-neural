@@ -14,7 +14,7 @@ const navItems = [
   "Career",
   "Contact",
   "FAQ",
-  "waitlist",
+  // "waitlist",
 ];
 
 const Navbar: React.FC = () => {
