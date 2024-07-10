@@ -17,13 +17,9 @@ function AboutUsDemo() {
               }}
               className="  text-[60px] px-4 py-1 mb-4 font-bold text-center"
             >
-              <div
-                style={{ color: "#EE9D1A" }}
-                className=" mb-6 md:text-7xl  text-center text-xl  font-bold text-black dark:text-white"
-              >
-                {item.badge}
-                🧑‍💼
-              </div>
+              <p className="text-4xl text-center font-bold  flex justify-center items-center text-primary">
+                {item.badge} 🧑‍💼
+              </p>
             </div>
             <div className="text-sm  prose prose-sm dark:prose-invert text-center">
               {item?.image && (

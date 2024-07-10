@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { Roboto, Oxygen } from "next/font/google";
 import ClientProvider from "./components/atoms/ClientProvider";
 import "./globals.css";
+import Head from "next/head";
 
 // Import the Client Component
 
@@ -30,7 +31,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="manifest" href="/manifest.json" />
+      </Head>
       <head>
+        <link rel="manifest" href="/manifest.json" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         {metadata.icons.icon.map((icon: any, index: number) => (

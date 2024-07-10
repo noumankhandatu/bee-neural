@@ -411,15 +411,11 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <div
-            style={{ color: "#EE9D1A" }}
-            className="mb-5  md:text-7xl  text-center text-xl  font-bold text-black dark:text-white"
-          >
-            Our <span className="text-black">Projects</span> 🌐
-          </div>
-
-          <div className="text-center mb-12 text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
-            Our projcts are worldwide Have fun with it,
+          <p className="text-4xl text-center font-bold  flex justify-center items-center text-primary">
+            Our Projects 🌐
+          </p>
+          <div className="text-center  text-base mb-20 md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+            Our projects are worldwide Have fun with it,
           </div>
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />

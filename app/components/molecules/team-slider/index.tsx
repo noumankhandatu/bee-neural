@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { AnimatedPinDemo } from "../pin-card";
 import { RiTeamFill } from "react-icons/ri";
+import { primary } from "@/utils/colors";
 
 const cards = [
   {
@@ -59,15 +60,14 @@ function TeamSlider() {
   return (
     <div>
       <div id="team" className="w-full">
-        <div
-          style={{ color: "#EE9D1A" }}
-          className="md:text-7xl text-center text-xl font-bold text-black flex justify-center"
+        <p
+          id="faq"
+          className="text-4xl text-center font-bold mt-20 flex justify-center items-center text-primary"
         >
           Our Team
-          <span>
-            <RiTeamFill className="ml-10" color="#FFC83D" />
-          </span>
-        </div>
+          <RiTeamFill className="ml-4" />
+        </p>
+
         <p className="text-[16px] text-center mt-4 mb-12">
           A dynamic team of innovators dedicated to excellence and
           groundbreaking solutions.

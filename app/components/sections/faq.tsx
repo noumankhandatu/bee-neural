@@ -2,6 +2,7 @@
 
 import { primary } from "@/utils/colors";
 import React, { useState } from "react";
+import { HiQuestionMarkCircle } from "react-icons/hi";
 
 const faqData = [
   {
@@ -114,10 +115,11 @@ const FaqDemo = () => {
     <>
       <p
         id="faq"
-        className="text-4xl text-center font-bold mt-20"
+        className="text-4xl text-center font-bold mt-20 flex justify-center items-center"
         style={{ color: primary }}
       >
-        FAQ
+        FAQ&apos;S
+        <HiQuestionMarkCircle className="ml-4" />
       </p>
       <p className="text-[16px] text-center mt-4 mb-12">
         Frequently Asked Questions
