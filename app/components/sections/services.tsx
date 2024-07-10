@@ -1,8 +1,6 @@
 import React from "react";
-import { ThreeDCardDemo } from "../molecules/3d-card";
 import { serviceArray, serviceAry } from "@/lib/raw-data";
 import { ServiceCard } from "../molecules/service-card";
-import Link from "next/link";
 
 const ServicesDemo = () => {
   return (
@@ -16,8 +14,8 @@ const ServicesDemo = () => {
         include
       </p>
       <div style={{ height: 100 }} />
-      <div className="flex justify-center w-full">
-        <div className="flex flex-wrap justify-center gap-4 w-full p-5">
+      <div className="flex justify-center w-full ">
+        <div className="flex flex-wrap justify-center gap-4 w-full p-5 ">
           {serviceAry.map((items: any, id: number) => {
             const isLastItem = id === serviceArray.length - 1;
             return (

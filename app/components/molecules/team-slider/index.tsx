@@ -34,7 +34,7 @@ const cards = [
   {
     name: "Nouman Datusing",
     position: "Developer",
-    image: "/assets/team/me.jpg",
+    image: "/assets/team/me.png",
   },
 ];
 

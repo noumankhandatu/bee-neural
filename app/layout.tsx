@@ -1,13 +1,12 @@
 import React from "react";
 import { Metadata } from "next";
-import { Roboto, Oxygen } from "next/font/google";
+import { Oxygen } from "next/font/google";
 import ClientProvider from "./components/atoms/ClientProvider";
 import "./globals.css";
 import Head from "next/head";
 
 // Import the Client Component
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata | any = {
