@@ -142,7 +142,7 @@ export const serviceArray = [
     title: "Web Development",
     image: "/tools/web.webp",
     description:
-      "At Bee Neural, we specialize in cutting-edge web development services. Our expert team designs and builds innovative, responsive websites tailored to your business needs. Utilizing the latest technologies and best practices, we ensure seamless user experiences and robust performance. From front-end design to back-end functionality, we provide comprehensive solutions that drive results.",
+      "At BeeNeural, we specialize in cutting-edge web development services. Our expert team designs and builds innovative, responsive websites tailored to your business needs. Utilizing the latest technologies and best practices, we ensure seamless user experiences and robust performance. From front-end design to back-end functionality, we provide comprehensive solutions that drive results.",
   },
 ];
 export const serviceAry = [

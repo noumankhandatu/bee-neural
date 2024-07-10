@@ -29,39 +29,39 @@ const baseurl = "https://bee-neural.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(baseurl),
   title: {
-    default: "Bee Neural Home",
-    template: "%s | Bee Neural",
+    default: "BeeNeural Home",
+    template: "%s | BeeNeural",
   },
   description:
-    "Welcome to Bee Neural, your go-to platform for neural network insights and resources.",
+    "Welcome to BeeNeural, your go-to platform for neural network insights and resources.",
   keywords: [
-    "Bee Neural",
-    "Bee Neural Home",
-    "Bee Neural | Home Page",
-    "Bee Neural Website",
+    "BeeNeural",
+    "BeeNeural Home",
+    "BeeNeural | Home Page",
+    "BeeNeural Website",
     "AI Services",
-    "Bee Neural AI Services",
+    "BeeNeural AI Services",
   ],
   openGraph: {
     type: "website",
     url: baseurl,
-    title: "Bee Neural",
+    title: "BeeNeural",
     description:
-      "Welcome to Bee Neural, your go-to platform for neural network insights and resources.",
+      "Welcome to BeeNeural, your go-to platform for neural network insights and resources.",
     images: [
       {
         url: "/assets/svg/logo.svg",
         width: 800,
         height: 600,
-        alt: "Bee Neural Logo",
+        alt: "BeeNeural Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bee Neural Home",
+    title: "BeeNeural Home",
     description:
-      "Welcome to Bee Neural, your go-to platform for neural network insights and resources.",
+      "Welcome to BeeNeural, your go-to platform for neural network insights and resources.",
     images: ["/assets/svg/logo.svg"],
   },
   alternates: {

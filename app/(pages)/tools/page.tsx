@@ -8,13 +8,13 @@ const PlaceholdersAndVanishInputDemo = lazy(
 );
 
 export const metadata: Metadata = {
-  title: "About Bee Neural | Bee Neural",
+  title: "About BeeNeural | BeeNeural",
   description:
     "Our mission is to empower businesses and individuals to accelerate climate action.",
   openGraph: {
     type: "website",
     url: "https://bee-neural.vercel.app/tools",
-    title: "About Bee Neural | Bee Neural",
+    title: "About BeeNeural | BeeNeural",
     description:
       "Our mission is to empower businesses and individuals to accelerate climate action.",
     images: [
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
         url: "https://bee-neural.vercel.app/logo.png",
         width: 800,
         height: 600,
-        alt: "Bee Neural Logo",
+        alt: "BeeNeural Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Bee Neural | Bee Neural",
+    title: "About BeeNeural | BeeNeural",
     description:
       "Our mission is to empower businesses and individuals to accelerate climate action.",
     images: ["https://bee-neural.vercel.app/logo.png"],

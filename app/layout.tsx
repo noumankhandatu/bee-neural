@@ -11,8 +11,8 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata | any = {
-  title: "Bee Neural",
-  description: "Bee Neural Leading Artificial Intelligence Company",
+  title: "BeeNeural",
+  description: "BeeNeural Leading Artificial Intelligence Company",
   icons: {
     icon: [
       {
