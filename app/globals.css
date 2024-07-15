@@ -44,11 +44,24 @@
 }
 
 .bg-gradient {
-  background: rgb(238, 157, 26);
   background: linear-gradient(
     50deg,
     rgba(238, 157, 26, 1) 9%,
     rgba(239, 165, 44, 1) 12%,
     rgba(255, 255, 255, 1) 47%
   );
+  background-size: 200% 200%;
+  animation: gradientRipple 5s ease infinite;
+}
+
+@keyframes gradientRipple {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

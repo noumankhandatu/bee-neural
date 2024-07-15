@@ -21,11 +21,11 @@ const Page: React.FC = () => {
       <main className="flex flex-col lg:flex-row items-center justify-center w-full px-10">
         <div
           data-aos="fade-right"
-          className="text-center lg:text-left lg:w-1/2"
+          className="text-center lg:text-left lg:w-1/2 lg:ml-20 ml-0"
         >
           <h1 className="font-bold mb-4">HI, I'M NOUMAN</h1>
           <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-primary">
-            I'M A FULL STACK DEVELOPER
+            I'M A FULL STACK DEVELOPER 👨🏻‍💻
           </h2>
           <p className="mb-6">
             Full stack developer with a passion for crafting innovative
