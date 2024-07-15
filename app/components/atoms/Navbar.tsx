@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -31,14 +32,16 @@ const Navbar: React.FC = () => {
         className={`w-full bg-[#F2F2F2] shadow-md p-3   fixed top-0 left-0 right-0 z-50 `}
       >
         <div className="max-w-screen-xl flex  flex-wrap items-center justify-between mx-auto">
-          <Image
-            priority
-            src="/logo.png"
-            alt="logo"
-            height={1000}
-            width={1000}
-            className="w-[180px] h-full]"
-          />
+          <Link href={"/"}>
+            <Image
+              priority
+              src="/logo.png"
+              alt="logo"
+              height={1000}
+              width={1000}
+              className="w-[180px] h-full]"
+            />
+          </Link>
           <button
             onClick={toggleMenu}
             type="button"
@@ -72,18 +75,18 @@ const Navbar: React.FC = () => {
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent ">
               {navItems.map((item) => (
                 <li key={item}>
-                  <a
+                  <Link
                     href={
                       item === "waitlist" ||
                       item === "Tools" ||
                       item === "Career"
                         ? `${item.toLowerCase()}`
-                        : `#${item.toLowerCase()}`
+                        : `/#${item.toLowerCase()}`
                     }
                     className="block capitalize py-2 px-3 text-[15px] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0  md:dark:hover:text-primary  text-beta  "
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
