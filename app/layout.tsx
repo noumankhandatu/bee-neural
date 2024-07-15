@@ -2,9 +2,9 @@ import React from "react";
 import { Metadata } from "next";
 import { Oxygen } from "next/font/google";
 import ClientProvider from "./components/atoms/ClientProvider";
-import "./globals.css";
 import Head from "next/head";
-
+import "./globals.css";
+import "aos/dist/aos.css";
 // Import the Client Component
 
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400", "700"] });

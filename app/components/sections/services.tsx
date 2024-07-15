@@ -4,7 +4,7 @@ import { ServiceCard } from "../molecules/service-card";
 
 const ServicesDemo = () => {
   return (
-    <>
+    <div id="services">
       <p className="text-4xl text-center font-bold  flex justify-center items-center text-primary">
         Our Services 📝
       </p>
@@ -34,7 +34,7 @@ const ServicesDemo = () => {
         We are dedicated to delivering innovative solutions that drive success
         and transform industries.
       </p>
-    </>
+    </div>
   );
 };
 

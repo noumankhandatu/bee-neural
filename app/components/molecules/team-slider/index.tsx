@@ -10,31 +10,37 @@ const cards = [
     name: "Gulshan Yasmeen",
     position: "Founder And AI Lead Researchers",
     image: "/assets/team/team1.webp",
+    link: "/developers/nouman",
   },
   {
     name: "Engr Shoaib Uddin",
     position: "Co-Founder Data Scientist And NLP Specialist",
     image: "/assets/team/team2.webp",
+    link: "/developers/nouman",
   },
   {
     name: "Hakeem Yar Baig",
     position: "Co-Founder DevOps And ML Engineer",
     image: "/assets/team/hakim.jpeg",
+    link: "/developers/nouman",
   },
   {
     name: "Ammar Ali",
     position: "Co-Founder Data Scientist Computer Vision Expert",
     image: "/assets/team/ammer.webp",
+    link: "/developers/nouman",
   },
   {
     name: "Ania Shams",
     position: "Machine Learning Engineer And Bussiness Developer",
     image: "/assets/team/shams.jpeg",
+    link: "/developers/nouman",
   },
   {
     name: "Nouman Datusing",
     position: "Developer",
     image: "/assets/team/me.png",
+    link: "/developers/nouman",
   },
 ];
 
@@ -80,6 +86,7 @@ function TeamSlider() {
                   name={member.name}
                   position={member.position}
                   image={member.image}
+                  link={member.link}
                 />
               </div>
             );

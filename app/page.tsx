@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Spinner from "./components/atoms/Spinner";
 import { SignupFormDemo } from "./components/sections/contact-section";
 import TeamSlider from "./components/molecules/team-slider";
+import Wrapper from "./components/molecules/headerfooter-wrapper";
 
 // Lazy imports
 const Testimonial = lazy(() => import("./components/sections/testimonial"));
@@ -75,35 +76,35 @@ export const metadata: Metadata = {
 const HomePage: React.FC = () => {
   return (
     <Suspense fallback={<Spinner />}>
-      <Navbar />
-      <main>
-        <HeroParallaxDemo />
-        <GoogleGeminiEffectDemo />
-        <section style={{ height: 200 }} />
-        <AboutUsDemo />
-        <hr />
-        <section style={{ height: 200 }} />
-        <ServicesDemo />
-        <section style={{ height: 200 }} />
-        <OurProjectsDemo />
-        <section style={{ height: 100 }} />
-        <Testimonial />
-        <section style={{ height: 100 }} />
-        <TeamSlider />
-        <section style={{ height: 100 }} />
-        <FaqDemo />
-        <SignupFormDemo />
-      </main>
-      <footer>
-        <Footer />
-        <div
-          className="flex align-middle justify-center items-center"
-          style={{ height: 120, backgroundColor: "#eeefef", color: "black" }}
-        >
-          <p> Copyright © 2024 BeeNeural. All Rights Reserved.</p>
-        </div>
-      </footer>
-      <RocketFired />
+      <Wrapper>
+        <main>
+          <HeroParallaxDemo />
+          <GoogleGeminiEffectDemo />
+          <section style={{ height: 200 }} />
+          <AboutUsDemo />
+          <hr />
+          <section style={{ height: 200 }} />
+          <ServicesDemo />
+          <section style={{ height: 200 }} />
+          <OurProjectsDemo />
+          <section style={{ height: 100 }} />
+          <Testimonial />
+          <section style={{ height: 100 }} />
+          <TeamSlider />
+          <section style={{ height: 100 }} />
+          <FaqDemo />
+          <SignupFormDemo />
+        </main>
+        <footer>
+          <Footer />
+          <div
+            className="flex align-middle justify-center items-center"
+            style={{ height: 120, backgroundColor: "#eeefef", color: "black" }}
+          >
+            <p> Copyright © 2024 BeeNeural. All Rights Reserved.</p>
+          </div>
+        </footer>
+      </Wrapper>
     </Suspense>
   );
 };

@@ -42,3 +42,13 @@
   position: relative;
   left: "50%";
 }
+
+.bg-gradient {
+  background: rgb(238, 157, 26);
+  background: linear-gradient(
+    50deg,
+    rgba(238, 157, 26, 1) 9%,
+    rgba(239, 165, 44, 1) 12%,
+    rgba(255, 255, 255, 1) 47%
+  );
+}

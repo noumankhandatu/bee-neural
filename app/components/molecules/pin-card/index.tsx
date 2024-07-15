@@ -3,14 +3,10 @@ import React from "react";
 import { PinContainer } from "./3d-pin";
 import Image from "next/image";
 
-export function AnimatedPinDemo({ name, position, image }: any) {
+export function AnimatedPinDemo({ name, position, image, link }: any) {
   return (
     <div className="  flex items-center justify-center ">
-      <PinContainer
-        className=""
-        title={name}
-        href="https://twitter.com/mannupaaji"
-      >
+      <PinContainer className="" title={name} href={link}>
         <div className="flex basis-full flex-col p-4 tracking-tight text-beta sm:basis-1/2 w-full">
           <h3 className="max-w-xs text-center !pb-2 !m-0 font-bold  text-base text-beta">
             {name}
