@@ -13,6 +13,7 @@ export const NLPcontent = [
           height={300}
           className="h-full w-full object-cover p-1"
           alt="linear board demo"
+          priority
         />
       </div>
     ),
@@ -29,6 +30,7 @@ export const NLPcontent = [
           height={300}
           className="h-full w-full object-cover p-1"
           alt="linear board demo"
+          priority
         />
       </div>
     ),
@@ -44,6 +46,7 @@ export const NLPcontent = [
         height={300}
         className="h-full w-full object-cover p-1"
         alt="linear board demo"
+        priority
       />
     ),
   },
@@ -59,6 +62,7 @@ export const NLPcontent = [
           height={300}
           className="h-full w-full object-cover p-1"
           alt="linear board demo"
+          priority
         />
       </div>
     ),
@@ -75,6 +79,7 @@ export const NLPcontent = [
           height={300}
           className="h-full w-full object-cover p-1"
           alt="linear board demo"
+          priority
         />
       </div>
     ),
@@ -91,6 +96,7 @@ export const NLPcontent = [
           height={300}
           className="h-full w-full object-cover p-1"
           alt="linear board demo"
+          priority
         />
       </div>
     ),
