@@ -65,3 +65,15 @@
     background-position: 0% 50%;
   }
 }
+.ceoImage {
+  border: 1px solid #eee; /* JUST TO LOOK COOL */
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+  transition: all 0.3s ease-in-out;
+  padding: 10px;
+  background-color: #fbf4e9;
+}
+
+.ceoImage:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+  transform: translate3d(0px, -12px, 0px);
+}

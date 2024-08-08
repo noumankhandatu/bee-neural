@@ -1,110 +1,87 @@
 import React, { lazy, Suspense } from "react";
-import type { Metadata } from "next";
 import Spinner from "./components/atoms/Spinner";
-import { SignupFormDemo } from "./components/sections/contact-section";
 import TeamSlider from "./components/molecules/team-slider";
 import Wrapper from "./components/molecules/headerfooter-wrapper";
+import Image from "next/image";
+import { Metadata } from "next";
 
 // Lazy imports
 const Testimonial = lazy(() => import("./components/sections/testimonial"));
 
-const FaqDemo = lazy(() => import("./components/sections/faq"));
-const Footer = lazy(() => import("./components/atoms/Footer"));
 const RocketFired = lazy(() => import("./components/atoms/rocket"));
 
-const Navbar = lazy(() => import("./components/atoms/Navbar"));
-const HeroParallaxDemo = lazy(
-  () => import("./components/molecules/hello-parallax")
-);
 const OurProjectsDemo = lazy(
   () => import("./components/sections/our-projects")
 );
-const GoogleGeminiEffectDemo = lazy(
-  () => import("./components/molecules/google-gemini-effect")
-);
-const ServicesDemo = lazy(() => import("./components/sections/services"));
-const AboutUsDemo = lazy(() => import("./components/sections/aboutus"));
 
-const baseurl = "https://bee-neural.vercel.app";
+const ServicesDemo = lazy(() => import("./components/sections/services"));
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseurl),
-  title: {
-    default: "BeeNeural Home",
-    template: "%s | BeeNeural",
-  },
-  description:
-    "Welcome to BeeNeural, your go-to platform for neural network insights and resources.",
-  keywords: [
-    "BeeNeural",
-    "BeeNeural Home",
-    "BeeNeural | Home Page",
-    "BeeNeural Website",
-    "AI Services",
-    "BeeNeural AI Services",
-  ],
-  openGraph: {
-    type: "website",
-    url: baseurl,
-    title: "BeeNeural",
-    description:
-      "Welcome to BeeNeural, your go-to platform for neural network insights and resources.",
-    images: [
-      {
-        url: "/assets/svg/logo.svg",
-        width: 800,
-        height: 600,
-        alt: "BeeNeural Logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "BeeNeural Home",
-    description:
-      "Welcome to BeeNeural, your go-to platform for neural network insights and resources.",
-    images: ["/assets/svg/logo.svg"],
-  },
-  alternates: {
-    canonical: baseurl,
-  },
-  other: {
-    "theme-color": "#dd5f00",
-  },
+  title: "BeeNeural - AI Solutions | Home",
+  description: "BeeNeural Leading Artificial Intelligence Company",
 };
-
 const HomePage: React.FC = () => {
   return (
     <Suspense fallback={<Spinner />}>
       <Wrapper>
+        <RocketFired />
         <main>
-          <HeroParallaxDemo />
-          <GoogleGeminiEffectDemo />
-          <section style={{ height: 200 }} />
-          <AboutUsDemo />
-          <hr />
-          <section style={{ height: 200 }} />
+          <section id="home" style={{ height: 100 }} />
+          <div className="relative">
+            <div
+              style={{
+                background: `url(/web.png)`,
+                backgroundSize: "cover",
+                backgroundPosition: "600px -470px",
+                height: 600,
+                opacity: 0.1,
+              }}
+              className="px-32 flex justify-between"
+            ></div>
+            <div className=" text-black   absolute  top-10 left-32">
+              <h1 className="text-6xl font-bold text-[#34373E]">
+                Empower Your Business With
+              </h1>
+              <h2 className="text-6xl font-bold text-[#34373E] mt-4">
+                {" "}
+                AI Services Of <span className="text-[#EE9D1A]">B</span>ee
+                <span className="text-[#EE9D1A]">N</span>
+                eural
+              </h2>
+              <p className="text-[16px] mt-10">
+                We build beautiful products with the latest technologies and
+                frameworks.
+              </p>
+              <p className="text-[16px] mt-4">
+                We are a team of passionate developers and designers that love
+                to build
+              </p>
+              <p className="text-[16px] mt-4">
+                amazing products With BeeNeural
+              </p>
+            </div>
+          </div>
+          {/* <AboutUsDemo />
+          <hr /> */}
+          <section id="services" style={{ height: 10 }} />
           <ServicesDemo />
-          <section style={{ height: 200 }} />
+          <section id="portfolio" style={{ height: 200 }} />
           <OurProjectsDemo />
           <section style={{ height: 100 }} />
           <Testimonial />
-          <section style={{ height: 100 }} />
+          <section id="team" style={{ height: 100 }} />
           <TeamSlider />
           <section style={{ height: 100 }} />
-          <FaqDemo />
-          <SignupFormDemo />
         </main>
-        <footer>
-          <Footer />
-          <div
-            className="flex align-middle justify-center items-center"
-            style={{ height: 120, backgroundColor: "#eeefef", color: "black" }}
-          >
-            <p> Copyright © 2024 BeeNeural. All Rights Reserved.</p>
-          </div>
-        </footer>
       </Wrapper>
+      <footer>
+        <div
+          className="flex align-middle justify-center items-center"
+          style={{ height: 120, backgroundColor: "#eeefef", color: "black" }}
+        >
+          <p> Copyright © 2024 BeeNeural. All Rights Reserved.</p>
+        </div>
+      </footer>
     </Suspense>
   );
 };

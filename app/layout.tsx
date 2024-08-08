@@ -5,12 +5,11 @@ import ClientProvider from "./components/atoms/ClientProvider";
 import Head from "next/head";
 import "./globals.css";
 import "aos/dist/aos.css";
-// Import the Client Component
 
 const oxygen = Oxygen({ subsets: ["latin"], weight: ["400", "700"] });
 
-export const metadata: Metadata | any = {
-  title: "BeeNeural",
+export const metadata: Metadata = {
+  title: "BeeNeural ",
   description: "BeeNeural Leading Artificial Intelligence Company",
   icons: {
     icon: [
@@ -31,16 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link rel="manifest" href="/manifest.json" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content=" BeeNeural - AI Solutions | Home" />
       </Head>
-      <head>
-        <link rel="manifest" href="/manifest.json" />
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        {metadata.icons.icon.map((icon: any, index: number) => (
-          <link key={index} rel={icon.rel} type={icon.type} href={icon.url} />
-        ))}
-      </head>
       <body className={oxygen.className}>
         <ClientProvider>{children}</ClientProvider>
       </body>

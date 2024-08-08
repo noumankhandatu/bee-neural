@@ -1,16 +1,14 @@
-"use client";
-
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
+
+export const metadata: Metadata = {
+  title: "BeeNeural ",
+  description: "BeeNeural Leading Artificial Intelligence Company",
+};
 
 const PortfolioNavbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <div className="relative mb-16">
       <nav

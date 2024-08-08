@@ -66,7 +66,7 @@ export function SignupFormDemo() {
         You can share your thoughts and stay in touch with us
       </p>
       <div className="flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-[80%]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d103386.65503162552!2d74.28570980753398!3d35.926588246870416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x38e637c660b54c0d%3A0xe223a1219f7cd8d!2sNomal%20-%20Gilgit%20Rd%2C%20near%20KIU%2C%20Gilgit%2C%2015100!3m2!1d35.9266164!2d74.36811089999999!5e0!3m2!1sen!2s!4v1720518686906!5m2!1sen!2s"
             width="100%"

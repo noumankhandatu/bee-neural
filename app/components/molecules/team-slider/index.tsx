@@ -3,14 +3,13 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { AnimatedPinDemo } from "../pin-card";
 import { RiTeamFill } from "react-icons/ri";
-import { primary } from "@/utils/colors";
 
 const cards = [
   {
     name: "Gulshan Yasmeen",
     position: "Founder And AI Lead Researchers",
     image: "/assets/team/team1.webp",
-    link: "/developers/nouman",
+    link: "/developers/gulshan-yasmeen",
   },
   {
     name: "Engr Shoaib Uddin",
@@ -64,35 +63,33 @@ const responsive = {
 };
 function TeamSlider() {
   return (
-    <div>
-      <div id="team" className="w-full">
-        <p
-          id="faq"
-          className="text-4xl text-center font-bold mt-20 flex justify-center items-center text-primary"
-        >
-          Our Team
-          <RiTeamFill className="ml-4" />
-        </p>
+    <div className="w-full">
+      <p
+        id="faq"
+        className="text-4xl text-center font-bold mt-20 flex justify-center items-center text-primary"
+      >
+        Our Team
+        <RiTeamFill className="ml-4" />
+      </p>
 
-        <p className="text-[16px] text-center mt-4 mb-12">
-          A dynamic team of innovators dedicated to excellence and
-          groundbreaking solutions.
-        </p>
-        <Carousel className="h-[363px]" responsive={responsive}>
-          {cards.map((member: any, id: number) => {
-            return (
-              <div key={id}>
-                <AnimatedPinDemo
-                  name={member.name}
-                  position={member.position}
-                  image={member.image}
-                  link={member.link}
-                />
-              </div>
-            );
-          })}
-        </Carousel>
-      </div>
+      <p className="text-[16px] text-center mt-4 mb-12">
+        A dynamic team of innovators dedicated to excellence and groundbreaking
+        solutions.
+      </p>
+      <Carousel className="h-[363px]" responsive={responsive}>
+        {cards.map((member: any, id: number) => {
+          return (
+            <div key={id}>
+              <AnimatedPinDemo
+                name={member.name}
+                position={member.position}
+                image={member.image}
+                link={member.link}
+              />
+            </div>
+          );
+        })}
+      </Carousel>
     </div>
   );
 }

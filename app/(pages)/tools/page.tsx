@@ -1,54 +1,23 @@
-import React, { lazy, Suspense } from "react";
-import type { Metadata } from "next";
-import Spinner from "@/app/components/atoms/Spinner";
-import { BackgroundBoxesDemo } from "@/app/components/molecules/background-boxes";
+import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
+import Link from "next/link";
+import React from "react";
 
-const PlaceholdersAndVanishInputDemo = lazy(
-  () => import("@/app/components/molecules/input")
-);
-
-export const metadata: Metadata = {
-  title: "About BeeNeural | BeeNeural",
-  description:
-    "Our mission is to empower businesses and individuals to accelerate climate action.",
-  openGraph: {
-    type: "website",
-    url: "https://bee-neural.vercel.app/tools",
-    title: "About BeeNeural | BeeNeural",
-    description:
-      "Our mission is to empower businesses and individuals to accelerate climate action.",
-    images: [
-      {
-        url: "https://bee-neural.vercel.app/logo.png",
-        width: 800,
-        height: 600,
-        alt: "BeeNeural Logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About BeeNeural | BeeNeural",
-    description:
-      "Our mission is to empower businesses and individuals to accelerate climate action.",
-    images: ["https://bee-neural.vercel.app/logo.png"],
-  },
-  alternates: {
-    canonical: "https://bee-neural.vercel.app/tools",
-  },
-  other: {
-    "theme-color": "#dd5f00",
-  },
-};
-
-const ToolsPage: React.FC = () => {
+const ToolsPage = () => {
   return (
-    <Suspense fallback={<Spinner />}>
-      <BackgroundBoxesDemo />
-      {/* <div>
-        <PlaceholdersAndVanishInputDemo />
-      </div> */}
-    </Suspense>
+    <Wrapper>
+      <div className="flex bg-secondary flex-col items-center justify-center h-screen">
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">Coming - Soon</h2>
+        <p className="text-lg text-gray-600 mb-3">
+          The page youre looking is still under construction 🚧
+        </p>
+        <p className="text-[13px] text-gray-600 mb-8">
+          But not to worry about because BeeNeural is always working . 🙌
+        </p>
+        <Link href="/">
+          <p className="text-blue-500 hover:underline">Return Home</p>
+        </Link>
+      </div>
+    </Wrapper>
   );
 };
 

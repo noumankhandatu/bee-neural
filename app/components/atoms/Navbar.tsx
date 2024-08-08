@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const navItems = [
   "Home",
-  "About",
+  // "About",
   "Services",
   "Tools",
   "Portfolio",
@@ -79,7 +79,9 @@ const Navbar: React.FC = () => {
                     href={
                       item === "waitlist" ||
                       item === "Tools" ||
-                      item === "Career"
+                      item === "Career" ||
+                      item === "Contact" ||
+                      item === "FAQ"
                         ? `${item.toLowerCase()}`
                         : `/#${item.toLowerCase()}`
                     }

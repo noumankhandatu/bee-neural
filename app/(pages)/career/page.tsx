@@ -1,16 +1,12 @@
 "use client";
 import { cn } from "@/utils/cn";
-import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
-import { primary } from "@/utils/colors";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Label } from "@/app/components/sections/contact-section/label";
 import { Input } from "@/app/components/sections/contact-section/input";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { IoMdArrowBack } from "react-icons/io";
-import Title from "@/app/components/atoms/Title";
 import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
 
 const CareerPage = () => {
@@ -73,20 +69,25 @@ const CareerPage = () => {
 
   return (
     <Wrapper>
-      <div id="contact" className="container mx-auto py-10">
+      <section style={{ height: 40 }} />
+      <div className="container mx-auto py-10">
         <div className="flex justify-between w-full">
-          <Link href={"/"}>
-            <IoMdArrowBack fontSize={35} color="#EE9D1A" className="ml-4" />
+          <Link className="text-white" href={"/"}>
+            {/* <IoMdArrowBack fontSize={35} color="#EE9D1A" className="ml-4" /> */}
+            .
           </Link>
 
-          <p className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl text-black">
-            <Title />
+          <p className="mb-5 sm:mb-5 text-xl text-center sm:text-5xl text-black">
+            <span className="text-primary font-bold">
+              B<span className="text-beta">ee</span>N
+              <span className="text-beta">eural</span>
+            </span>
             👩🏻‍💻
           </p>
           <div></div>
         </div>
 
-        <p className="text-[20px] text-center mt-4 mb-12">
+        <p className="text-[20px] text-center  mb-12">
           Join BeeNeural and Be a part of something great
         </p>
         <div className="flex justify-center">

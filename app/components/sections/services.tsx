@@ -4,14 +4,15 @@ import { ServiceCard } from "../molecules/service-card";
 
 const ServicesDemo = () => {
   return (
-    <div id="services">
+    <div>
       <p className="text-4xl text-center font-bold  flex justify-center items-center text-primary">
         Our Services 📝
       </p>
-      <p className=" text-center mt-8 md:text-lg">
-        At AI Services Hub, we provide a comprehensive range of AI services
-        designed to help businesses achieve their goals. <br /> Our offerings
-        include
+      <p className=" text-center mt-8 md:text-sm lg:ml-52 lg:mr-52">
+        We provide a comprehensive range of AI services designed to help
+        businesses achieve their goals. Our offerings at BeeNeural include
+        cutting-edge machine learning solutions, natural language processing,{" "}
+        <br /> computer vision, and predictive analytics.
       </p>
       <div style={{ height: 100 }} />
       <div className="flex justify-center w-full ">

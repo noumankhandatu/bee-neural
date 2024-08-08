@@ -146,9 +146,14 @@ export const serviceArray = [
   },
 ];
 export const serviceAry = [
+  // {
+  //   title: "Natural Language Processing ",
+  //   image: "/assets/service-images/nlp.jpg",
+  //   description: "",
+  // },
   {
-    title: "Natural Language Processing ",
-    image: "/assets/service-images/nlp.jpg",
+    title: "Artificial Intelligence",
+    image: "/assets/service-images/cv.jpg",
     description: "",
   },
   {
@@ -156,19 +161,15 @@ export const serviceAry = [
     image: "/assets/service-images/ci.jpg",
     description: "",
   },
-  {
-    title: "Computer Vision",
-    image: "/assets/service-images/cv.jpg",
-    description: "",
-  },
-  {
-    title: "Machine Learning",
-    image: "/assets/service-images/ml.webp",
-    description: "",
-  },
+
+  // {
+  //   title: "Machine Learning",
+  //   image: "/assets/service-images/ml.webp",
+  //   description: "",
+  // },
 
   {
-    title: "Web Development with AI Integration",
+    title: "Web AI Integration",
     image: "/tools/web.webp",
     description: "",
   },

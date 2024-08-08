@@ -3,29 +3,33 @@
 import { primary } from "@/utils/colors";
 import React, { useState } from "react";
 import { HiQuestionMarkCircle } from "react-icons/hi";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "BeeNeural - AI Solutions | FAQ",
+  description: "BeeNeural Leading Artificial Intelligence Company",
+};
 const faqData = [
   {
-    question: " How Much Will It Cost?",
+    question: "How Much Will It Cost?",
     answer: (
       <p className="mb-2 text-gray-500 dark:text-gray-400">
-        To Get A Better Idea Of The Cost Of What You Want To Build, Give Us A
-        Quick Phone Call. We’ll Ask You A Few Questions About The Nature Of The
-        Site, What Sort Of Interactivity The Site Will Have, Your Graphic Design
-        Needs, Etc. Then We’ll Be Able To Give You A Ballpark Figure. If You’re
-        Still Interested, We’ll Come To Your Place Of Business And Come Up With
-        A Firm Quote.
+        To get a better idea of the cost for your BeeNeural project, give us a
+        quick call. We’ll ask a few questions about the nature of your site, the
+        level of interactivity, your graphic design needs, etc. Then, we’ll
+        provide you with a ballpark figure. If you&apos;re still interested,
+        we&apos;ll visit your place of business and provide a firm quote.
       </p>
     ),
   },
   {
-    question: "How Long It Takes To Design?",
+    question: "How Long Does It Take To Design?",
     answer: (
       <p className="mb-2 text-gray-500 dark:text-gray-400">
-        The Time Limit Of Any Assignment Is Normally Dictated By The Client. If
-        You Have Any Time Limit In Mind We Will Attempt To Assemble It For You.
-        The Main General Delay In The Making Of A Website Is Waiting For The
-        Content Of The Pages To Be Sent To Us By The Client.
+        The timeframe for any BeeNeural assignment is normally dictated by the
+        client. If you have a specific deadline in mind, we will attempt to meet
+        it for you. The main general delay in creating a website is often
+        waiting for the content of the pages to be provided by the client.
       </p>
     ),
   },
@@ -33,31 +37,32 @@ const faqData = [
     question: "How Do I Associate With BeeNeural?",
     answer: (
       <p className="mb-2 text-gray-500 dark:text-gray-400">
-        The Process Begins When You Contact Us With Your Requirements. We
-        Analyze Your Requirements And Respond To You. On The Basis Of The
-        Further Discussion, You Can Choose An Engagement Model That Suits You
-        The Best. After That, We Begin The Process Of Development.
+        The process begins when you contact BeeNeural with your requirements. We
+        analyze your needs and respond accordingly. Based on further discussion,
+        you can choose an engagement model that suits you best. After that, we
+        begin the development process.
       </p>
     ),
   },
   {
-    question: "Can You Help My Current Project Look More Professional?",
+    question: "Can BeeNeural Help My Current Project Look More Professional?",
     answer: (
       <p className="mb-2 text-gray-500 dark:text-gray-400">
-        Yes. Give Us Your Requirements And We Have Experienced Expertise To Help
-        You Give A New Professional Look That Really Wonders!
+        Yes. Provide us with your requirements, and BeeNeural’s experienced team
+        will help give your project a new, professional look that truly stands
+        out.
       </p>
     ),
   },
   {
-    question: "When Do I Pay?",
+    question: "When Do I Pay for BeeNeural Services?",
     answer: (
       <p className="mb-2 text-gray-500 dark:text-gray-400">
-        For Most Projects, Equal Payments Are Made At The Start, Midway, And The
-        End Of The Project, But We Can Work With You To Set Up A Schedule That
-        Meets Your Needs. We Understand That This Is A Big Investment And Want
-        To Help You Budget For The Expense In Whatever Way Possible. We Accept
-        Checks, PayPal, And All Major Credit Cards.
+        For most BeeNeural projects, equal payments are made at the start,
+        midway, and the end of the project. However, we can work with you to set
+        up a payment schedule that meets your needs. We understand this is a
+        significant investment and want to help you budget for the expense. We
+        accept checks, PayPal, and all major credit cards.
       </p>
     ),
   },

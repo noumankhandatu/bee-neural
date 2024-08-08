@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-const baseurl = "https://bee-neural.vercel.app";
+const baseurl = "https://beeneural.com/";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
