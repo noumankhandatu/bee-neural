@@ -75,10 +75,7 @@ const HomePage: React.FC = () => {
         </main>
       </Wrapper>
       <footer>
-        <div
-          className="flex align-middle justify-center items-center"
-          style={{ height: 120, backgroundColor: "#eeefef", color: "black" }}
-        >
+        <div className="flex align-middle justify-center items-center bg-primary text-white h-[90px]">
           <p> Copyright © 2024 BeeNeural. All Rights Reserved.</p>
         </div>
       </footer>

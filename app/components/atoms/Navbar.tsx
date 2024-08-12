@@ -13,6 +13,7 @@ const navItems = [
   "Portfolio",
   "Team",
   "Career",
+  "Pricing",
   "Contact",
   "FAQ",
   // "waitlist",
@@ -81,6 +82,7 @@ const Navbar: React.FC = () => {
                       item === "Tools" ||
                       item === "Career" ||
                       item === "Contact" ||
+                      item === "Pricing" ||
                       item === "FAQ"
                         ? `${item.toLowerCase()}`
                         : `/#${item.toLowerCase()}`

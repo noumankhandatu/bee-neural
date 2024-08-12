@@ -16,7 +16,7 @@ const ServicesDemo = () => {
       </p>
       <div style={{ height: 100 }} />
       <div className="flex justify-center w-full ">
-        <div className="flex flex-wrap justify-center gap-4 w-full p-5 ">
+        <div className="flex flex-wrap justify-center gap-4 gap-y-32 w-full p-5 ">
           {serviceAry.map((items: any, id: number) => {
             const isLastItem = id === serviceArray.length - 1;
             return (
@@ -31,10 +31,6 @@ const ServicesDemo = () => {
           })}
         </div>
       </div>
-      <p className=" text-center mt-8 md:text-lg">
-        We are dedicated to delivering innovative solutions that drive success
-        and transform industries.
-      </p>
     </div>
   );
 };

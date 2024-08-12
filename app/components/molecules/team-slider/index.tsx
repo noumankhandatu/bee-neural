@@ -15,19 +15,19 @@ const cards = [
     name: "Engr Shoaib Uddin",
     position: "Co-Founder Data Scientist And NLP Specialist",
     image: "/assets/team/team2.webp",
-    link: "/developers/nouman",
+    link: "/developers/shoaib",
   },
   {
     name: "Hakeem Yar Baig",
     position: "Co-Founder DevOps And ML Engineer",
     image: "/assets/team/hakim.jpeg",
-    link: "/developers/nouman",
+    link: "/developers/hakim",
   },
   {
     name: "Ammar Ali",
     position: "Co-Founder Data Scientist Computer Vision Expert",
     image: "/assets/team/ammer.webp",
-    link: "/developers/nouman",
+    link: "/developers/ammar ",
   },
   {
     name: "Ania Shams",

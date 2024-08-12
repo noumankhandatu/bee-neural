@@ -154,12 +154,14 @@ export const serviceAry = [
   {
     title: "Artificial Intelligence",
     image: "/assets/service-images/cv.jpg",
-    description: "",
+    description:
+      "Artificial Intelligence (AI) empowers machines to perform human-like tasks. Beeneural provides AI services that automate processes, enhance efficiency, and drive business growth.",
   },
   {
     title: "Cloud Computing",
     image: "/assets/service-images/ci.jpg",
-    description: "",
+    description:
+      "Cloud computing allows businesses to access data and applications online. Beeneural offers secure, scalable cloud solutions that enhance flexibility, efficiency, and innovation.",
   },
 
   // {
@@ -169,14 +171,16 @@ export const serviceAry = [
   // },
 
   {
-    title: "Web AI Integration",
+    title: "Web & AI Integration",
     image: "/tools/web.webp",
-    description: "",
+    description:
+      "Web & AI Integration blends web technologies with AI for smarter applications. Beeneural optimizes web platforms with AI to enhance user experiences and drive innovation.",
   },
   {
     title: "IoT and Robotics",
     image: "/assets/service-images/data analytic.jpg",
-    description: "",
+    description:
+      "IoT and Robotics combine devices with intelligent systems for automation. Beeneural provides solutions to connect, collect data, and innovate in a connected world.",
   },
 ];
 export const projectCardArray = [

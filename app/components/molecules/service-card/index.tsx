@@ -12,20 +12,22 @@ interface ThreeCardTypes {
   className?: string;
 }
 
-export function ServiceCard({ title, image, className }: ThreeCardTypes) {
+export function ServiceCard({
+  title,
+  image,
+  className,
+  description,
+}: ThreeCardTypes) {
   const slugify = (text: string) => {
     return text.trim().toLowerCase().replace(/\s+/g, "-");
   };
   return (
-    <Link href={`/${slugify(title)}`} className="cursor-pointer text-center">
+    <Link href={`/${slugify(title)}`} className="cursor-pointer ">
       <CardContainer className={className}>
         <CardBody
-          className={`bg-secondary text-center relative group/card border-black/[0.1] w-auto h-auto rounded-xl p-6 border transition-all duration-300 ease-in-out  hover:shadow-2xl hover:shadow-orange-500/50`}
+          className={`bg-secondary h-[400px] text-center relative group/card border-black/[0.1] w-auto rounded-xl p-6 border transition-all duration-300 ease-in-out  hover:shadow-2xl hover:shadow-orange-500/50`}
         >
-          <p className="text-center font-bold text-neutral-600 mb-4 ">
-            {" "}
-            {title}
-          </p>
+          <h1 className=" font-bold text-neutral-600 mb-2 "> {title}</h1>
           <Image
             priority
             src={image}
@@ -34,6 +36,7 @@ export function ServiceCard({ title, image, className }: ThreeCardTypes) {
             className="h-[200px] w-[300px]  object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
+          <p className="text-[13px] mt-4">{description}</p>
         </CardBody>
       </CardContainer>
     </Link>
