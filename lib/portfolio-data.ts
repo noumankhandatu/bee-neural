@@ -60,3 +60,55 @@ export const noumandata: NoumanData = {
     { name: "NoSQL Databases", emoji: "🗃️" },
   ],
 };
+
+export const HakimPortfolioData = [
+  {
+    src: "/assets/team/portfolio/ANPR.png",
+    title: "ANPR System",
+    description: `
+      Our ANPR system utilizes advanced imaging and AI technologies to accurately detect and recognize vehicle license plates. Designed for seamless integration, it helps monitor traffic flow, enhance security, and streamline parking management. Ideal for smart city applications, this system is a robust solution for effective vehicle oversight.
+    `,
+  },
+  {
+    src: "/assets/team/portfolio/chatbot development.png",
+    title: "Customized Chatbot",
+    description: `A customized chatbot designed to engage users based on provided images leverages advanced image recognition to interpret visual content. Upon receiving an image, it identifies key elements or scenes and generates relevant, context-aware responses, questions, or recommendations tailored to the user's interests. This functionality enhances user engagement by creating a dynamic, interactive experience, showcasing the chatbot's ability to understand and respond to visual information for applications in customer service, personalized marketing, and more.
+    `,
+  },
+  {
+    src: "/assets/team/portfolio/build Ai tools.png",
+    title: "URL Detection Tool",
+    description: `The project leverages YOLOv8 for object detection and EasyOCR for Optical Character Recognition (OCR) to extract valuable information from PDFs The script begins by loading a custom-trained YOLOv8 model and a text reader from EasyOCR. It enables users to input the URL of a PDF, specify a page range, and initiate the object detection and OCR process. The script visually displays the images containing the specified class (class 0) and subsequently extracts text and confidence levels through OCR. The recognized results are organized into a Pandas DataFrame and saved as an Excel file.
+    `,
+  },
+];
+export const ShoaibPortfolioData = [
+  {
+    src: "/assets/images/ags.png",
+    title: "Autograding System",
+    description: `
+      The Subjective-Based Auto-Grading System is an AI-driven solution
+      that automates grading for subjective exam papers. Using OCR
+      technology, it converts handwritten or printed text from scanned
+      papers into digital format. The text is then preprocessed and
+      vectorized using methods like TF-IDF or BERT embeddings. By
+      calculating cosine similarity between student responses and
+      reference answers, the system assigns grades automatically.
+      Educators can upload papers, view results, and adjust grades
+      through an intuitive interface, enhancing efficiency and
+      consistency in grading.
+    `,
+  },
+  {
+    src: "/assets/images/mtrc.png",
+    title: "Medical Test Recommendation System",
+    description: `
+      In hospitals, waiting for appointments takes a long time, and
+      doctors decide on tests after hearing about symptoms. My project
+      helps by suggesting which medical tests someone might need, just
+      based on their symptoms. This way, we can speed up the process and
+      make it easier for people to get the right tests without
+      waiting too long.
+    `,
+  },
+];

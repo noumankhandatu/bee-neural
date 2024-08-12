@@ -90,6 +90,7 @@ const WebDeveloperPage: React.FC = () => {
             src="/assets/team/Hi.png"
             alt="Saul"
             width={400}
+            priority
             height={400}
             className="w-[500px] h-[500px]"
           />

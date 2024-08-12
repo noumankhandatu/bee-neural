@@ -19,6 +19,7 @@ export function AnimatedPinDemo({ name, position, image, link }: any) {
               src={image}
               alt="img"
               width={200}
+              priority
               height={200}
               className="h-[150px] w-[150px]"
               style={{ borderRadius: "110px", border: "4px solid white" }}

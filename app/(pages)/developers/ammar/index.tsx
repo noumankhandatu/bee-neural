@@ -4,6 +4,8 @@ import React from "react";
 import GulshamYasmeenCarousel from "../gulshan-yasmeen/carousels/carousel";
 import GulshanYasmeenTestimonailCarousel from "../gulshan-yasmeen/carousels/testimonail-carousel";
 import { AmmarJourney } from "@/lib/journey-data";
+import PortfolioCarousel from "../gulshan-yasmeen/carousels/carousel";
+import { ShoaibPortfolioData } from "@/lib/portfolio-data";
 
 const AmmarPortfolio = () => {
   return (
@@ -38,6 +40,7 @@ const AmmarPortfolio = () => {
         </div>
         <div className="flex justify-center items-center">
           <Image
+            priority
             height={1000}
             width={1000}
             className="md:w-[400px] md:h-[500px]  w-full h-full border-red border-2 rounded-sm shadow-2xl ceoImage"
@@ -61,7 +64,7 @@ const AmmarPortfolio = () => {
         </p>
 
         <div className="md:p-20 p-10">
-          <GulshamYasmeenCarousel />
+          <PortfolioCarousel carouselItems={ShoaibPortfolioData} />
           <section style={{ height: 200 }} />
           <h2 className="text-3xl font-bold text-center">Journey and Impact</h2>
 

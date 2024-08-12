@@ -21,6 +21,7 @@ export const TestimonialCard = ({
             className="rounded-full w-12 h-12 mb-4"
             height={300}
             width={300}
+            priority
           />
           <h3 className="text-lg font-semibold mb-2">{name}</h3>
           <h4 className="text-md font-light mb-4">{title}</h4>

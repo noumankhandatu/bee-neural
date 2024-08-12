@@ -221,3 +221,41 @@ export const AmmarJourney = [
     ),
   },
 ];
+export const HakeemJourney = [
+  {
+    key: 1,
+    content: (
+      <TestimonialCard
+        isActive={false}
+        imageSrc="/assets/team/journey/s5.jpg"
+        name="Seminar"
+        title=""
+        testimonial="In this one-day hands-on workshop, participants were introduced to Machine Learning and Natural Language Processing (NLP). During the event, Shoaib Uddin delivered a presentation to the youth, emphasizing the importance of NLP and the transformative impact of Large Language Models in various industries. "
+      />
+    ),
+  },
+  {
+    key: 2,
+    content: (
+      <TestimonialCard
+        isActive={false}
+        imageSrc="/assets/team/journey/s6.jpg"
+        name="Training Program"
+        title="Training Program"
+        testimonial="Shoaib Uddin completed an AI and Data Science training program at NUST Campus Gilgit-Baltistan."
+      />
+    ),
+  },
+  {
+    key: 0,
+    content: (
+      <TestimonialCard
+        isActive={false}
+        imageSrc="/assets/team/journey/s7.jpg"
+        name="Leveraging The Impact Of AI"
+        title="Leveraging The Impact Of AI"
+        testimonial="BeeNeural was invited to a one-day tech camp where we empowered the youth by highlighting the impact of AI."
+      />
+    ),
+  },
+];

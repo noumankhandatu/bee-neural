@@ -2,28 +2,35 @@
 import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
 import Image from "next/image";
 import React, { useState } from "react";
-import GulshamYasmeenCarousel from "./carousels/carousel";
 import GulshanYasmeenTestimonailCarousel from "./carousels/testimonail-carousel";
 import { GulshanJourney } from "@/lib/journey-data";
 import Modal from "./modal/caro-model";
 import MultiImageCarousel from "./modal/journey-model-carousel";
+import PortfolioCarousel from "./carousels/carousel";
+import { ShoaibPortfolioData } from "@/lib/portfolio-data";
 
 const journeyImages = [
   {
     src: "/assets/team/journey/gulshan/g1.jpg",
-    title: "Vice-President of GBAI Association",
+    title: "Workshop ",
     description:
-      "Serving as the Vice-President of GBAI Association. It is the first AI association in Gilgit Baltistan that is working in field of AI and Data Sciences, to bring more opportunities into Gilgit, related to these cutting Edge Technologies.",
+      "One Day Workshop on Artificial Intelligence and Data Science, at Karakorum International University Gilgit.",
+  },
+  {
+    src: "/assets/team/journey/gulshan/c2/c22.jpeg",
+    title: "Serving ",
+    description:
+      "Serving as the Vice-President of GBAI Association. It is the first AI association in Gilgit Baltistan that is working in field of AI and Data Sciences, to bring more opportunities into Gilgit, related to these cutting Edge Technologies. ",
   },
   {
     src: "/assets/team/journey/gulshan/g5.jpeg",
-    title: "Tech Empowerment Camp",
+    title: "Tech ",
     description:
       "Tech Empowerment Camp for youth of Gilgit, arranged by Aga Khan Economic Planning Board. I delivered session on Artificial Intelligence and Ethical Consideration in AI.",
   },
   {
     src: "/assets/team/journey/gulshan/c3/c33.JPG",
-    title: "Training Program",
+    title: "Training",
     description:
       "Conducted 2 months training program to the Faculty of Karakoram International University, in the field of Data Science. This training Program was conducted in collaboration with Institute of Professional Development center, KIU.",
   },
@@ -56,6 +63,8 @@ const carouselTwoarray = [
   {
     src: "/assets/team/journey/gulshan/c2/c23.jpeg",
   },
+];
+const carouselThreearray = [
   {
     src: "/assets/team/journey/gulshan/c2/c24.jpeg",
   },
@@ -63,7 +72,7 @@ const carouselTwoarray = [
     src: "/assets/team/journey/gulshan/c2/c25.jpeg",
   },
 ];
-const carouselThreearray = [
+const carouselFourarray = [
   {
     src: "/assets/team/journey/gulshan/c3/c31.jpeg",
   },
@@ -77,6 +86,7 @@ const carouselThreearray = [
     src: "/assets/team/journey/gulshan/c3/c34.jpeg",
   },
 ];
+
 const GulshanYasmeenPortfolio = () => {
   const [selectedCarousel, setSelectedCarousel] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -121,6 +131,7 @@ const GulshanYasmeenPortfolio = () => {
         </div>
         <div className="flex justify-center items-center">
           <Image
+            priority
             height={1000}
             width={1000}
             className="md:w-[400px] md:h-[500px] w-full h-full border-red border-2 rounded-sm shadow-2xl ceoImage"
@@ -140,16 +151,17 @@ const GulshanYasmeenPortfolio = () => {
         </p>
         <div
           style={{ justifyItems: "center" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-2 justify-center  text-center md:p-20 p-10 items-center"
+          className="grid grid-cols-1 md:grid-cols-4 gap-2 justify-center  text-center md:p-20 p-10 items-center"
         >
           {journeyImages.map((image, index) => (
             <div
               key={index}
-              className="relative w-full h-full md:w-[300px] md:h-[400px]"
+              className="relative w-full h-full md:w-[230px] md:h-[300px]"
               onClick={() => {
                 if (index === 0) openCarouselModal(carouselOnearray);
                 if (index === 1) openCarouselModal(carouselTwoarray);
                 if (index === 2) openCarouselModal(carouselThreearray);
+                if (index === 3) openCarouselModal(carouselFourarray);
               }}
             >
               <Image
@@ -192,7 +204,7 @@ const GulshanYasmeenPortfolio = () => {
           examples and experiences.
         </p>
         <div className="md:p-20 p-10">
-          <GulshamYasmeenCarousel />
+          <PortfolioCarousel carouselItems={ShoaibPortfolioData} />
           <section style={{ height: 200 }} />
           <h2 className="text-3xl font-bold text-center">
             Client Testimonials

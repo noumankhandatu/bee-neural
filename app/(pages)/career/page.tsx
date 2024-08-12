@@ -179,6 +179,7 @@ const CareerPage = () => {
               </form>
             </div>
             <Image
+              priority
               src={"/assets/images/beeneural.webp"}
               alt="image"
               height={1000}

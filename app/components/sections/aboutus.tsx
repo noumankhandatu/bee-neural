@@ -25,6 +25,7 @@ function AboutUsDemo() {
               {item?.image && (
                 <Image
                   src={item.image}
+                  priority
                   alt="blog thumbnail"
                   height="1000"
                   width="1000"
