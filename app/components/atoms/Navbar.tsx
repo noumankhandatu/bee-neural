@@ -73,26 +73,33 @@ const Navbar: React.FC = () => {
             } w-full lg:block md:w-auto`}
             id="navbar-default"
           >
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent ">
-              {navItems.map((item) => (
-                <li key={item}>
-                  <Link
-                    href={
-                      item === "waitlist" ||
-                      item === "Tools" ||
-                      item === "Career" ||
-                      item === "Contact" ||
-                      item === "Pricing" ||
-                      item === "FAQ"
-                        ? `${item.toLowerCase()}`
-                        : `/#${item.toLowerCase()}`
-                    }
-                    className="block capitalize py-2 px-3 text-[15px] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0  md:dark:hover:text-primary  text-beta  "
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+            <ul className="font-medium items-center flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent ">
+              <>
+                {navItems.map((item) => (
+                  <li key={item}>
+                    <Link
+                      href={
+                        item === "waitlist" ||
+                        item === "Tools" ||
+                        item === "Career" ||
+                        item === "Contact" ||
+                        item === "Pricing" ||
+                        item === "FAQ"
+                          ? `${item.toLowerCase()}`
+                          : `/#${item.toLowerCase()}`
+                      }
+                      className="block capitalize py-2 px-3 text-[15px] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0  md:dark:hover:text-primary  text-beta  "
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+                <Link href={"/connect"}>
+                  <button className="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-2 px-4 border border-primary hover:border-transparent rounded">
+                    Connect
+                  </button>
+                </Link>
+              </>
             </ul>
           </div>
         </div>

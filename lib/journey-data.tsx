@@ -5,7 +5,7 @@ export const GulshanJourney = [
     content: (
       <TestimonialCard
         isActive={true}
-        imageSrc="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        imageSrc="/assets/testimonials/t1.jpg"
         name="Aram Saffarian"
         title="President of Treaty Health"
         testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
@@ -17,7 +17,7 @@ export const GulshanJourney = [
     content: (
       <TestimonialCard
         isActive={true}
-        imageSrc="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        imageSrc="/assets/testimonials/t2.jpg"
         name="Aram Saffarian"
         title="President of Treaty Health"
         testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
@@ -29,7 +29,7 @@ export const GulshanJourney = [
     content: (
       <TestimonialCard
         isActive={true}
-        imageSrc="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        imageSrc="/assets/testimonials/t3.jpg"
         name="Aram Saffarian"
         title="President of Treaty Health"
         testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
@@ -41,7 +41,7 @@ export const GulshanJourney = [
     content: (
       <TestimonialCard
         isActive={true}
-        imageSrc="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        imageSrc="/assets/testimonials/t4.jpg"
         name="Aram Saffarian"
         title="President of Treaty Health"
         testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
@@ -53,7 +53,43 @@ export const GulshanJourney = [
     content: (
       <TestimonialCard
         isActive={true}
-        imageSrc="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        imageSrc="/assets/testimonials/t5.jpg"
+        name="Aram Saffarian"
+        title="President of Treaty Health"
+        testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
+      />
+    ),
+  },
+  {
+    key: 6,
+    content: (
+      <TestimonialCard
+        isActive={true}
+        imageSrc="/assets/testimonials/t6.jpg"
+        name="Aram Saffarian"
+        title="President of Treaty Health"
+        testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
+      />
+    ),
+  },
+  {
+    key: 7,
+    content: (
+      <TestimonialCard
+        isActive={true}
+        imageSrc="/assets/testimonials/t7.jpg"
+        name="Aram Saffarian"
+        title="President of Treaty Health"
+        testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
+      />
+    ),
+  },
+  {
+    key: 8,
+    content: (
+      <TestimonialCard
+        isActive={true}
+        imageSrc="/assets/testimonials/t8.jpg"
         name="Aram Saffarian"
         title="President of Treaty Health"
         testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
@@ -153,10 +189,10 @@ export const AmmarJourney = [
     content: (
       <TestimonialCard
         isActive={false}
-        imageSrc="/assets/team/journey/s5.jpg"
-        name="Test"
-        title="test1"
-        testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
+        imageSrc="/assets/team/journey/ammar/at1.jpg"
+        name="Incubation Training Center"
+        title="Incubation Training Center"
+        testimonial="At Incubation we learned alot "
       />
     ),
   },
@@ -165,7 +201,7 @@ export const AmmarJourney = [
     content: (
       <TestimonialCard
         isActive={false}
-        imageSrc="/assets/team/journey/s6.jpg"
+        imageSrc="/assets/team/journey/ammar/at2.jpg"
         name="Test"
         title="test1"
         testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
@@ -177,7 +213,7 @@ export const AmmarJourney = [
     content: (
       <TestimonialCard
         isActive={false}
-        imageSrc="/assets/team/journey/sj1.jpg"
+        imageSrc="/assets/team/journey/ammar/at3.jpeg"
         name="Test"
         title="test1"
         testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
@@ -189,31 +225,7 @@ export const AmmarJourney = [
     content: (
       <TestimonialCard
         isActive={false}
-        imageSrc="/assets/team/journey/sj3.jpg"
-        name="Test"
-        title="test1"
-        testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
-      />
-    ),
-  },
-  {
-    key: 5,
-    content: (
-      <TestimonialCard
-        isActive={false}
-        imageSrc="/assets/team/journey/sj4.JPG"
-        name="Test"
-        title="test1"
-        testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."
-      />
-    ),
-  },
-  {
-    key: 6,
-    content: (
-      <TestimonialCard
-        isActive={false}
-        imageSrc="/assets/team/journey/sj5.jpg"
+        imageSrc="/assets/team/journey/ammar/at4.jpeg"
         name="Test"
         title="test1"
         testimonial="Xeven Solutions has improved the client's existing app. Xeven Solutions utilizes their expertise to deliver comprehensive, user-friendly solutions. Their team manages projects well and has excellent documentation processes and communication."

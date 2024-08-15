@@ -26,7 +26,7 @@ const PricingPage = () => {
           />
           <PricingCard
             title="Hourly"
-            price="$100"
+            price="$38"
             period="/ PER HOUR"
             description="One-off projects & on-going work"
             features={["✔️ Flexible", "✔️ Transparent", "✔️ Scalable"]}

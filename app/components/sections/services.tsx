@@ -12,6 +12,7 @@ const ServicesDemo = () => {
         We provide a comprehensive range of AI services designed to help
         businesses achieve their goals. Our offerings at BeeNeural include
         cutting-edge machine learning solutions, natural language processing,{" "}
+        web development with AI integration,
         <br /> computer vision, and predictive analytics.
       </p>
       <div style={{ height: 100 }} />

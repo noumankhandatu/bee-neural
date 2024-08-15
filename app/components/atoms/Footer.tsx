@@ -9,6 +9,7 @@ import {
 import { Label } from "../sections/contact-section/label";
 import { Input } from "../sections/contact-section/input";
 import { cn } from "@/utils/cn";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -24,7 +25,11 @@ const Footer = () => {
               <li className="text-[12px]">About Us</li>
               <li className="text-[12px]">Our Services</li>
               <li className="text-[12px]">Terms & Condition</li>
-              <li className="text-[12px]">Privacy Policy</li>
+              <Link href={"/legal-policy"}>
+                <li className="text-[12px] text-primary mt-2">
+                  Legal Certificate
+                </li>
+              </Link>
             </ul>
           </div>
           <div className="space-y-4">

@@ -112,3 +112,24 @@ export const ShoaibPortfolioData = [
     `,
   },
 ];
+export const GulshanPortfolioData = [
+  {
+    src: "/assets/images/od.png",
+    title: "Object Detection",
+    description: `
+     Real-time data collected from the road to Gilgit is used for object detection, specifically identifying turns and damaged road sections. By leveraging YOLO models, this system achieves an accuracy of over 90%.
+    `,
+  },
+  {
+    src: "/assets/images/nlp.png",
+    title: "Natural Language Processing",
+    description: `
+ This project focused on analyzing customer sentiments related to the restaurants using Natural Language Processing (NLP). The goal was to categorize and quantify sentiments as positive, negative, or neutral.  `,
+  },
+  {
+    src: "/assets/images/dva.png",
+    title: "Data Visualization & Analytics",
+    description: `
+ This interactive dashboard presents key statistics on Netflix. It allows users to select a specific feature, highlighting details about the chosen movie or TV show. The dashboard displays the total number of TV shows and movies, the most popular by country, and provides insights into release dates, genres, descriptions, and other relevant details. `,
+  },
+];

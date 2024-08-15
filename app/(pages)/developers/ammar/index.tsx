@@ -1,15 +1,15 @@
-import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
 import Image from "next/image";
 import React from "react";
-import GulshamYasmeenCarousel from "../gulshan-yasmeen/carousels/carousel";
 import GulshanYasmeenTestimonailCarousel from "../gulshan-yasmeen/carousels/testimonail-carousel";
 import { AmmarJourney } from "@/lib/journey-data";
 import PortfolioCarousel from "../gulshan-yasmeen/carousels/carousel";
 import { ShoaibPortfolioData } from "@/lib/portfolio-data";
+import PortfolioNavbar from "@/app/components/atoms/PortfolioNavbar";
 
 const AmmarPortfolio = () => {
   return (
-    <Wrapper>
+    <div>
+      <PortfolioNavbar />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-20 p-10">
         <div>
           <h1 className="text-4xl font-bold">Who is Ammar ? </h1>
@@ -78,7 +78,7 @@ const AmmarPortfolio = () => {
           <section style={{ height: 200 }} />
         </div>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 

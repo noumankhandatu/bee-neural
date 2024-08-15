@@ -1,5 +1,4 @@
 import React from "react";
-import { AnimatedTooltipPreview } from "../molecules/customer-tooltip";
 import { InfiniteMovingCardsDemo } from "../molecules/InfiniteMovingCards";
 
 const Testimonial = () => {
@@ -14,7 +13,6 @@ const Testimonial = () => {
       <p className="text-[16px] text-center mt-4 mb-12">
         See What People Have To Say About Us
       </p>
-      <AnimatedTooltipPreview />
       <InfiniteMovingCardsDemo />
     </div>
   );

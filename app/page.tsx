@@ -56,9 +56,7 @@ const HomePage: React.FC = () => {
                 We are a team of passionate developers and designers that love
                 to build
               </p>
-              <p className="text-[16px] mt-4">
-                amazing products With BeeNeural
-              </p>
+              <p className="text-[16px] mt-4">amazing products</p>
             </div>
           </div>
           {/* <AboutUsDemo />

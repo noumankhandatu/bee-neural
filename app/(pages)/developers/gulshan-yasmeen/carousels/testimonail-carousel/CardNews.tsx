@@ -11,21 +11,21 @@ export const TestimonialCard = ({
     <div>
       {isActive ? (
         <div
-          className={`bg-primary rounded-lg md:h-[250px] md:w-[400px] w-[200px] p-6 mt-10 mb-10 text-start text-white transition-transform duration-300 ease-in-out ml-2 mr-2 ${
-            isActive ? "transform -translate-y-4" : ""
+          className={`bg-beta rounded-lg pl-4 pr-4  text-start text-white transition-transform duration-300 ease-in-out  ${
+            isActive ? "" : ""
           }`}
         >
           <Image
             src={imageSrc}
             alt={`${name}'s picture`}
-            className="rounded-full w-12 h-12 mb-4"
-            height={300}
-            width={300}
+            className="rounded-sm w-full h-[200px]"
+            height={1000}
+            width={1000}
             priority
           />
-          <h3 className="text-lg font-semibold mb-2">{name}</h3>
+          {/* <h3 className="text-lg font-semibold mb-2">{name}</h3>
           <h4 className="text-md font-light mb-4">{title}</h4>
-          <p className="text-[10px] leading-relaxed">{testimonial}</p>
+          <p className="text-[10px] leading-relaxed">{testimonial}</p> */}
         </div>
       ) : (
         <div className="bg-beta  rounded-lg md:h-[300px] md:w-[400px] w-[200px] ">

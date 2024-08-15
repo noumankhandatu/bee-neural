@@ -1,13 +1,14 @@
 "use client";
-import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GulshanYasmeenTestimonailCarousel from "./carousels/testimonail-carousel";
 import { GulshanJourney } from "@/lib/journey-data";
 import Modal from "./modal/caro-model";
 import MultiImageCarousel from "./modal/journey-model-carousel";
 import PortfolioCarousel from "./carousels/carousel";
-import { ShoaibPortfolioData } from "@/lib/portfolio-data";
+import { GulshanPortfolioData } from "@/lib/portfolio-data";
+import PortfolioNavbar from "@/app/components/atoms/PortfolioNavbar";
+import AOS from "aos";
 
 const journeyImages = [
   {
@@ -88,6 +89,11 @@ const carouselFourarray = [
 ];
 
 const GulshanYasmeenPortfolio = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   const [selectedCarousel, setSelectedCarousel] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -101,9 +107,13 @@ const GulshanYasmeenPortfolio = () => {
   };
 
   return (
-    <Wrapper>
+    <div>
+      <PortfolioNavbar />
       {/* Section 1: About */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-20 p-10">
+      <div
+        data-aos="fade-down"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-20 p-10"
+      >
         <div>
           <h1 className="text-4xl font-bold">About Gulshan Yasmeen</h1>
           <p className="text-[14px] mt-10 text-beta leading-loose">
@@ -143,7 +153,7 @@ const GulshanYasmeenPortfolio = () => {
 
       {/* Section 2: Journey and Impact */}
       <section style={{ height: 100 }} />
-      <div>
+      <div data-aos="fade-down">
         <h2 className="text-3xl font-bold text-center">Journey and Impact</h2>
         <p className="text-[14px] mt-10 text-beta leading-loose text-center mx-10">
           Discover my noteworthy engagements, meaningful contributions, and
@@ -195,16 +205,16 @@ const GulshanYasmeenPortfolio = () => {
       )}
       {/* Section 3: Portfolio and Testimonials */}
       <section style={{ height: 100 }} />
-      <div>
+      <div data-aos="fade-down">
         <h2 className="text-3xl font-bold text-center">
-          Irfan&apos;s Tech Portfolio
+          Gulshan&apos;s Tech Portfolio
         </h2>
         <p className="text-[14px] mt-10 text-beta leading-loose text-center mx-10">
           Highlighting my skills and accomplishments through tangible work
           examples and experiences.
         </p>
         <div className="md:p-20 p-10">
-          <PortfolioCarousel carouselItems={ShoaibPortfolioData} />
+          <PortfolioCarousel carouselItems={GulshanPortfolioData} />
           <section style={{ height: 200 }} />
           <h2 className="text-3xl font-bold text-center">
             Client Testimonials
@@ -217,7 +227,7 @@ const GulshanYasmeenPortfolio = () => {
           <section style={{ height: 200 }} />
         </div>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 

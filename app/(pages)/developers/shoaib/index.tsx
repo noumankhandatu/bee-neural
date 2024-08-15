@@ -1,15 +1,26 @@
-import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import GulshanYasmeenTestimonailCarousel from "../gulshan-yasmeen/carousels/testimonail-carousel";
 import { ShoaibJourney } from "@/lib/journey-data";
 import PortfolioCarousel from "../gulshan-yasmeen/carousels/carousel";
 import { ShoaibPortfolioData } from "@/lib/portfolio-data";
+import PortfolioNavbar from "@/app/components/atoms/PortfolioNavbar";
+import AOS from "aos";
 
 const ShoaibPortfolio = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   return (
-    <Wrapper>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-20 p-10">
+    <div>
+      <PortfolioNavbar />
+      <div
+        data-aos="fade-right"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-20 p-10"
+      >
         <div>
           <h1 className="text-4xl font-bold">Who is Shoaib Uddin ? </h1>
           <p className="text-[14px] mt-10 text-beta leading-loose">
@@ -53,7 +64,7 @@ const ShoaibPortfolio = () => {
       {/* section 3 */}
       <section style={{ height: 100 }} />
 
-      <div>
+      <div data-aos="fade-right">
         <h2 className="text-3xl font-bold text-center">
           Shoaib&apos;s Portfolio
         </h2>
@@ -77,7 +88,7 @@ const ShoaibPortfolio = () => {
           <section style={{ height: 200 }} />
         </div>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 

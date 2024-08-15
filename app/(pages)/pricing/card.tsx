@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import AOS from "aos";
+import Link from "next/link";
 
 interface PricingCardProps {
   title: string;
@@ -36,9 +37,11 @@ const PricingCard: React.FC<PricingCardProps> = ({
           <li key={index}>{feature}</li>
         ))}
       </ul>
-      <button className="bg-white text-black rounded-lg py-2 px-4 text-[14px] font-bold w-full hover:bg-primary hover:text-white transition duration-300 ease-in-out ">
-        {buttonText}
-      </button>
+      <Link href={"/connect"}>
+        <button className="bg-white text-black rounded-lg py-2 px-4 text-[14px] font-bold w-full hover:bg-primary hover:text-white transition duration-300 ease-in-out ">
+          {buttonText}
+        </button>
+      </Link>
     </div>
   );
 };

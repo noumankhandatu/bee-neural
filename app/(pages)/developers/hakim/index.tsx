@@ -1,14 +1,15 @@
-import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
 import Image from "next/image";
 import React from "react";
 import GulshanYasmeenTestimonailCarousel from "../gulshan-yasmeen/carousels/testimonail-carousel";
 import { HakeemJourney, ShoaibJourney } from "@/lib/journey-data";
 import PortfolioCarousel from "../gulshan-yasmeen/carousels/carousel";
 import { HakimPortfolioData } from "@/lib/portfolio-data";
+import PortfolioNavbar from "@/app/components/atoms/PortfolioNavbar";
 
 const HakimPortfolio = () => {
   return (
-    <Wrapper>
+    <div>
+      <PortfolioNavbar />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-20 p-10">
         <div>
           <h1 className="text-4xl font-bold">Who is Hakeem Yar Baig ? </h1>
@@ -83,7 +84,7 @@ const HakimPortfolio = () => {
           <section style={{ height: 200 }} />
         </div>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 
