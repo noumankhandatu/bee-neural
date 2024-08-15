@@ -29,8 +29,8 @@ export function ServiceCard({
         <Image
           priority
           src={image}
-          height="1000"
-          width="1000"
+          height={200}
+          width={300}
           className="h-[200px] w-[300px]  object-cover rounded-xl group-hover/card:shadow-xl"
           alt="thumbnail"
         />

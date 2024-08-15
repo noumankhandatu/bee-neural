@@ -142,8 +142,8 @@ const GulshanYasmeenPortfolio = () => {
         <div className="flex justify-center items-center">
           <Image
             priority
-            height={1000}
-            width={1000}
+            height={500}
+            width={400}
             className="md:w-[400px] md:h-[500px] w-full h-full border-red border-2 rounded-sm shadow-2xl ceoImage"
             src={"/assets/team/frontimage2.jpg"}
             alt="ceo"
@@ -175,9 +175,9 @@ const GulshanYasmeenPortfolio = () => {
               }}
             >
               <Image
-                height={1000}
+                height={400}
                 priority
-                width={1000}
+                width={300}
                 className="w-full h-full"
                 src={image.src}
                 alt={image.title}

@@ -50,9 +50,9 @@ const ShoaibPortfolio = () => {
         </div>
         <div className="flex justify-center items-center">
           <Image
-            height={1000}
+            height={500}
             priority
-            width={1000}
+            width={400}
             className="md:w-[400px] md:h-[500px]  w-full h-full border-red border-2 rounded-sm shadow-2xl ceoImage"
             src={"/assets/team/shoaib-front.jpg"}
             alt="ceo"

@@ -41,8 +41,8 @@ const AmmarPortfolio = () => {
         <div className="flex justify-center items-center">
           <Image
             priority
-            height={1000}
-            width={1000}
+            height={400}
+            width={400}
             className="md:w-[400px] md:h-[500px]  w-full h-full border-red border-2 rounded-sm shadow-2xl ceoImage"
             src={"/assets/team/journey/a1.jpg"}
             alt="ceo"

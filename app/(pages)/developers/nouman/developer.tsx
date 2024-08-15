@@ -117,7 +117,7 @@ const WebDeveloperPage: React.FC = () => {
                 <hr />
                 <Image
                   src={project.image}
-                  height={400}
+                  height={150}
                   width={400}
                   alt="image"
                   className="w-full h-[150px]"

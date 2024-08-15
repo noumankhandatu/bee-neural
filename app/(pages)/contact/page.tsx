@@ -4,8 +4,24 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "BeeNeural | Contact",
+  metadataBase: new URL(`https://beeneural.com/`),
+  title: {
+    template: "BeeNeural - AI Solutions | Contact",
+    default: `BeeNeural - AI Solutions | Contact`,
+  },
+  alternates: {
+    canonical: "./",
+  },
   description: "BeeNeural Leading Artificial Intelligence Company",
+  icons: {
+    icon: [
+      {
+        rel: "icon",
+        type: "image/ico",
+        url: "/favicon.ico",
+      },
+    ],
+  },
 };
 const ContactPage = () => {
   return (

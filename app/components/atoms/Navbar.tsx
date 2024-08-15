@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 
 const navItems = [
   "Home",
@@ -20,7 +19,6 @@ const navItems = [
 ];
 
 const Navbar: React.FC = () => {
-  const colors = useSelector((state: any) => state.theme);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -38,8 +36,8 @@ const Navbar: React.FC = () => {
               priority
               src="/logo.png"
               alt="logo"
-              height={1000}
-              width={1000}
+              height={200}
+              width={200}
               className="w-[180px] h-full]"
             />
           </Link>

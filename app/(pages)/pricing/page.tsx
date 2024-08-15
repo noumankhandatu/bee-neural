@@ -4,8 +4,24 @@ import React from "react";
 import PricingCard from "./card";
 
 export const metadata: Metadata = {
-  title: "BeeNeural | Pricing",
+  metadataBase: new URL(`https://beeneural.com/`),
+  title: {
+    template: "BeeNeural | Pricing",
+    default: `BeeNeural | Pricing`,
+  },
+  alternates: {
+    canonical: "./",
+  },
   description: "BeeNeural Leading Artificial Intelligence Company",
+  icons: {
+    icon: [
+      {
+        rel: "icon",
+        type: "image/ico",
+        url: "/favicon.ico",
+      },
+    ],
+  },
 };
 
 const PricingPage = () => {

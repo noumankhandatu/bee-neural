@@ -59,8 +59,8 @@ export function ThreeDCardDemo({
           <Image
             src={image}
             priority
-            height="1000"
-            width="1000"
+            height="300"
+            width="300"
             className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />

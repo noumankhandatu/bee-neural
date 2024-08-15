@@ -6,9 +6,26 @@ import { HiQuestionMarkCircle } from "react-icons/hi";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BeeNeural - AI Solutions | FAQ",
+  metadataBase: new URL(`https://beeneural.com/`),
+  title: {
+    template: "BeeNeural - AI Solutions | FAQ ",
+    default: `BeeNeural - AI Solutions | FAQ  `,
+  },
+  alternates: {
+    canonical: "./",
+  },
   description: "BeeNeural Leading Artificial Intelligence Company",
+  icons: {
+    icon: [
+      {
+        rel: "icon",
+        type: "image/ico",
+        url: "/favicon.ico",
+      },
+    ],
+  },
 };
+
 const faqData = [
   {
     question: "How Much Will It Cost?",

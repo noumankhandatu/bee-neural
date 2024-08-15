@@ -18,9 +18,9 @@ export function AnimatedPinDemo({ name, position, image, link }: any) {
             <Image
               src={image}
               alt="img"
-              width={200}
+              width={150}
               priority
-              height={200}
+              height={150}
               className="h-[150px] w-[150px]"
               style={{ borderRadius: "110px", border: "4px solid white" }}
             />

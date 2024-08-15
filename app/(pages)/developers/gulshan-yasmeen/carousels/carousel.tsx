@@ -40,8 +40,8 @@ const PortfolioCarousel = ({ carouselItems }: any) => {
             <Image
               src={item.src}
               style={{ height: "300px", width: "300px" }}
-              height={1000}
-              width={1000}
+              height={300}
+              width={300}
               alt={item.title}
             />
             <div className="w-full">

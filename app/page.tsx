@@ -2,7 +2,6 @@ import React, { lazy, Suspense } from "react";
 import Spinner from "./components/atoms/Spinner";
 import TeamSlider from "./components/molecules/team-slider";
 import Wrapper from "./components/molecules/headerfooter-wrapper";
-import Image from "next/image";
 import { Metadata } from "next";
 
 // Lazy imports
@@ -17,8 +16,24 @@ const OurProjectsDemo = lazy(
 const ServicesDemo = lazy(() => import("./components/sections/services"));
 
 export const metadata: Metadata = {
-  title: "BeeNeural - AI Solutions | Home",
+  metadataBase: new URL(`https://beeneural.com/`),
+  title: {
+    template: "BeeNeural - AI Solutions | Home",
+    default: `BeeNeural - AI Solutions | Home`,
+  },
+  alternates: {
+    canonical: "./",
+  },
   description: "BeeNeural Leading Artificial Intelligence Company",
+  icons: {
+    icon: [
+      {
+        rel: "icon",
+        type: "image/ico",
+        url: "/favicon.ico",
+      },
+    ],
+  },
 };
 const HomePage: React.FC = () => {
   return (

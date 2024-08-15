@@ -4,9 +4,26 @@ import Image from "next/image";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "BeeNeural | Legal Certificate",
+  metadataBase: new URL(`https://beeneural.com/`),
+  title: {
+    template: "BeeNeural | Legal Certificate",
+    default: `BeeNeural | Legal Certificate`,
+  },
+  alternates: {
+    canonical: "./",
+  },
   description: "BeeNeural Leading Artificial Intelligence Company",
+  icons: {
+    icon: [
+      {
+        rel: "icon",
+        type: "image/ico",
+        url: "/favicon.ico",
+      },
+    ],
+  },
 };
+
 const LegalPolicy = () => {
   return (
     <Wrapper>
@@ -17,15 +34,15 @@ const LegalPolicy = () => {
         <Image
           src={"/assets/images/c1.png"}
           alt="c1"
-          height={1000}
-          width={1000}
+          height={800}
+          width={800}
           className="w-[500px]"
         />
         <Image
           src={"/assets/images/c2.png"}
           alt="c1"
-          height={1000}
-          width={1000}
+          height={800}
+          width={800}
           className="w-[500px]"
         />
       </div>

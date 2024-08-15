@@ -182,8 +182,8 @@ const CareerPage = () => {
               priority
               src={"/assets/images/beeneural.webp"}
               alt="image"
-              height={1000}
-              width={1000}
+              height={400}
+              width={400}
               className="w-full h-full"
             />
           </div>

@@ -19,8 +19,8 @@ export const TestimonialCard = ({
             src={imageSrc}
             alt={`${name}'s picture`}
             className="rounded-sm w-full h-[200px]"
-            height={1000}
-            width={1000}
+            height={300}
+            width={400}
             priority
           />
           {/* <h3 className="text-lg font-semibold mb-2">{name}</h3>

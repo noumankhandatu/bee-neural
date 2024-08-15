@@ -4,10 +4,25 @@ import Link from "next/link";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "BeeNeural ",
+  metadataBase: new URL(`https://beeneural.com/`),
+  title: {
+    template: "BeeNeural ",
+    default: `BeeNeural  `,
+  },
+  alternates: {
+    canonical: "./",
+  },
   description: "BeeNeural Leading Artificial Intelligence Company",
+  icons: {
+    icon: [
+      {
+        rel: "icon",
+        type: "image/ico",
+        url: "/favicon.ico",
+      },
+    ],
+  },
 };
-
 const PortfolioNavbar: React.FC = () => {
   return (
     <div className="relative mb-16">
@@ -20,8 +35,8 @@ const PortfolioNavbar: React.FC = () => {
               priority
               src="/logo.png"
               alt="logo"
-              height={1000}
-              width={1000}
+              height={200}
+              width={200}
               className="w-[180px] h-full]"
             />
           </Link>
