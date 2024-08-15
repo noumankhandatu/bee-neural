@@ -35,7 +35,6 @@ const CareerPage = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-
     const formDataToSubmit = new FormData();
     formDataToSubmit.append("firstName", formData.firstName);
     formDataToSubmit.append("lastName", formData.lastName);
@@ -66,7 +65,6 @@ const CareerPage = () => {
       setLoading(false);
     }
   };
-
   return (
     <Wrapper>
       <section style={{ height: 40 }} />

@@ -74,8 +74,7 @@ const HomePage: React.FC = () => {
               <p className="text-[16px] mt-4">amazing products</p>
             </div>
           </div>
-          {/* <AboutUsDemo />
-          <hr /> */}
+
           <section id="services" style={{ height: 10 }} />
           <ServicesDemo />
           <section id="portfolio" style={{ height: 200 }} />
