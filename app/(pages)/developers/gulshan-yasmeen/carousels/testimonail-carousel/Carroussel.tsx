@@ -6,9 +6,16 @@ import dynamic from "next/dynamic";
 
 // Import the type of the Carousel component
 import type CarouselType from "react-spring-3d-carousel";
+interface CarouselProps {
+  slides: any;
+  goToSlide?: number | null;
+  offsetRadius?: number;
+  showNavigation?: boolean;
+  animationConfig?: any;
+}
 
 // Use dynamic import with type assertion
-const Carousel = dynamic(
+const Carousel = dynamic<CarouselProps>(
   () =>
     import("react-spring-3d-carousel") as Promise<typeof CarouselType | any>,
   {
@@ -46,9 +53,9 @@ export default function Carroussel(props: CardProps) {
     >
       <Carousel
         slides={cards}
-        goToSlide={goToSlide}
-        offsetRadius={offsetRadius}
-        showNavigation={showArrows}
+        goToSlide={goToSlide as unknown as number}
+        offsetRadius={offsetRadius as unknown as number}
+        showNavigation={showArrows as unknown as boolean}
         animationConfig={config.gentle}
       />
     </div>

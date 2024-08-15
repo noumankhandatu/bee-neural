@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { serviceArray } from "@/lib/raw-data";
 import { ThreeDCardDemo } from "../3d-card";
 import { PlaceholdersAndVanishInput } from "./placeholders-and-vanish-input";
-import { FaHome } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 import Link from "next/link";
 

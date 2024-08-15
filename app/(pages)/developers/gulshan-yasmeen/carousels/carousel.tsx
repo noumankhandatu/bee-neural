@@ -31,7 +31,7 @@ const PortfolioCarousel = ({ carouselItems }: any) => {
         slidesToSlide={1}
         swipeable
       >
-        {carouselItems.map((item, index) => (
+        {carouselItems.map((item: any, index: any) => (
           <div
             key={index}
             style={{ justifyItems: "center" }}

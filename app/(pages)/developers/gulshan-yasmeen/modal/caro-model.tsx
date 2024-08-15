@@ -1,6 +1,6 @@
 import React from "react";
 
-const Modal = ({ onClose, children }) => {
+const Modal = ({ onClose, children }: any) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
       <div className="bg-white rounded-lg shadow-lg max-w-3xl w-full p-6 relative">

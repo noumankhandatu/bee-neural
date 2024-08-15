@@ -97,7 +97,7 @@ const GulshanYasmeenPortfolio = () => {
   const [selectedCarousel, setSelectedCarousel] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openCarouselModal = (carouselArray) => {
+  const openCarouselModal = (carouselArray: any) => {
     setSelectedCarousel(carouselArray);
     setIsModalOpen(true);
   };
