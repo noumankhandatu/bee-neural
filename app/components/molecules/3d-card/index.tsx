@@ -44,10 +44,7 @@ export function ThreeDCardDemo({
         <p className="text-xl font-bold text-neutral-600 dark:text-white">
           {title}
         </p>
-        <p
-          translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-        >
+        <p className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
           {getDescription()}
           {!showFullDescription && (
             <button
@@ -58,7 +55,7 @@ export function ThreeDCardDemo({
             </button>
           )}
         </p>
-        <CardItem translateZ="100" className="w-full mt-4">
+        <p className="w-full mt-4">
           <Image
             src={image}
             priority
@@ -67,7 +64,7 @@ export function ThreeDCardDemo({
             className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
-        </CardItem>
+        </p>
       </CardBody>
     </CardContainer>
   );
