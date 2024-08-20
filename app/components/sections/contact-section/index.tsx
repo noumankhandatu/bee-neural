@@ -8,9 +8,10 @@ import { primary } from "@/utils/colors";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
+import useTheme from "@/utils/useTheme";
 
 export function SignupFormDemo() {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

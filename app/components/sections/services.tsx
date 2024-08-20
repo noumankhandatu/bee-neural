@@ -1,10 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { serviceArray, serviceAry } from "@/lib/raw-data";
 import { ServiceCard } from "../molecules/service-card";
+import useTheme from "@/utils/useTheme";
 
 const ServicesDemo = () => {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   return (
     <div
       className={`${

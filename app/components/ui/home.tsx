@@ -4,6 +4,7 @@ import React, { lazy, Suspense } from "react";
 import TeamSlider from "../molecules/team-slider";
 import Wrapper from "../molecules/headerfooter-wrapper";
 import Spinner from "../atoms/Spinner";
+import useTheme from "@/utils/useTheme";
 
 // Lazy imports
 const Testimonial = lazy(() => import("../sections/testimonial"));
@@ -12,7 +13,7 @@ const OurProjectsDemo = lazy(() => import("../sections/our-projects"));
 const ServicesDemo = lazy(() => import("../sections/services"));
 
 const HomePage: React.FC = () => {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   return (
     <Suspense fallback={<Spinner />}>
       <Wrapper>

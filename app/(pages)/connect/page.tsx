@@ -8,9 +8,10 @@ import { useState } from "react";
 import Link from "next/link";
 import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
 import ServicesDemo from "@/app/components/sections/services";
+import useTheme from "@/utils/useTheme";
 
 const ConnectPage = () => {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

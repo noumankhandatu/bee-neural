@@ -7,10 +7,10 @@ import PortfolioCarousel from "../gulshan-yasmeen/carousels/carousel";
 import { ShoaibPortfolioData } from "@/lib/portfolio-data";
 import PortfolioNavbar from "@/app/components/atoms/PortfolioNavbar";
 import AOS from "aos";
-import { useSelector } from "react-redux";
+import useTheme from "@/utils/useTheme";
 
 const ShoaibPortfolio = () => {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   useEffect(() => {
     AOS.init({
       duration: 1000,

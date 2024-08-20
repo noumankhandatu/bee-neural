@@ -1,13 +1,14 @@
 "use client";
 import { toggleTheme } from "@/toolkit/themeSlice";
+import useTheme from "@/utils/useTheme";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const PortfolioNavbar: React.FC = () => {
   const dispatch = useDispatch();
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   console.log(theme);
   const handleToggleTheme = () => {
     dispatch(toggleTheme());

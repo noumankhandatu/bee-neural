@@ -9,7 +9,7 @@ import PortfolioCarousel from "./carousels/carousel";
 import { GulshanPortfolioData } from "@/lib/portfolio-data";
 import PortfolioNavbar from "@/app/components/atoms/PortfolioNavbar";
 import AOS from "aos";
-import { useSelector } from "react-redux";
+import useTheme from "@/utils/useTheme";
 
 const journeyImages = [
   {
@@ -90,7 +90,7 @@ const carouselFourarray = [
 ];
 
 const GulshanYasmeenPortfolio = () => {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   useEffect(() => {
     AOS.init({
       duration: 1000,

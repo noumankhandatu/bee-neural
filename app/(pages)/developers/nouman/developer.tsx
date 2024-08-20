@@ -7,9 +7,11 @@ import Link from "next/link";
 import AOS from "aos";
 import { noumandata } from "@/lib/portfolio-data";
 import PortfolioNavbar from "@/app/components/atoms/PortfolioNavbar";
+import useTheme from "@/utils/useTheme";
 
 const WebDeveloperPage: React.FC = () => {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,

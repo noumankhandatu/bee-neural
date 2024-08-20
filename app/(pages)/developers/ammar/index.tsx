@@ -6,9 +6,10 @@ import { AmmarJourney } from "@/lib/journey-data";
 import PortfolioCarousel from "../gulshan-yasmeen/carousels/carousel";
 import { AmmarPortfolioData } from "@/lib/portfolio-data";
 import PortfolioNavbar from "@/app/components/atoms/PortfolioNavbar";
+import useTheme from "@/utils/useTheme";
 
 const AmmarPortfolio = () => {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   return (
     <div
       className={

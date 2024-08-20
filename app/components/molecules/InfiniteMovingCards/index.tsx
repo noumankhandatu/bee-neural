@@ -1,17 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import { InfiniteMovingCards } from "./infinite-moving-cards";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
+import useTheme from "@/utils/useTheme";
 
 const left = "left";
 const right = "right";
 
 export function InfiniteMovingCardsDemo() {
   const [turn, setTurn] = useState(left);
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   return (
     <div
       className={`h-[20rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden ${

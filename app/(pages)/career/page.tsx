@@ -8,7 +8,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
-import { useSelector } from "react-redux";
+import useTheme from "@/utils/useTheme";
 
 const CareerPage = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ const CareerPage = () => {
   const [loading, setLoading] = useState(false);
 
   // Get the current theme from Redux
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,

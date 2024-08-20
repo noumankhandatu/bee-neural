@@ -5,9 +5,10 @@ import { useSelector } from "react-redux";
 import { GlobeDemo } from "../molecules/globe";
 import { projectCardArray } from "@/lib/raw-data";
 import { HoverEffect } from "../molecules/card-hover-effect/card-hover-effect";
+import useTheme from "@/utils/useTheme";
 
 const OurProjectsDemo = () => {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   return (
     <div
       className={` w-full mx-auto px-4 ${

@@ -1,6 +1,7 @@
 "use client";
 
 import { toggleTheme } from "@/toolkit/themeSlice";
+import useTheme from "@/utils/useTheme";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -21,7 +22,7 @@ const navItems = [
 const Navbar: React.FC = () => {
   const dispatch = useDispatch();
   const isOpen = React.useState(false)[0];
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   const toggleMenu = () => {
     dispatch({ type: "TOGGLE_MENU" });
   };

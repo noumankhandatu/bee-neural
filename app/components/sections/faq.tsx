@@ -1,9 +1,9 @@
 "use client";
 
 import { primary } from "@/utils/colors";
+import useTheme from "@/utils/useTheme";
 import React, { useState } from "react";
 import { HiQuestionMarkCircle } from "react-icons/hi";
-import { useSelector } from "react-redux";
 
 const faqData = [
   {
@@ -106,7 +106,7 @@ const FaqItem = ({ question, answer, isOpen, onToggle }: any) => (
 );
 
 const FaqDemo = () => {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleToggle = (index: any) => {

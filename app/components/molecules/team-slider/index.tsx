@@ -6,6 +6,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { AnimatedPinDemo } from "../pin-card";
 import { RiTeamFill } from "react-icons/ri";
+import useTheme from "@/utils/useTheme";
 
 const cards = [
   {
@@ -66,7 +67,7 @@ const responsive = {
 };
 
 function TeamSlider() {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   return (
     <div
       className={`w-full ${

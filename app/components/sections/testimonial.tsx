@@ -1,9 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { InfiniteMovingCardsDemo } from "../molecules/InfiniteMovingCards";
+import useTheme from "@/utils/useTheme";
 
 const Testimonial = () => {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   return (
     <div
       id="career"

@@ -2,14 +2,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import { useSelector } from "react-redux";
+import useTheme from "@/utils/useTheme";
 
 const World = dynamic(() => import("./globe").then((m) => m.World), {
   ssr: false,
 });
 
 export function GlobeDemo() {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",

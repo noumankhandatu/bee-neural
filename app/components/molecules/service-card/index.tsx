@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { useSelector } from "react-redux";
 import { CardBody, CardContainer } from "../3d-card/3d-card";
+import useTheme from "@/utils/useTheme";
 
 interface ThreeCardTypes {
   title: string;
@@ -18,7 +19,7 @@ export function ServiceCard({
   className,
   description,
 }: ThreeCardTypes) {
-  const theme = localStorage.getItem("theme");
+  const { theme } = useTheme();
   const slugify = (text: string) => {
     return text.trim().toLowerCase().replace(/\s+/g, "-");
   };
