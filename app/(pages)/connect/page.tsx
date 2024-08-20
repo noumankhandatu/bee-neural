@@ -10,6 +10,7 @@ import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
 import ServicesDemo from "@/app/components/sections/services";
 
 const ConnectPage = () => {
+  const theme = localStorage.getItem("theme");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -77,18 +78,35 @@ const ConnectPage = () => {
 
   return (
     <Wrapper>
-      <section style={{ height: 40 }} />
-      <div className="container mx-auto py-10">
+      <div
+        className={`container mx-auto py-24 p-4 bg-black ${
+          theme === "dark" ? "bg-black text-secondary" : "bg-white text-black"
+        }`}
+      >
         <div className="flex justify-between w-full">
           <Link className="text-white" href={"/"}>
             {/* <IoMdArrowBack fontSize={35} color="#EE9D1A" className="ml-4" /> */}
             .
           </Link>
 
-          <p className="mb-5 sm:mb-5 text-xl text-center sm:text-5xl text-black">
+          <p className="pb-5 sm:pb-5 text-xl text-center sm:text-5xl text-black">
             <span className="text-primary font-bold">
-              B<span className="text-beta">ee</span>N
-              <span className="text-beta">eural</span>
+              B
+              <span
+                className={`${
+                  theme === "dark" ? " text-secondary" : " text-black"
+                }`}
+              >
+                ee
+              </span>
+              N
+              <span
+                className={`${
+                  theme === "dark" ? " text-secondary" : " text-black"
+                }`}
+              >
+                eural
+              </span>
             </span>
           </p>
           <div></div>
@@ -97,21 +115,17 @@ const ConnectPage = () => {
         <p className="text-[16px] text-center ">
           Connect with beeneural to make something great
         </p>
-        <p className="text-[16px] text-center  mb-12">
+        <p className="text-[16px] text-center  pb-12">
           Below are our services let&apos;s connect and discuss further
         </p>
-        <hr />
         <section id="services" style={{ height: 100 }} />
         <ServicesDemo />
-        <div className="flex justify-center mt-40 ">
+        <div className="flex justify-center pt-40 ">
           <div className="w-[70%]">
             <div className="w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-              <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-                Please fill the feilds below
+              <h2 className="font-bold text-4xl text-center text-neutral-800 dark:text-neutral-200">
+                Get In Touch
               </h2>
-              <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                Remember you can drop your pdf below
-              </p>
 
               <form className="my-8" onSubmit={handleSubmit}>
                 <LabelInputContainer className="mb-4">

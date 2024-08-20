@@ -1,4 +1,7 @@
 "use client";
+
+import React from "react";
+import { useSelector } from "react-redux";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { AnimatedPinDemo } from "../pin-card";
@@ -8,7 +11,7 @@ const cards = [
   {
     name: "Gulshan Yasmeen",
     position: "Founder And AI Lead Researchers",
-    image: "/assets/team/team1.webp",
+    image: "/assets/g1.JPG",
     link: "/developers/gulshan-yasmeen",
   },
   {
@@ -20,14 +23,14 @@ const cards = [
   {
     name: "Hakeem Yar Baig",
     position: "Co-Founder DevOps And ML Engineer",
-    image: "/assets/team/hakim.jpeg",
+    image: "/hakin-photoaidcom-cropped.jpg",
     link: "/developers/hakim",
   },
   {
     name: "Ammar Ali",
     position: "Co-Founder Data Scientist Computer Vision Expert",
     image: "/assets/team/ammer.webp",
-    link: "/developers/ammar ",
+    link: "/developers/ammar",
   },
   {
     name: "Ania Shams",
@@ -61,34 +64,44 @@ const responsive = {
     items: 1,
   },
 };
+
 function TeamSlider() {
+  const theme = localStorage.getItem("theme");
   return (
-    <div className="w-full">
+    <div
+      className={`w-full ${
+        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       <p
         id="faq"
-        className="text-4xl text-center font-bold mt-20 flex justify-center items-center text-primary"
+        className={`text-4xl text-center font-bold pt-20 flex justify-center items-center ${
+          theme === "dark" ? "text-primary" : "text-primary"
+        }`}
       >
         Our Team
         <RiTeamFill className="ml-4" />
       </p>
 
-      <p className="text-[16px] text-center mt-4 mb-12">
+      <p
+        className={`text-[16px] text-center mt-4 pb-12 ${
+          theme === "dark" ? "text-neutral-200" : "text-neutral-700"
+        }`}
+      >
         A dynamic team of innovators dedicated to excellence and groundbreaking
         solutions.
       </p>
       <Carousel className="h-[363px]" responsive={responsive}>
-        {cards.map((member: any, id: number) => {
-          return (
-            <div key={id}>
-              <AnimatedPinDemo
-                name={member.name}
-                position={member.position}
-                image={member.image}
-                link={member.link}
-              />
-            </div>
-          );
-        })}
+        {cards.map((member: any, id: number) => (
+          <div key={id}>
+            <AnimatedPinDemo
+              name={member.name}
+              position={member.position}
+              image={member.image}
+              link={member.link}
+            />
+          </div>
+        ))}
       </Carousel>
     </div>
   );

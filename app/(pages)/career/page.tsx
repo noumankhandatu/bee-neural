@@ -8,6 +8,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Wrapper from "@/app/components/molecules/headerfooter-wrapper";
+import { useSelector } from "react-redux";
 
 const CareerPage = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +20,8 @@ const CareerPage = () => {
   const [pdfFile, setPdfFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
 
+  // Get the current theme from Redux
+  const theme = localStorage.getItem("theme");
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
@@ -65,43 +68,85 @@ const CareerPage = () => {
       setLoading(false);
     }
   };
+
   return (
     <Wrapper>
-      <section style={{ height: 40 }} />
-      <div className="container mx-auto py-10">
+      <div
+        className={`mx-auto py-24 ${
+          theme === "dark" ? "bg-black" : "text-white"
+        }`}
+      >
         <div className="flex justify-between w-full">
-          <Link className="text-white" href={"/"}>
+          <Link
+            className={cn(
+              "text-white",
+              theme === "dark" ? "text-gray-200" : "text-black"
+            )}
+            href={"/"}
+          >
             {/* <IoMdArrowBack fontSize={35} color="#EE9D1A" className="ml-4" /> */}
             .
           </Link>
 
-          <p className="mb-5 sm:mb-5 text-xl text-center sm:text-5xl text-black">
-            <span className="text-primary font-bold">
-              B<span className="text-beta">ee</span>N
-              <span className="text-beta">eural</span>
+          <p
+            className={cn(
+              "mp-5 sm:pb-5 text-xl text-center sm:text-5xl",
+              theme === "dark" ? "text-white" : "text-black"
+            )}
+          >
+            <span className="font-bold">
+              <span className="text-primary">B</span>
+              <span
+                className={theme === "dark" ? "text-gray-200" : "text-black"}
+              >
+                ee
+              </span>
+              <span className="text-primary">N</span>
+              <span
+                className={theme === "dark" ? "text-gray-200" : "text-black"}
+              >
+                eural
+              </span>
             </span>
             👩🏻‍💻
           </p>
           <div></div>
         </div>
 
-        <p className="text-[20px] text-center  mb-12">
-          Join BeeNeural and Be a part of something great
+        <p
+          className={cn(
+            "text-[20px] text-center mb-12",
+            theme === "dark" ? "text-gray-300" : "text-black"
+          )}
+        >
+          Join BeeNeural and be a part of something great
         </p>
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-[80%]">
-            <div className="w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-              <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-                Fill form below 🙌
-              </h2>
-              <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
+            <div
+              className={cn(
+                "w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input",
+                theme === "dark"
+                  ? "bg-gray-900 text-white"
+                  : "bg-white text-black"
+              )}
+            >
+              <h2 className="font-bold text-xl">Fill the form below 🙌</h2>
+              <p className="text-sm max-w-sm mt-2">
                 Remember to drop your resume below
               </p>
 
               <form className="my-8" onSubmit={handleSubmit}>
                 <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                   <LabelInputContainer>
-                    <Label htmlFor="firstName">First name</Label>
+                    <Label
+                      className={
+                        theme === "dark" ? "text-gray-200" : "text-black"
+                      }
+                      htmlFor="firstName"
+                    >
+                      First name
+                    </Label>
                     <Input
                       id="firstName"
                       name="firstName"
@@ -113,7 +158,14 @@ const CareerPage = () => {
                     />
                   </LabelInputContainer>
                   <LabelInputContainer>
-                    <Label htmlFor="lastName">Last name</Label>
+                    <Label
+                      className={
+                        theme === "dark" ? "text-gray-200" : "text-black"
+                      }
+                      htmlFor="lastName"
+                    >
+                      Last name
+                    </Label>
                     <Input
                       id="lastName"
                       name="lastName"
@@ -126,7 +178,14 @@ const CareerPage = () => {
                   </LabelInputContainer>
                 </div>
                 <LabelInputContainer className="mb-4">
-                  <Label htmlFor="email">Email Address</Label>
+                  <Label
+                    className={
+                      theme === "dark" ? "text-gray-200" : "text-black"
+                    }
+                    htmlFor="email"
+                  >
+                    Email Address
+                  </Label>
                   <Input
                     id="email"
                     name="email"
@@ -138,7 +197,14 @@ const CareerPage = () => {
                   />
                 </LabelInputContainer>
                 <LabelInputContainer className="mb-4">
-                  <Label htmlFor="message">Message</Label>
+                  <Label
+                    className={
+                      theme === "dark" ? "text-gray-200" : "text-black"
+                    }
+                    htmlFor="message"
+                  >
+                    Message
+                  </Label>
                   <Input
                     id="message"
                     name="message"
@@ -149,10 +215,17 @@ const CareerPage = () => {
                     disabled={loading}
                   />
                 </LabelInputContainer>
-                <div className="bg-gradient-to-r from-transparent via-neutral-300  to-transparent my-8 h-[1px] w-full" />
+                <div className="bg-gradient-to-r from-transparent via-neutral-300 to-transparent my-8 h-[1px] w-full" />
 
                 <LabelInputContainer className="mb-4">
-                  <Label htmlFor="resume">Upload Resume (PDF)</Label>
+                  <Label
+                    className={
+                      theme === "dark" ? "text-gray-200" : "text-black"
+                    }
+                    htmlFor="resume"
+                  >
+                    Upload Resume (PDF)
+                  </Label>
                   <input
                     id="resume"
                     name="resume"
@@ -160,12 +233,20 @@ const CareerPage = () => {
                     accept="application/pdf"
                     onChange={handleFileChange}
                     disabled={loading}
-                    className="block w-full text-sm text-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gradient-to-br file:from-primary file:to-primary file:text-white hover:file:bg-gray-100 "
+                    className={cn(
+                      "block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:font-semibold hover:file:bg-gray-100",
+                      theme === "dark"
+                        ? "file:bg-gray-700 file:text-white"
+                        : "file:bg-gray-300 file:text-black"
+                    )}
                   />
                 </LabelInputContainer>
 
                 <button
-                  className="bg-gradient-to-br relative group/btn from-primary  to-primary block  w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                  className={cn(
+                    "bg-gradient-to-br relative group/btn from-gray-700 to-gray-900 block w-full rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]",
+                    theme === "dark" ? "text-white" : "text-white"
+                  )}
                   type="submit"
                   disabled={loading}
                 >
@@ -173,7 +254,7 @@ const CareerPage = () => {
                   <BottomGradient />
                 </button>
 
-                <div className="bg-gradient-to-r from-transparent via-neutral-300  to-transparent my-8 h-[1px] w-full" />
+                <div className="bg-gradient-to-r from-transparent via-neutral-300 to-transparent my-8 h-[1px] w-full" />
               </form>
             </div>
             <Image
@@ -194,8 +275,8 @@ const CareerPage = () => {
 const BottomGradient = () => {
   return (
     <>
-      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-gray-500 to-transparent" />
+      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-gray-700 to-transparent" />
     </>
   );
 };

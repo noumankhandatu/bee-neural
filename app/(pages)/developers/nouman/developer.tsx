@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import ConnectButton from "@/app/components/atoms/ConnectButton";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import { noumandata } from "@/lib/portfolio-data";
 import PortfolioNavbar from "@/app/components/atoms/PortfolioNavbar";
 
 const WebDeveloperPage: React.FC = () => {
+  const theme = localStorage.getItem("theme");
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -16,7 +17,11 @@ const WebDeveloperPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen mt-20 text-black flex flex-col items-center justify-center bg-gradient">
+    <div
+      className={`min-h-screen mt-20 flex flex-col items-center justify-center ${
+        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       <PortfolioNavbar />
       <div className="relative w-full flex justify-center">
         <video
@@ -38,13 +43,17 @@ const WebDeveloperPage: React.FC = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <main className="flex flex-col lg:flex-row items-center justify-center w-full px-10">
+      <main className="flex flex-col mt-52 lg:flex-row items-center justify-center w-full px-10">
         <div
           data-aos="fade-right"
           className="text-center lg:text-left lg:w-1/2 lg:ml-20 ml-0"
         >
           <h1 className="font-bold mb-4">HI, I'M NOUMAN</h1>
-          <h2 className="text-2xl lg:text-4xl font-bold mb-4 text-primary">
+          <h2
+            className={`text-2xl lg:text-4xl font-bold mb-4 ${
+              theme === "dark" ? "text-white" : "text-primary"
+            }`}
+          >
             I'M A FULL STACK DEVELOPER 👨🏻‍💻
           </h2>
           <p className="mb-6">
@@ -85,7 +94,7 @@ const WebDeveloperPage: React.FC = () => {
           </div>
           <ConnectButton />
         </div>
-        <div data-aos="fade-left" className="lg:w-1/2 mt-10 lg:mt-0 lg:pl-10">
+        <div data-aos="fade-right" className="lg:w-1/2 mt-10 lg:mt-0 lg:pl-10">
           <Image
             src="/assets/team/Hi.png"
             alt="Saul"
@@ -110,10 +119,14 @@ const WebDeveloperPage: React.FC = () => {
               href={project.link}
               rel="noopener noreferrer"
             >
-              <div className="border p-6 rounded-lg shadow-lg bg-white dark:bg-gray-800 ">
-                <h4 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                  {project.title}
-                </h4>
+              <div
+                className={`border p-6 rounded-lg shadow-lg ${
+                  theme === "dark"
+                    ? "bg-black text-white"
+                    : "bg-white text-black"
+                }`}
+              >
+                <h4 className="mb-2 text-lg font-semibold">{project.title}</h4>
                 <hr />
                 <Image
                   src={project.image}
@@ -123,9 +136,7 @@ const WebDeveloperPage: React.FC = () => {
                   className="w-full h-[150px]"
                 />
                 <hr />
-                <p className="mt-2 text-gray-500 text-left ">
-                  {project.description}
-                </p>
+                <p className="mt-2">{project.description}</p>
               </div>
             </Link>
           ))}

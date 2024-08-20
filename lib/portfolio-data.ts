@@ -133,3 +133,47 @@ export const GulshanPortfolioData = [
  This interactive dashboard presents key statistics on Netflix. It allows users to select a specific feature, highlighting details about the chosen movie or TV show. The dashboard displays the total number of TV shows and movies, the most popular by country, and provides insights into release dates, genres, descriptions, and other relevant details. `,
   },
 ];
+export const AmmarPortfolioData = [
+  {
+    src: "/assets/images/face_rec.png",
+    title: "Face Recognition-Based Attendance System — Feb 2024",
+    description: `
+    Developed a robust Face Recognition-Based Attendance System utilizing Dlib’s face landmark detection
+and cosine similarity for accurate identification. The core functionality involved detecting faces using
+Dlib’s face detector, storing facial data in a database, and then matching incoming faces by calculating
+the cosine similarity with the stored data. This approach ensured precise and efficient face recognition.
+The system’s frontend was designed using KivyMD, providing an intuitive and user-friendly interface.
+    `,
+  },
+  {
+    src: "/assets/images/SAM.jpeg",
+    title: "One-Shot Segmentation using SAM and OWL — Apr 2024",
+    description: `
+   Implemented a one-shot segmentation system by integrating SAM (Segment Anything Model) and OWL
+(Object-Wise Learning). The process involved using OWL to detect objects based on specific prompts,
+which then provided bounding boxes for the identified objects. SAM was subsequently utilized to seg-
+ment only the objects that were prompted, ensuring precise and targeted segmentation. This project
+demonstrated the effective combination of object detection and segmentation for specialized applications.
+    `,
+  },
+  {
+    src: "/assets/images/Try On.jpeg",
+    title: "2D Virtual Try-On System (VTON) — Nov 2023",
+    description: `
+  Developed a 2D Virtual Try-On (VTON) system inspired by IDM VTON, enabling users to virtually try
+on clothing items. The system supports both lower and upper body sections, providing a realistic and
+interactive experience for users to visualize how different outfits would look on them.
+    `,
+  },
+  {
+    src: "/assets/images/Screenshot from 2024-08-20 16-29-21.png",
+    title: "Hand-to-Object Distance Measurement System — Mar 2024",
+    description: `
+ Developed a system to measure the distance between a detected object and a hand using YOLO
+for object detection and MediaPipe for hand landmark recognition. After calibrating the camera for
+accurate measurements, I implemented a method to calculate the distance between the hand and the
+object in real-time. This project combined advanced computer vision techniques to create a precise and
+functional system for spatial awareness.
+    `,
+  },
+];

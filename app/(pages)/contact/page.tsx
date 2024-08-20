@@ -13,22 +13,12 @@ export const metadata: Metadata = {
     canonical: "./",
   },
   description: "BeeNeural Leading Artificial Intelligence Company",
-  icons: {
-    icon: [
-      {
-        rel: "icon",
-        type: "image/ico",
-        url: "/favicon.ico",
-      },
-    ],
-  },
 };
+
 const ContactPage = () => {
   return (
     <Wrapper>
-      <section style={{ height: 40 }} />
       <SignupFormDemo />
-      <section style={{ height: 100 }} />
     </Wrapper>
   );
 };

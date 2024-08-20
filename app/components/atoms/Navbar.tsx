@@ -1,12 +1,13 @@
 "use client";
 
+import { toggleTheme } from "@/toolkit/themeSlice";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 const navItems = [
   "Home",
-  // "About",
   "Services",
   "Tools",
   "Portfolio",
@@ -15,36 +16,63 @@ const navItems = [
   "Pricing",
   "Contact",
   "FAQ",
-  // "waitlist",
 ];
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const dispatch = useDispatch();
+  const isOpen = React.useState(false)[0];
+  const theme = localStorage.getItem("theme");
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    dispatch({ type: "TOGGLE_MENU" });
+  };
+
+  const handleToggleTheme = () => {
+    dispatch(toggleTheme());
   };
 
   return (
-    <div className="relative mb-16">
+    <div
+      className={`relative mb-16 ${
+        theme === "dark" ? "bg-[#0D0D0D]" : "bg-secondary"
+      }`}
+    >
       <nav
-        className={`w-full bg-[#F2F2F2] shadow-md p-3   fixed top-0 left-0 right-0 z-50 `}
+        className={`w-full shadow-md p-3 fixed top-0 left-0 right-0 z-50 ${
+          theme === "dark"
+            ? "bg-[#0D0D0D] text-secondary"
+            : "bg-secondary text-black"
+        }`}
       >
-        <div className="max-w-screen-xl flex  flex-wrap items-center justify-between mx-auto">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <Link href={"/"}>
-            <Image
-              priority
-              src="/logo.png"
-              alt="logo"
-              height={200}
-              width={200}
-              className="w-[180px] h-full]"
-            />
+            {theme === "dark" ? (
+              <Image
+                priority
+                src="/dark-logo.jpg"
+                alt="logo"
+                height={200}
+                width={200}
+                className="w-[180px] h-full"
+              />
+            ) : (
+              <Image
+                priority
+                src="/logo.png"
+                alt="logo"
+                height={200}
+                width={200}
+                className="w-[180px] h-full"
+              />
+            )}
           </Link>
           <button
             onClick={toggleMenu}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary hover:text-primary rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden focus:outline-none focus:ring-2 ${
+              theme === "dark"
+                ? "text-secondary hover:bg-black focus:ring-black"
+                : "text-black hover:bg-secondary focus:ring-secondary"
+            }`}
             aria-controls="navbar-default"
             aria-expanded={isOpen}
           >
@@ -71,33 +99,80 @@ const Navbar: React.FC = () => {
             } w-full lg:block md:w-auto`}
             id="navbar-default"
           >
-            <ul className="font-medium items-center flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent ">
-              <>
-                {navItems.map((item) => (
-                  <li key={item}>
-                    <Link
-                      href={
-                        item === "waitlist" ||
-                        item === "Tools" ||
-                        item === "Career" ||
-                        item === "Contact" ||
-                        item === "Pricing" ||
-                        item === "FAQ"
-                          ? `${item.toLowerCase()}`
-                          : `/#${item.toLowerCase()}`
-                      }
-                      className="block capitalize py-2 px-3 text-[15px] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0  md:dark:hover:text-primary  text-beta  "
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-                <Link href={"/connect"}>
-                  <button className="bg-transparent hover:bg-primary text-primary font-semibold hover:text-white py-2 px-4 border border-primary hover:border-transparent rounded">
-                    Connect
-                  </button>
-                </Link>
-              </>
+            <ul
+              className={`font-medium items-center flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ${
+                theme === "dark"
+                  ? "border-black text-secondary"
+                  : "bg-secondary border-secondary text-black"
+              }`}
+            >
+              {navItems.map((item) => (
+                <li key={item}>
+                  <Link
+                    href={
+                      item === "waitlist" ||
+                      item === "Tools" ||
+                      item === "Career" ||
+                      item === "Contact" ||
+                      item === "Pricing" ||
+                      item === "FAQ"
+                        ? `${item.toLowerCase()}`
+                        : `/#${item.toLowerCase()}`
+                    }
+                    className={`block capitalize py-2 px-3 text-[15px] rounded md:p-0 ${
+                      theme === "dark"
+                        ? "md:hover:text-primary"
+                        : "hover:bg-secondary md:hover:text-primary"
+                    }`}
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+              <Link href={"/connect"}>
+                <button
+                  className={`font-semibold py-2 px-4 border rounded ${
+                    theme === "dark"
+                      ? "bg-transparent text-secondary border-secondary hover:bg-alpha hover:border-alpha"
+                      : "bg-transparent text-primary border-primary hover:bg-primary hover:text-secondary"
+                  }`}
+                >
+                  Connect
+                </button>
+              </Link>
+              <button onClick={handleToggleTheme} className="ml-2">
+                {theme === "dark" ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 cursor-pointer"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 cursor-pointer"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                    />
+                  </svg>
+                )}
+              </button>
             </ul>
           </div>
         </div>

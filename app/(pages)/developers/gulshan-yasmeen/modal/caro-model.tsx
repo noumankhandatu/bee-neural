@@ -1,11 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Modal = ({ onClose, children }: any) => {
+  const theme = localStorage.getItem("theme");
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
       <div className="bg-white rounded-lg shadow-lg max-w-3xl w-full p-6 relative">
         <button
-          className="absolute top-2 right-2 text-xl font-bold"
+          className={`absolute top-2 right-2 text-xl font-bold ${
+            theme === "dark" ? " text-black " : " text-white"
+          } `}
           onClick={onClose}
         >
           &times;

@@ -2,12 +2,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import { useSelector } from "react-redux";
 
 const World = dynamic(() => import("./globe").then((m) => m.World), {
   ssr: false,
 });
 
 export function GlobeDemo() {
+  const theme = localStorage.getItem("theme");
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -395,7 +397,11 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="  h-[300px] mt-12 mb-12 flex flex-row items-center justify-center py-20 lg:h-screen md:h-auto dark:bg-black bg-white relative w-full">
+    <div
+      className={`h-[300px]   flex flex-row items-center justify-center  lg:h-full md:h-auto relative ${
+        theme === "dark" ? "bg-black" : "bg-white"
+      }`}
+    >
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
         <motion.div
           initial={{
@@ -411,15 +417,23 @@ export function GlobeDemo() {
           }}
           className="div"
         >
-          <p className="text-4xl text-center font-bold  flex justify-center items-center text-primary">
+          <p className="text-4xl text-center font-bold flex justify-center items-center text-primary">
             Our Projects 🌐
           </p>
-          <div className="text-center  text-base mb-20 md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+          <div
+            className={`text-center text-base pb-20 text-[16px]  leading-loose font-normal max-w-md pt-2 mx-auto ${
+              theme === "dark" ? "text-white" : "text-neutral-700"
+            }`}
+          >
             Our projects are worldwide Have fun with it,
           </div>
         </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        <div className=" absolute w-full -bottom-20 h-72 md:h-full z-10">
+        <div
+          className={`absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent z-40 ${
+            theme === "dark" ? "to-black" : "to-white"
+          }`}
+        />
+        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />;
         </div>
       </div>

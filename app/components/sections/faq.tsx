@@ -3,28 +3,7 @@
 import { primary } from "@/utils/colors";
 import React, { useState } from "react";
 import { HiQuestionMarkCircle } from "react-icons/hi";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  metadataBase: new URL(`https://beeneural.com/`),
-  title: {
-    template: "BeeNeural - AI Solutions | FAQ ",
-    default: `BeeNeural - AI Solutions | FAQ  `,
-  },
-  alternates: {
-    canonical: "./",
-  },
-  description: "BeeNeural Leading Artificial Intelligence Company",
-  icons: {
-    icon: [
-      {
-        rel: "icon",
-        type: "image/ico",
-        url: "/favicon.ico",
-      },
-    ],
-  },
-};
+import { useSelector } from "react-redux";
 
 const faqData = [
   {
@@ -127,6 +106,7 @@ const FaqItem = ({ question, answer, isOpen, onToggle }: any) => (
 );
 
 const FaqDemo = () => {
+  const theme = localStorage.getItem("theme");
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleToggle = (index: any) => {
@@ -136,17 +116,27 @@ const FaqDemo = () => {
   return (
     <>
       <p
+        className={`text-4xl text-center font-bold mt-20 flex justify-center items-center pt-10 pb-10  ${
+          theme === "dark" ? "bg-black" : "bg-white"
+        }`}
         id="faq"
-        className="text-4xl text-center font-bold mt-20 flex justify-center items-center"
         style={{ color: primary }}
       >
         FAQ&apos;S
         <HiQuestionMarkCircle className="ml-4" />
       </p>
-      <p className="text-[16px] text-center mt-4 mb-12">
+      <p
+        className={`text-[16px] text-center pt-4 pb-12 ${
+          theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+        }`}
+      >
         Frequently Asked Questions
       </p>
-      <div className="flex justify-center">
+      <div
+        className={`flex  justify-center pb-24 ${
+          theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+        }`}
+      >
         <div
           id="accordion-collapse"
           className="w-[80%]"

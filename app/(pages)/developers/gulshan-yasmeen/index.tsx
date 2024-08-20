@@ -9,6 +9,7 @@ import PortfolioCarousel from "./carousels/carousel";
 import { GulshanPortfolioData } from "@/lib/portfolio-data";
 import PortfolioNavbar from "@/app/components/atoms/PortfolioNavbar";
 import AOS from "aos";
+import { useSelector } from "react-redux";
 
 const journeyImages = [
   {
@@ -89,6 +90,7 @@ const carouselFourarray = [
 ];
 
 const GulshanYasmeenPortfolio = () => {
+  const theme = localStorage.getItem("theme");
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -107,7 +109,11 @@ const GulshanYasmeenPortfolio = () => {
   };
 
   return (
-    <div>
+    <div
+      className={
+        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+      }
+    >
       <PortfolioNavbar />
       {/* Section 1: About */}
       <div
@@ -115,8 +121,18 @@ const GulshanYasmeenPortfolio = () => {
         className="grid grid-cols-1 md:grid-cols-2 gap-4 md:p-20 p-10"
       >
         <div>
-          <h1 className="text-4xl font-bold">About Gulshan Yasmeen</h1>
-          <p className="text-[14px] mt-10 text-beta leading-loose">
+          <h1
+            className={`text-4xl font-bold ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
+          >
+            About Gulshan Yasmeen
+          </h1>
+          <p
+            className={`text-[16px] mt-10 leading-loose ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
+          >
             Gulshan Yasmeen is a Software Engineer who graduated from NUST
             Islamabad, one of Pakistan&lsquo;s top engineering universities,
             recognized globally in the QS World University Rankings. After
@@ -126,7 +142,11 @@ const GulshanYasmeenPortfolio = () => {
             power of data inspired her to establish BeeNeural Private Ltd in
             Gilgit—the region&lsquo;s first AI-based startup.
           </p>
-          <p className="text-[14px] mt-2 text-beta leading-loose">
+          <p
+            className={`text-[16px]   leading-loose ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
+          >
             Gulshan is not only a successful entrepreneur but also a dedicated
             community leader. She actively trains and mentors youth in modern
             technologies, empowering the next generation. Throughout her life,
@@ -134,7 +154,11 @@ const GulshanYasmeenPortfolio = () => {
             embodying a balanced approach to personal and professional
             development.
           </p>
-          <p className="text-[14px] mt-2 text-beta leading-loose">
+          <p
+            className={`text-[16px]   leading-loose ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
+          >
             She believes that with passion, faith in God, and self-belief,
             nothing is impossible to achieve.
           </p>
@@ -155,7 +179,11 @@ const GulshanYasmeenPortfolio = () => {
       <section style={{ height: 100 }} />
       <div data-aos="fade-down">
         <h2 className="text-3xl font-bold text-center">Journey and Impact</h2>
-        <p className="text-[14px] mt-10 text-beta leading-loose text-center mx-10">
+        <p
+          className={`text-[16px]  text-center mt-4 leading-loose ${
+            theme === "dark" ? "text-white" : "text-black"
+          }`}
+        >
           Discover my noteworthy engagements, meaningful contributions, and
           impactful initiatives that shaped my journey.
         </p>
@@ -209,7 +237,11 @@ const GulshanYasmeenPortfolio = () => {
         <h2 className="text-3xl font-bold text-center">
           Gulshan&apos;s Tech Portfolio
         </h2>
-        <p className="text-[14px] mt-10 text-beta leading-loose text-center mx-10">
+        <p
+          className={`text-[16px]  text-center mt-4 leading-loose ${
+            theme === "dark" ? "text-white" : "text-black"
+          }`}
+        >
           Highlighting my skills and accomplishments through tangible work
           examples and experiences.
         </p>
@@ -219,7 +251,11 @@ const GulshanYasmeenPortfolio = () => {
           <h2 className="text-3xl font-bold text-center">
             Client Testimonials
           </h2>
-          <p className="text-[14px] mt-10 text-beta leading-loose text-center">
+          <p
+            className={`text-[16px]  text-center mt-4 leading-loose ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
+          >
             Feedback on the Professional Services and Results
           </p>
           <section style={{ height: 250 }} />

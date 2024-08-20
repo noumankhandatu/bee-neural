@@ -7,8 +7,10 @@ import { Input } from "./input";
 import { primary } from "@/utils/colors";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useSelector } from "react-redux";
 
 export function SignupFormDemo() {
+  const theme = localStorage.getItem("theme");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -54,7 +56,12 @@ export function SignupFormDemo() {
   };
 
   return (
-    <div id="contact" className="container mx-auto py-10">
+    <div
+      id="contact"
+      className={`container mx-auto py-10 p-4 bg-black ${
+        theme === "dark" ? "bg-black" : "bg-white"
+      }`}
+    >
       <ToastContainer />
       <p
         className="text-4xl text-center font-bold mt-20"

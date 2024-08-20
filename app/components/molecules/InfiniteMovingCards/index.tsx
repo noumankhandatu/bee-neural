@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { InfiniteMovingCards } from "./infinite-moving-cards";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
@@ -10,15 +11,28 @@ const right = "right";
 
 export function InfiniteMovingCardsDemo() {
   const [turn, setTurn] = useState(left);
+  const theme = localStorage.getItem("theme");
   return (
-    <div className="h-[20rem]   rounded-md flex flex-col antialiased bg-white  items-center justify-center relative overflow-hidden">
+    <div
+      className={`h-[20rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden ${
+        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       <FaArrowLeft
-        className="absolute left-10 border-2 border-primary rounded-full h-[30px] w-[30px] p-1 text-primary cursor-pointer"
+        className={`absolute left-10 border-2 rounded-full h-[30px] w-[30px] p-1 cursor-pointer ${
+          theme === "dark"
+            ? "border-secondary text-secondary"
+            : "border-primary text-primary"
+        }`}
         onClick={() => setTurn(left)}
       />
       <InfiniteMovingCards items={testimonials} direction={turn} speed="slow" />
       <FaArrowRight
-        className="absolute right-10 border-2 border-primary rounded-full h-[30px] w-[30px] p-1 text-primary cursor-pointer"
+        className={`absolute right-10 border-2 rounded-full h-[30px] w-[30px] p-1 cursor-pointer ${
+          theme === "dark"
+            ? "border-secondary text-secondary"
+            : "border-primary text-primary"
+        }`}
         onClick={() => setTurn(right)}
       />
     </div>
