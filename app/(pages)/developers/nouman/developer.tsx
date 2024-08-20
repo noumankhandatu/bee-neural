@@ -21,7 +21,9 @@ const WebDeveloperPage: React.FC = () => {
   return (
     <div
       className={`min-h-screen mt-20 flex flex-col items-center justify-center ${
-        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+        theme === "dark"
+          ? "bg-black text-white bg-gradient "
+          : "bg-white text-black bg-gradients"
       }`}
     >
       <PortfolioNavbar />
