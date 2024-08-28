@@ -27,11 +27,11 @@ export const metadata: Metadata = {
 const PricingPage = () => {
   return (
     <Wrapper>
-      <div className="p-20 text-black">
+      <div className="lg:pl-20 pl:10  lg:pr-20 pr:10  pt-20 pb-20 text-black w-full">
         <h1 className="text-4xl font-bold mb-20 text-center ">
           Simple, transparent pricing that <br /> works for you
         </h1>
-        <div className="flex justify-center space-x-10">
+        <div className="flex justify-center gap-3  flex-wrap w-full">
           <PricingCard
             title="Fixed"
             price="?"

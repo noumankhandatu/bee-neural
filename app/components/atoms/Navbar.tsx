@@ -25,6 +25,7 @@ const Navbar: React.FC = () => {
   const { theme } = useTheme();
   const toggleMenu = () => {
     dispatch({ type: "TOGGLE_MENU" });
+    alert("asd");
   };
 
   const handleToggleTheme = () => {
@@ -111,12 +112,14 @@ const Navbar: React.FC = () => {
                 <li key={item}>
                   <Link
                     href={
-                      item === "waitlist" ||
-                      item === "Tools" ||
-                      item === "Career" ||
-                      item === "Contact" ||
-                      item === "Pricing" ||
-                      item === "FAQ"
+                      item === "Home"
+                        ? "/"
+                        : item === "waitlist" ||
+                          item === "Tools" ||
+                          item === "Career" ||
+                          item === "Contact" ||
+                          item === "Pricing" ||
+                          item === "FAQ"
                         ? `${item.toLowerCase()}`
                         : `/#${item.toLowerCase()}`
                     }

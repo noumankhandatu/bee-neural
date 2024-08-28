@@ -19,7 +19,6 @@ const HomePage: React.FC = () => {
       <Wrapper>
         <RocketFired />
         <main>
-          <section id="home" />
           <div
             className={` relative ${
               theme === "dark" ? "bg-black" : "bg-white"
@@ -39,19 +38,19 @@ const HomePage: React.FC = () => {
               }`}
             ></div>
             <div
-              className={`absolute top-10 left-32 ${
+              className={`absolute top-10 lg:left-32 left-10 ${
                 theme === "dark" ? "text-secondary" : "text-black"
               }`}
             >
               <h1
-                className={`text-6xl font-bold pt-6 ${
+                className={`lg:text-6xl text-5xl font-bold pt-6 ${
                   theme === "dark" ? "text-white" : "text-[#34373E]"
                 }`}
               >
                 Empower Your Business With
               </h1>
               <h2
-                className={`text-6xl font-bold mt-4 ${
+                className={`lg:text-6xl text-5xl font-bold mt-4 ${
                   theme === "dark" ? "text-white" : "text-[#34373E]"
                 }`}
               >
@@ -74,7 +73,6 @@ const HomePage: React.FC = () => {
           <section
             id="services"
             style={{
-              height: 10,
               background: theme === "dark" ? "black" : "white",
             }}
           />

@@ -6,7 +6,6 @@ import {
   FaInstagram,
   FaGoogle,
 } from "react-icons/fa";
-import { Label } from "../sections/contact-section/label";
 import { Input } from "../sections/contact-section/input";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
@@ -55,11 +54,31 @@ const Footer = () => {
               Email: info@beeneural.com
             </address>
             <div className="flex space-x-4 mt-4">
-              <FaFacebook className="h-6 w-6" />
-              <FaTwitter className="h-6 w-6" />
-              <FaLinkedin className="h-6 w-6" />
-              <FaInstagram className="h-6 w-6" />
-              <FaGoogle className="h-6 w-6" />
+              {/* <FaFacebook className="h-6 w-6" />
+              <FaTwitter className="h-6 w-6" /> */}
+              <Link
+                href="https://www.linkedin.com/company/beeneural/mycompany/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin className="h-6 w-6" />
+              </Link>
+              <Link
+                href="https://beeneural.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGoogle className="h-6 w-6" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/bee_neural?igsh=YjJpOXpsbTFhdWsy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram className="h-6 w-6" />
+              </Link>
+              {/* <FaInstagram className="h-6 w-6" />
+              <FaGoogle className="h-6 w-6" /> */}
             </div>
           </div>
           <div className="space-y-4">

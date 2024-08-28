@@ -105,7 +105,7 @@ const WebDeveloperPage: React.FC = () => {
             width={400}
             priority
             height={400}
-            className="w-[500px] h-[500px]"
+            className="lg:w-[500px] lg:h-[500px]"
           />
         </div>
       </main>
