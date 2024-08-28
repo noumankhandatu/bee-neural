@@ -96,3 +96,8 @@
   box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
   transform: translate3d(0px, -12px, 0px);
 }
+
+.bgcover {
+  background-size: cover !important;
+  background-position: 600px -470px !important;
+}

@@ -5,7 +5,7 @@ import useTheme from "@/utils/useTheme";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const navItems = [
   "Home",
@@ -21,20 +21,21 @@ const navItems = [
 
 const Navbar: React.FC = () => {
   const dispatch = useDispatch();
-  const isOpen = React.useState(false)[0];
+  const [isOpen, setIsOpen] = React.useState(false);
   const { theme } = useTheme();
+
   const toggleMenu = () => {
-    dispatch({ type: "TOGGLE_MENU" });
-    alert("asd");
+    setIsOpen(!isOpen);
   };
 
   const handleToggleTheme = () => {
     dispatch(toggleTheme());
+    toggleMenu();
   };
 
   return (
     <div
-      className={`relative mb-16 ${
+      className={`relative z-[9999] mb-16 ${
         theme === "dark" ? "bg-[#0D0D0D]" : "bg-secondary"
       }`}
     >
@@ -70,7 +71,7 @@ const Navbar: React.FC = () => {
           <button
             onClick={toggleMenu}
             type="button"
-            className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden focus:outline-none focus:ring-2 ${
+            className={`inline-flex items-center p-2 w-10 h-10 z-[99999] absolute right-4 justify-center text-sm rounded-lg lg:hidden focus:outline-none focus:ring-2 ${
               theme === "dark"
                 ? "text-secondary hover:bg-black focus:ring-black"
                 : "text-black hover:bg-secondary focus:ring-secondary"
@@ -97,20 +98,31 @@ const Navbar: React.FC = () => {
           </button>
           <div
             className={`${
-              isOpen ? "block" : "hidden"
-            } w-full lg:block md:w-auto`}
+              isOpen ? "translate-x-0" : "-translate-x-full"
+            } w-full lg:block md:w-auto fixed top-0 left-0 h-screen bg-opacity-90 z-50 transition-transform duration-300 ease-in-out lg:static lg:h-auto lg:translate-x-0 lg:bg-opacity-100 lg:flex lg:items-center`}
             id="navbar-default"
           >
+            <div className="flex justify-between items-center p-4 lg:hidden">
+              <button
+                onClick={toggleMenu}
+                className={`p-2 w-10 h-10 justify-center text-sm rounded-lg focus:outline-none ${
+                  theme === "dark"
+                    ? "text-secondary hover:bg-black"
+                    : "text-black hover:bg-secondary"
+                }`}
+              ></button>
+            </div>
             <ul
               className={`font-medium items-center flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ${
                 theme === "dark"
-                  ? "border-black text-secondary"
+                  ? "border-black text-secondary bg-black h-[80%]"
                   : "bg-secondary border-secondary text-black"
               }`}
             >
               {navItems.map((item) => (
                 <li key={item}>
                   <Link
+                    onClick={toggleMenu}
                     href={
                       item === "Home"
                         ? "/"

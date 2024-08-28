@@ -25,7 +25,7 @@ const RocketFired: React.FC = () => {
   }, [offset]);
 
   return (
-    <div className="fixed right-8 bottom-8">
+    <div className="fixed right-8 bottom-8 z-[99999999]">
       <a href="#top">
         <div
           ref={iconRef}

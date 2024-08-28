@@ -28,12 +28,10 @@ const HomePage: React.FC = () => {
               style={{
                 background:
                   theme === "dark" ? `url(/web-dark.jpg)` : `url(/web.png)`,
-                backgroundSize: "cover",
-                backgroundPosition: "600px -470px",
                 height: 600,
                 opacity: theme === "dark" ? 0.1 : 0.1,
               }}
-              className={`px-32 flex justify-between ${
+              className={`px-32 bgcover flex justify-between ${
                 theme === "dark" ? "bg-black" : "bg-secondary"
               }`}
             ></div>
@@ -43,14 +41,14 @@ const HomePage: React.FC = () => {
               }`}
             >
               <h1
-                className={`lg:text-6xl text-5xl font-bold pt-6 ${
+                className={`lg:text-6xl text-4xl font-bold pt-6 ${
                   theme === "dark" ? "text-white" : "text-[#34373E]"
                 }`}
               >
                 Empower Your Business With
               </h1>
               <h2
-                className={`lg:text-6xl text-5xl font-bold mt-4 ${
+                className={`lg:text-6xl text-4xl font-bold mt-4 ${
                   theme === "dark" ? "text-white" : "text-[#34373E]"
                 }`}
               >
